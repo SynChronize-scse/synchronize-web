@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+}
+
+@font-face {
+  font-family: 'AdieuRegular';
+  src: url('/fonts/adieu/regular.ttf') format('truetype');
+}
