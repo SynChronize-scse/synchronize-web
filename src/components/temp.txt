@@ -1,1 +1,0 @@
-This file is just for not to get this folder ignored by git.
