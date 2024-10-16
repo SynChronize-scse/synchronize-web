@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FaInstagram, FaLinkedin, FaGithub, FaFacebook, FaEnvelope } from 'react-icons/fa';
 import mapImage from '../assets/xim_map.png';
@@ -73,3 +74,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
