@@ -5,6 +5,8 @@ import Particles, {
 } from "@tsparticles/react";
 import type { Container, Engine } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
+import LandingPart from "./LandingPart";
+import StackedCards from "./StackedCards";
 
 const LandingSection = () => {
   const [init, setInit] = useState<boolean>(false);
@@ -203,10 +205,9 @@ const LandingSection = () => {
         />
       )}
 
-      <main className="relative z-10 w-full h-full flex items-center justify-center">
-        <h1 className="text-xl sm:text-5xl font-bold text-primary-400 font-[AdieuRegular]">
-          Synchronize'25
-        </h1>
+      <main className="relative z-10 w-full h-full font-[AdieuRegular] text-primary-400">
+        <LandingPart />
+        <StackedCards />
       </main>
     </div>
   );
