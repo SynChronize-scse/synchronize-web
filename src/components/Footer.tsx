@@ -35,8 +35,8 @@ const Footer = () => {
       </div>
 
       <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl w-full h-auto flex flex-col gap-10 md:flex-row justify-between px-3 sm:px-5 xl:px-5 pt-8 pb-8 lg:pt-16 lg:pb-8 xl:pt-24 xl:pb-12">
-        <div className="flex flex-row max-[320px]:flex-col max-[320px]:items-start gap-3 sm:gap-12 md:gap-14 lg:gap-28 xl:gap-52 sm:justify-between items-end">
-          <div className="flex flex-col space-y-5 w-1/2 sm:w-auto">
+        <div className="flex flex-row max-[320px]:flex-col max-[320px]:items-start gap-3 sm:gap-12 md:gap-14 lg:gap-28 xl:gap-52 justify-between items-end">
+          <div className="flex flex-col space-y-5 sm:w-auto">
             <a href="#" className="hover:text-gray-400">
               Events
             </a>
@@ -51,7 +51,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="flex flex-col space-y-5 w-1/2 sm:w-auto">
+          <div className="flex flex-col space-y-5 sm:w-auto">
             <a href="#" className="hover:text-gray-400">
               Gallery
             </a>
@@ -71,25 +71,25 @@ const Footer = () => {
               <div className="flex flex-row gap-5 sm:gap-0 sm:justify-between text-base sm:text-lg">
                 <a
                   href="#"
-                  className="hover:text-gray-400 text-2xl border border-[#635D37] rounded-full p-1"
+                  className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaInstagram />
                 </a>
                 <a
                   href="#"
-                  className="hover:text-gray-400 text-2xl border border-[#635D37] rounded-full p-1"
+                  className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaLinkedin />
                 </a>
                 <a
                   href="#"
-                  className="hover:text-gray-400 text-2xl border border-[#635D37] rounded-full p-1"
+                  className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaGithub />
                 </a>
                 <a
                   href="#"
-                  className="hover:text-gray-400 text-2xl border border-[#635D37] rounded-full p-1"
+                  className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaFacebook />
                 </a>
@@ -113,7 +113,7 @@ const Footer = () => {
       </div>
 
       {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-bold">SYNCHRONIZE'25</h1> */}
-      <div className="w-full flex justify-center items-center border-t border-gray-700">
+      <div className="w-full flex justify-center items-center border-t border-gray-700 px-3 sm:px-0">
         <div className="text-[#E3E0D1] flex flex-row justify-evenly w-full text-[calc(100vw/12)] font-black leading-none pb-3 pt-2 sm:pt-0">
           <span className="m-0 p-0">S</span>
           <span className="m-0 p-0">Y</span>

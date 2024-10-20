@@ -7,14 +7,18 @@ export default {
     extend: {
       colors: {
         primary: {
-          400: "#FFF0D1"
+          400: "#FFF0D1",
+          900: "#262626"
         },
         dark: {
           400: "#141414"
-        }
+        },
+        input: "#635D37",
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
 
