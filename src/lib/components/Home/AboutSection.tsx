@@ -8,12 +8,12 @@ function AboutSection({ className }: AboutSectionProps) {
   return (
     <div
       className={cn(
-        "flex flex-col font-[AdieuRegular] w-full px-20 bg-dark-400",
+        "flex flex-col font-[AdieuRegular] w-full px-3 sm:px-20 bg-dark-400",
         className
       )}
     >
       <div className="flex flex-col w-fit">
-        <span className="uppercase whitespace-nowrap text-primary-400 text-3xl w-fit mb-1">
+        <span className="uppercase whitespace-nowrap text-primary-400 text-base sm:text-xl md:text-3xl w-fit mb-1">
           About Synchronize
         </span>
         <div className="w-[75%] h-[1px] self-end bg-primary-400"></div>
