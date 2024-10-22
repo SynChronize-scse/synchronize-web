@@ -33,7 +33,7 @@ const LandingPart = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center sm:mt-40 py-24 sm:py-0">
+          <div className="flex flex-col items-center sm:mt-40 py-24 sm:py-0 relative z-20">
             <button className="border border-primary-400 text-sm rounded-full px-3 py-2">
               Register Now
             </button>
