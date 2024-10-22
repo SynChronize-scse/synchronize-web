@@ -5,7 +5,7 @@ import {
   FaFacebook,
   FaEnvelope,
 } from "react-icons/fa";
-import mapImage from "../assets/xim_map.png";
+import mapImage from "../../assets/xim_map.png";
 
 const Footer = () => {
   const handleMapClick = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-dark-400 text-primary-400 font-[AdieuRegular] relative z-[1]">
+    <footer className="w-full bg-dark-400 text-primary-400 font-[AdieuRegular] relative z-[1] pt-10">
       <div className="relative w-full flex flex-col items-center justify-center">
         <h2 className="text-xl sm:text-2xl lg:text-3xl self-start pl-3 sm:pl-5">
           How To Find Us

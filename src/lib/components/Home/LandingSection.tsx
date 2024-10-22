@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { HTMLAttributes, useEffect, useState } from "react";
 import Particles, {
   initParticlesEngine,
   IParticlesProps,
@@ -6,9 +6,15 @@ import Particles, {
 import type { Container, Engine } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
 import LandingPart from "./LandingPart";
-import StackedCards from "./StackedCards";
+import { ShootingStars } from "../ShootingStars/ShootingStars";
+import Navbar from "../Navbar";
+import { cn } from "$lib/utils";
 
-const LandingSection = () => {
+interface LandingSectionProps {
+  className?: HTMLAttributes<HTMLDivElement>["className"];
+}
+
+const LandingSection = ({ className }: LandingSectionProps) => {
   const [init, setInit] = useState<boolean>(false);
 
   useEffect(() => {
@@ -20,7 +26,7 @@ const LandingSection = () => {
   }, []);
 
   const particlesLoaded = async (container?: Container) => {
-    console.log(container);
+    // console.log(container);
   };
 
   const options: IParticlesProps["options"] = {
@@ -86,7 +92,7 @@ const LandingSection = () => {
           mode: "parallax",
           parallax: {
             enable: true,
-            force: 50,
+            force: 40,
             smooth: 10,
           },
         },
@@ -195,20 +201,23 @@ const LandingSection = () => {
   };
 
   return (
-    <div id="bg" className="w-full h-full relative">
+    <div id="bg" className={cn("w-full h-full relative", className)}>
       {init && (
         <Particles
           id="tsparticles"
-          className="absolute top-0 bottom-0 h-full w-full z-0"
+          className="absolute top-0 bottom-0 h-full w-full z-0 bg-[#111111]"
           particlesLoaded={particlesLoaded}
           options={options}
         />
       )}
 
-      <main className="relative z-10 w-full h-full font-[AdieuRegular] text-primary-400">
+      <ShootingStars />
+
+      <main className="relative z-10 w-full font-[AdieuRegular] text-primary-400">
         <LandingPart />
-        <StackedCards />
       </main>
+
+      <Navbar />
     </div>
   );
 };

@@ -14,10 +14,26 @@ export default {
           400: "#141414"
         },
         input: "#635D37",
+      },
+      animation: {
+        bounceMore: 'bounceMore 1.5s infinite',
+      },
+      keyframes: {
+        bounceMore:  {
+          '0%, 100%':{
+            transform: 'translateY(-25%)',
+            'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            transform: 'translateY(100%)',
+            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
+          }
+        }
       }
     },
   },
   plugins: [
+    // eslint-disable-next-line no-undef
     require('tailwind-scrollbar'),
   ],
 }
