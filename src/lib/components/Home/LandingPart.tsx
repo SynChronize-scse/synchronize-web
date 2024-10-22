@@ -16,7 +16,7 @@ const LandingPart = () => {
           SYNCHRONIZE'25
         </h3> */}
           <div className="flex flex-col">
-            <h3 className=" sm:mt-10 z-10 font-bold leading-none tracking-wider h-[clamp(2rem,9vi+-0.6rem,7rem)]  text-[clamp(2rem,9vi+-0.6rem,7rem)]">
+            <h3 className="sm:mt-10 z-10 font-bold leading-none tracking-wider h-[clamp(2rem,9vi+-0.6rem,7rem)]  text-[clamp(1.9rem,9vi+-0.6rem,7rem)]">
               SYNCHRONIZE'25
             </h3>
 
@@ -27,7 +27,7 @@ const LandingPart = () => {
               />
 
               <div className="border-t border-primary-400 flex-1"></div>
-              <span className="ml-3 uppercase text-primary-400 text-lg sm:text-xl whitespace-nowrap">
+              <span className="ml-3 uppercase text-primary-400 text-base sm:text-xl whitespace-nowrap">
                 ENTER THE COSMOS
               </span>
             </div>
@@ -47,7 +47,7 @@ const LandingPart = () => {
           </div>
         </div>
 
-        <Globe className="w-[450px] sm:w-[500px] overflow-hidden aspect-square absolute -right-52 sm:-right-0 top-32 sm:top-20" />
+        <Globe className="w-[450px] sm:w-[500px] overflow-hidden aspect-square absolute -right-52 sm:-right-48 top-32 sm:top-32" />
 
         <img
           src="/images/saturn.png"

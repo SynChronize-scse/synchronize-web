@@ -40,7 +40,7 @@ const LandingSection = ({ className }: LandingSectionProps) => {
     },
     particles: {
       number: {
-        value: 50,
+        value: window?.innerWidth > 768 ? 50 : 70,
         density: {
           enable: true,
           height: 1000,
@@ -120,34 +120,34 @@ const LandingSection = ({ className }: LandingSectionProps) => {
           width: 100,
           height: 0,
         },
-        particles: {
-          shape: {
-            type: "circle",
-          },
-          size: {
-            value: 2,
-          },
-          move: {
-            speed: 15,
-            outModes: {
-              default: "destroy",
-              top: "none",
-            },
-            straight: true,
-            direction: "bottom-right",
-          },
-          life: {
-            count: 1,
-          },
-          trail: {
-            enable: true,
-            fill: { color: "#fff" },
-            length: 20,
-          },
-          rotate: {
-            value: 0,
-          },
-        },
+        // particles: {
+        //   shape: {
+        //     type: "circle",
+        //   },
+        //   size: {
+        //     value: 2,
+        //   },
+        //   move: {
+        //     speed: 15,
+        //     outModes: {
+        //       default: "destroy",
+        //       top: "none",
+        //     },
+        //     straight: true,
+        //     direction: "bottom-right",
+        //   },
+        //   life: {
+        //     count: 1,
+        //   },
+        //   trail: {
+        //     enable: true,
+        //     fill: { color: "#fff" },
+        //     length: 20,
+        //   },
+        //   rotate: {
+        //     value: 0,
+        //   },
+        // },
       },
       // {
       //   life: {
@@ -211,7 +211,7 @@ const LandingSection = ({ className }: LandingSectionProps) => {
         />
       )}
 
-      <ShootingStars />
+      <ShootingStars maxSpeed={5} minSpeed={1} />
 
       <main className="relative z-10 w-full font-[AdieuRegular] text-primary-400">
         <LandingPart />
