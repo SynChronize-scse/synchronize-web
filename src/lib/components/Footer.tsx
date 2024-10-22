@@ -43,7 +43,7 @@ const Footer = () => {
             <a href="#" className="hover:text-gray-400">
               Team
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="/memories" className="hover:text-gray-400">
               Memories
             </a>
             <a href="#" className="hover:text-gray-400">
