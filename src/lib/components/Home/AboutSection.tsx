@@ -6,24 +6,21 @@ interface AboutSectionProps {
 }
 
 const AboutSection = ({ className }: AboutSectionProps) => {
-  const wordRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const letterRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
-  const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, earum, id eligendi autem beatae, voluptates ducimus nam incidunt veniam nostrum perspiciatis! Modi facilis corporis at, dignissimos in totam expedita impedit veritatis laborum ex doloribus maiores dolorem. Expedita, eum voluptates quos error reiciendis quas accusamus earum harum minus omnis repudiandae accusantium.";
-  const words = text.split(/(\s+)/).filter(word => word.trim().length > 0);
+  const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, earum, id eligendi autem beatae, voluptates ducimus nam incidunt veniam nostrum perspiciatis! Modi facilis corporis at, dignissimos in totam expedita impedit veritatis laborum ex doloribus maiores dolorem. Expedita, eum voluptates quos error reiciendis quas accusamus earum harum minus omnis repudiandae accusantium.;"
+  
+  const letters = Array.from(text);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Add delay based on word index
-            const wordIndex = wordRefs.current.findIndex(ref => ref === entry.target);
-            setTimeout(() => {
-              entry.target.classList.add('text-bright');
-              entry.target.classList.remove('text-dim');
-            }, wordIndex * 100); // 100ms delay between each word
+            entry.target.classList.add('text-bright', 'animate-fadeIn');
+            entry.target.classList.remove('text-dim');
           } else {
-            entry.target.classList.remove('text-bright');
+            entry.target.classList.remove('text-bright', 'animate-fadeIn');
             entry.target.classList.add('text-dim');
           }
         });
@@ -34,7 +31,7 @@ const AboutSection = ({ className }: AboutSectionProps) => {
       }
     );
 
-    wordRefs.current.forEach((ref) => {
+    letterRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
@@ -72,13 +69,16 @@ const AboutSection = ({ className }: AboutSectionProps) => {
         </div>
 
         <div className="flex-1 flex flex-wrap leading-relaxed">
-          {words.map((word, index) => (
+          {letters.map((letter, index) => (
             <span
               key={index}
-              ref={el => wordRefs.current[index] = el}
-              className="text-dim transition-colors duration-700 text-base sm:text-lg md:text-xl inline-block mr-1 opacity-70 hover:opacity-100"
+              ref={el => letterRefs.current[index] = el}
+              className="text-dim transition-colors duration-300 text-base sm:text-lg md:text-xl inline" // Use inline instead of inline-block
+              style={{
+                animationDelay: `${index * 0.4}s`, // Slight delay for each letter
+              }}
             >
-              {word}
+              {letter === ' ' ? '\u00A0' : letter} 
             </span>
           ))}
         </div>
