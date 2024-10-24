@@ -23,17 +23,17 @@ export default {
         'custom-cursor': 'url("/images/cursor.png"), auto',
       },
       animation: {
-        bounceMore: 'bounceMore 1.5s infinite',
+        fadeInSlide: 'fadeInSlide 0.5s ease-out forwards', // New animation
       },
       keyframes: {
-        bounceMore:  {
-          '0%, 100%':{
-            transform: 'translateY(-25%)',
-            'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)',
+        fadeInSlide: {  // Keyframes for fading in and sliding up
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(30px)',  // Start below
           },
-          '50%': {
-            transform: 'translateY(100%)',
-            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)',
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',  // End in place
           }
         }
       }
@@ -44,4 +44,3 @@ export default {
     require('tailwind-scrollbar'),
   ],
 }
-
