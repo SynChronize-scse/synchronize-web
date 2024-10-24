@@ -15,6 +15,13 @@ export default {
         },
         input: "#635D37",
       },
+      textColor: {
+        bright: "#FFF0D1",
+        dim: "#262626", 
+      },
+      cursor: {
+        'custom-cursor': 'url("/images/cursor.png"), auto',
+      },
       animation: {
         bounceMore: 'bounceMore 1.5s infinite',
       },
