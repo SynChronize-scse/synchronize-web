@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { cn } from "$lib/utils";
 
 interface AboutSectionProps {
@@ -6,18 +6,19 @@ interface AboutSectionProps {
 }
 
 const AboutSection = ({ className }: AboutSectionProps) => {
-  const letterRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const wordRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const [cursorYPosition, setCursorYPosition] = useState(0); // State to track cursor Y position
 
-  const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, earum, id eligendi autem beatae, voluptates ducimus nam incidunt veniam nostrum perspiciatis! Modi facilis corporis at, dignissimos in totam expedita impedit veritatis laborum ex doloribus maiores dolorem. Expedita, eum voluptates quos error reiciendis quas accusamus earum harum minus omnis repudiandae accusantium.;"
-  
-  const letters = Array.from(text);
+  const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, earum, id eligendi autem beatae, voluptates ducimus nam incidunt veniam nostrum perspiciatis! Modi facilis corporis at, dignissimos in totam expedita impedit veritatis laborum ex doloribus maiores dolorem. Expedita, eum voluptates quos error reiciendis quas accusamus earum harum minus omnis repudiandae accusantium.";
+
+  const words = text.split(' '); // Splitting the text by words
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('text-bright', 'animate-fadeIn');
+            entry.target.classList.add('text-bright', 'animate-fadeIn'); // Add subtle fade-in effect
             entry.target.classList.remove('text-dim');
           } else {
             entry.target.classList.remove('text-bright', 'animate-fadeIn');
@@ -26,22 +27,35 @@ const AboutSection = ({ className }: AboutSectionProps) => {
         });
       },
       {
-        threshold: 0.8,
-        rootMargin: '-20px'
+        threshold: 0.1, // Low threshold to detect words entering view
+        rootMargin: '-20px',
       }
     );
 
-    letterRefs.current.forEach((ref) => {
+    wordRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => observer.disconnect();
   }, []);
 
+  // Listen to the scroll event to adjust cursor position
+  const handleScroll = () => {
+    const scrollY = window.scrollY; // Get current scroll position
+    setCursorYPosition(scrollY * 0.5); // Adjust multiplier for how fast/slow the cursor moves relative to scroll
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div
       className={cn(
-        "flex flex-col font-[AdieuRegular] w-full px-3 sm:px-20 bg-dark-400 min-h-screen",
+        "flex flex-col font-[AdieuRegular] w-full px-3 sm:px-20 bg-dark-400 min-h-screen relative",
         className
       )}
       style={{ cursor: 'url("/images/cursor.png"), auto' }}
@@ -60,7 +74,11 @@ const AboutSection = ({ className }: AboutSectionProps) => {
           <div className="aspect-square bg-dark-400 border border-gray-800"></div>
         </div>
 
-        <div className="w-16 h-16 -mt-4 md:mt-0 md:-ml-8">
+        {/* Cursor Image - Moves with scrolling */}
+        <div 
+          className="w-20 h-20 absolute" 
+          style={{ top: `${cursorYPosition}px`, left: '10px' }} // Position dynamically based on scroll
+        >
           <img 
             src="/images/cursor.png" 
             alt="Cursor" 
@@ -69,16 +87,16 @@ const AboutSection = ({ className }: AboutSectionProps) => {
         </div>
 
         <div className="flex-1 flex flex-wrap leading-relaxed">
-          {letters.map((letter, index) => (
+          {words.map((word, index) => (
             <span
               key={index}
-              ref={el => letterRefs.current[index] = el}
-              className="text-dim transition-colors duration-300 text-base sm:text-lg md:text-xl inline" // Use inline instead of inline-block
+              ref={el => wordRefs.current[index] = el}
+              className="text-dim transition-colors duration-300 text-base sm:text-lg md:text-xl inline-block" // Use inline-block to keep word spacing
               style={{
-                animationDelay: `${index * 0.4}s`, // Slight delay for each letter
+                animationDelay: `${index * 0.2}s`, // Slightly staggered delay for each word
               }}
             >
-              {letter === ' ' ? '\u00A0' : letter} 
+              {word}&nbsp; {/* Ensure spacing between words */}
             </span>
           ))}
         </div>
