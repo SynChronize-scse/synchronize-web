@@ -65,7 +65,7 @@ const AboutSection = ({ className }: AboutSectionProps) => {
             ref={sectionRef}
             className="flex flex-col gap-4 font-[AdieuLight]"
           >
-            {paragraphs.map((paragraph, pIndex) => (
+            {paragraphs.map((_paragraph, pIndex) => (
               <p key={pIndex} className="leading-relaxed indent-10 md:indent-0">
                 {words[pIndex].map((word, wIndex) => (
                   <span
