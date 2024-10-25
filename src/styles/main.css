@@ -13,6 +13,12 @@
 :root {
   --black: #000;
   --white: #fff;
+  --primary-400: #FFF0D1;
+}
+
+::selection {
+  background-color: var(--primary-400);
+  color: var(--black);
 }
 
 body {
@@ -54,4 +60,9 @@ body {
 @font-face {
   font-family: 'AdieuRegular';
   src: url('/fonts/adieu/regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AdieuLight';
+  src: url('/fonts/adieu/light.otf') format('opentype');
 }

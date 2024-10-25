@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import { cn } from "$lib/utils";
 
 interface AboutSectionProps {
@@ -6,36 +6,30 @@ interface AboutSectionProps {
 }
 
 const AboutSection = ({ className }: AboutSectionProps) => {
-  const letterRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
-  const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, earum, id eligendi autem beatae, voluptates ducimus nam incidunt veniam nostrum perspiciatis! Modi facilis corporis at, dignissimos in totam expedita impedit veritatis laborum ex doloribus maiores dolorem. Expedita, eum voluptates quos error reiciendis quas accusamus earum harum minus omnis repudiandae accusantium.;"
-  
-  const letters = Array.from(text);
+  const text =
+    "SynChronize is the university's technical fest with a multitude of events planned over a span of three days, wherein students from our university, as well as from other institutes, may take part in events like coding contests, technical workshops, guest lectures, and more. With the series of planned events and curriculum, the organizing team expects a hearty participation of over 3k students, and aims for this to be a big success as well as a fruitful experience for all the participants.";
+
+  const paragraphs = [text];
+  const words = paragraphs.map((paragraph) => paragraph.split(" "));
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('text-bright', 'animate-fadeIn');
-            entry.target.classList.remove('text-dim');
-          } else {
-            entry.target.classList.remove('text-bright', 'animate-fadeIn');
-            entry.target.classList.add('text-dim');
-          }
-        });
-      },
-      {
-        threshold: 0.8,
-        rootMargin: '-20px'
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const { top, height } = sectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const scrollPercentage = Math.max(
+          0,
+          Math.min(1, (windowHeight - top) / (windowHeight + height))
+        );
+        setScrollPosition(scrollPercentage);
       }
-    );
+    };
 
-    letterRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => observer.disconnect();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -53,39 +47,57 @@ const AboutSection = ({ className }: AboutSectionProps) => {
         <div className="w-[75%] h-[1px] self-end bg-primary-400"></div>
       </div>
 
-      {/* Content Section */}
-      <div className="flex flex-col md:flex-row gap-8 mt-16">
-        {/* Left Image Section */}
-        <div className="w-full md:w-[35%] relative">
-          <div className="aspect-square bg-dark-400 border border-gray-800"></div>
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8 mt-16">
+        <div className="w-full relative aspect-square bg-dark-400 border border-gray-800">
+          <div className=""></div>
         </div>
 
-        <div className="w-16 h-16 -mt-4 md:mt-0 md:-ml-8">
-          <img 
-            src="/images/cursor.png" 
-            alt="Cursor" 
-            className="w-full h-full object-contain"
-          />
-        </div>
+        <div className="flex flex-col md:flex-row gap-2">
+          <div className="relative">
+            <img
+              src="/images/cursor1.png"
+              alt="Cursor"
+              className="relative top-8 left-3 md:sticky md:top-0 w-6 md:min-w-12 object-contain"
+            />
+          </div>
 
-        <div className="flex-1 flex flex-wrap leading-relaxed">
-          {letters.map((letter, index) => (
-            <span
-              key={index}
-              ref={el => letterRefs.current[index] = el}
-              className="text-dim transition-colors duration-300 text-base sm:text-lg md:text-xl inline" // Use inline instead of inline-block
-              style={{
-                animationDelay: `${index * 0.4}s`, // Slight delay for each letter
-              }}
-            >
-              {letter === ' ' ? '\u00A0' : letter} 
-            </span>
-          ))}
+          <div
+            ref={sectionRef}
+            className="flex flex-col gap-4 font-[AdieuLight]"
+          >
+            {paragraphs.map((paragraph, pIndex) => (
+              <p key={pIndex} className="leading-relaxed indent-10 md:indent-0">
+                {words[pIndex].map((word, wIndex) => (
+                  <span
+                    key={wIndex}
+                    className="indent-1 inline-block mr-1 tracking-wide"
+                  >
+                    {word.split("").map((letter, lIndex) => {
+                      const overallIndex = pIndex * 5 + wIndex * 5 + lIndex;
+                      const isHighlighted =
+                        scrollPosition > overallIndex / (text.length * 1);
+                      return (
+                        <span
+                          key={lIndex}
+                          className={cn(
+                            "transition-colors duration-300 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl",
+                            isHighlighted ? "text-bright" : "text-dim"
+                          )}
+                          style={{
+                            animationDelay: `${overallIndex * 0.01}s`,
+                          }}
+                        >
+                          {letter}
+                        </span>
+                      );
+                    })}
+                  </span>
+                ))}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
-
-      {/* Extra space for scrolling */}
-      <div className="h-[15vh]"></div>
     </div>
   );
 };
