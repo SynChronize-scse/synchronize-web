@@ -55,7 +55,7 @@ const AboutSection = ({ className }: AboutSectionProps) => {
         <div className="flex flex-col md:flex-row gap-2">
           <div className="relative">
             <img
-              src="/images/cursor1.png"
+              src="/images/cursor.png"
               alt="Cursor"
               className="relative top-8 left-3 md:sticky md:top-0 w-6 md:min-w-12 object-contain"
             />
