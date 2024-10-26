@@ -55,7 +55,7 @@ const AboutSection = ({ className }: AboutSectionProps) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8 mt-16">
-        <div className="relative aspect-square bg-dark-400 border border-gray-800 h-[95%] w-[85%] sm:w-full">
+        <div className="relative aspect-square bg-dark-400 border border-gray-800 w-full md:h-[95%] md:w-[85%] ">
           <div className=""></div>
         </div>
 
@@ -66,8 +66,10 @@ const AboutSection = ({ className }: AboutSectionProps) => {
               alt="Cursor"
               className="relative top-8 left-3 md:sticky md:top-0 w-6 md:min-w-12 object-contain"
               style={{
-                transform: `translateY(${cursorPosition}px)`,
-                transition: 'transform 0.1s ease-out'
+                transform: `translateY(${
+                  window.innerWidth > 768 ? cursorPosition : 0
+                }px)`,
+                transition: "transform 0.1s ease-out",
               }}
             />
           </div>
