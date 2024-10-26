@@ -40,11 +40,15 @@ const LandingSection = ({ className }: LandingSectionProps) => {
     },
     particles: {
       number: {
-        value: window?.innerWidth > 768 ? 30 : 50,
-        density: {
-          enable: true,
-          height: 1000,
-          width: 1000,
+        value: window?.innerWidth > 768 ? 90 : 20,
+        // density: {
+        //   enable: true,
+        //   height: 1000,
+        //   width: 1000,
+        // },
+        limit: {
+          mode: "wait",
+          value: window?.innerWidth > 768 ? 200 : 50,
         },
       },
       color: {
@@ -71,7 +75,7 @@ const LandingSection = ({ className }: LandingSectionProps) => {
       },
       move: {
         enable: true,
-        speed: 1,
+        speed: 0.5,
         direction: "none",
         random: true,
         straight: false,
