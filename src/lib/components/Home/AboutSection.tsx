@@ -8,6 +8,7 @@ interface AboutSectionProps {
 const AboutSection = ({ className }: AboutSectionProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [cursorPosition, setCursorPosition] = useState(0);
 
   const text =
     "SynChronize is the university's technical fest with a multitude of events planned over a span of three days, wherein students from our university, as well as from other institutes, may take part in events like coding contests, technical workshops, guest lectures, and more. With the series of planned events and curriculum, the organizing team expects a hearty participation of over 3k students, and aims for this to be a big success as well as a fruitful experience for all the participants.";
@@ -25,6 +26,12 @@ const AboutSection = ({ className }: AboutSectionProps) => {
           Math.min(1, (windowHeight - top) / (windowHeight + height))
         );
         setScrollPosition(scrollPercentage);
+
+        // Calculate cursor position based on scroll
+        const textHeight = sectionRef.current.clientHeight;
+        const maxCursorMove = textHeight - 48; // 48px is approximate cursor height
+        const newCursorPosition = scrollPercentage * maxCursorMove;
+        setCursorPosition(newCursorPosition);
       }
     };
 
@@ -48,16 +55,20 @@ const AboutSection = ({ className }: AboutSectionProps) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8 mt-16">
-        <div className="w-full relative aspect-square bg-dark-400 border border-gray-800">
+        <div className="relative aspect-square bg-dark-400 border border-gray-800 h-[95%] w-[85%] sm:w-full">
           <div className=""></div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-2">
+        <div className="flex flex-col md:flex-row gap-1">
           <div className="relative">
             <img
               src="/images/cursor.png"
               alt="Cursor"
               className="relative top-8 left-3 md:sticky md:top-0 w-6 md:min-w-12 object-contain"
+              style={{
+                transform: `translateY(${cursorPosition}px)`,
+                transition: 'transform 0.1s ease-out'
+              }}
             />
           </div>
 
