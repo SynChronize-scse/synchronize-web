@@ -16,9 +16,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-dark-400 text-primary-400 font-[AdieuRegular] relative z-[1] pt-10">
+    <footer className="w-full bg-dark-400 text-primary-400 font-[AdieuRegular] relative z-[1] pt-16">
       <div className="relative w-full flex flex-col items-center justify-center">
-        <h2 className="text-xl sm:text-2xl lg:text-3xl self-start pl-3 sm:pl-5">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl pl-3 sm:pl-5">
           How To Find Us
         </h2>
         <div
