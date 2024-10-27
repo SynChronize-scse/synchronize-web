@@ -7,8 +7,8 @@ import type { Container, Engine } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
 import LandingPart from "./LandingPart";
 import { ShootingStars } from "../ShootingStars/ShootingStars";
-import Navbar from "../Navbar";
 import { cn } from "$lib/utils";
+import Navbar from "../Navbar/Navbar";
 
 interface LandingSectionProps {
   className?: HTMLAttributes<HTMLDivElement>["className"];

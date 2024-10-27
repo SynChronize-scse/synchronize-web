@@ -1,33 +1,7 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body{
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-}
-
-body{
-    overflow-x: hidden;
-}
-
-
-#main{
-    height: 100vh;
-    width: 100%;
-    /* background-color: blueviolet; */
-    /* background: url(./assets/LastLand.gif) center no-repeat fixed; */
-    /* background-size: cover; */
-}
-
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 50px;
     color: white;
 }
 
@@ -36,11 +10,14 @@ nav h2{
     font-weight: 500;
 }
 
-nav i, nav h5{
+nav h5{
     font-size: 26px;
     font-weight: 500;
     cursor: pointer;
-
+    position: absolute;
+    right: 60px;
+    top: 65px;
+    z-index: 100;
 }
 
 
@@ -51,7 +28,8 @@ nav i, nav h5{
     position: absolute;
     background-color: rgba(10, 10, 10, 0.404);
     color: #fff1d0;
-    top: -100%;
+    top: -100vh;
+    z-index: 1000;
     right: 0%;
     /* filter: blur(30px); */
     backdrop-filter: blur(10px);
@@ -75,11 +53,12 @@ nav i, nav h5{
     border-bottom: 1px solid white;
 }
 
-#full i, #full h5{
+#full h5{
     cursor: pointer;
     top: 5%;
     right: 4%;
     position: absolute;
+    z-index: 1500;
     /*border: 1px solid white;*/
     color: #fff;
     font-weight: 500;
@@ -116,15 +95,17 @@ nav i, nav h5{
         font-size: 20px;
         /* border: 1px solid pink; */
         margin-right: 0;
+        top: 5.5%;
+        right: 9%;
     }
 
     #full h5{
-        
         margin-top: 0;
         top: 4%;
         right: 4%;
         position: absolute;
         font-size: 20px;
+        z-index: 1500;
     }
 
 }
