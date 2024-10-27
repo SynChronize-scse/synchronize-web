@@ -63,7 +63,7 @@ const Home = () => {
       title: "Guest Lectures",
       description:
         "These would include informational and motivational talks from eminent personalities from the field of computer science. Guest lecture is expected to be insightful and a great....",
-      src: "https://images.unsplash.com/photo-1643508522322-5bbc32b80dd0",
+      src: "https://images.unsplash.com/flagged/photo-1557896279-080cb03b9ca6",
       color: "#31511E",
     },
   ];

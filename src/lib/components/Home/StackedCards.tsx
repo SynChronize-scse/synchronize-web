@@ -1,7 +1,7 @@
 import React, { HTMLAttributes, useRef } from "react";
 import { useScroll } from "framer-motion";
 import Card from "./Card";
-import { cn } from "$lib/utils";
+import { cn, isMobileDevice } from "$lib/utils";
 
 interface StackedCardsProps {
   items: {
@@ -24,7 +24,9 @@ const StackedCards: React.FC<StackedCardsProps> = ({ items, className }) => {
   return (
     <main ref={container} className={cn("relative px-3 sm:px-20", className)}>
       {items?.map((project, i) => {
-        const targetScale = 1 - (items?.length - i) * 0.05;
+        const targetScale = isMobileDevice()
+          ? 1
+          : 1 - (items?.length - i) * 0.05;
         return (
           <Card
             key={`p_${i}`}
