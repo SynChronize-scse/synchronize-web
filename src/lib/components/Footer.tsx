@@ -71,24 +71,28 @@ const Footer = () => {
               <div className="flex flex-row gap-5 sm:gap-0 sm:justify-between text-base sm:text-lg">
                 <a
                   href="#"
+                  aria-label="Instagram page link"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaInstagram />
                 </a>
                 <a
                   href="#"
+                  aria-label="LinkedIn page link"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaLinkedin />
                 </a>
                 <a
                   href="#"
+                  aria-label="GitHub page link"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaGithub />
                 </a>
                 <a
                   href="#"
+                  aria-label="Facebook page link"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaFacebook />

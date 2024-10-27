@@ -10,6 +10,7 @@ const LandingPart = () => {
             <div className="relative">
               <img
                 src="/images/moons.png"
+                alt="decoration moons image"
                 className="rotate-90 h-[100px] sm:h-[120px] opacity-50"
               />
             </div>
@@ -25,7 +26,8 @@ const LandingPart = () => {
               <div className="relative z-10 flex flex-row items-center justify-center mt-4 w-full max-w-[90%] self-end">
                 <img
                   src="/images/star.png"
-                  className="w-10 h-10 sm:w-20 sm:h-20"
+                  alt="decoration star image"
+                  className="w-10  sm:w-20 "
                 />
 
                 <div className="border-t border-primary-400 flex-1"></div>
@@ -58,12 +60,14 @@ const LandingPart = () => {
 
         <img
           src="/images/saturn.png"
-          className="hidden sm:block w-[250px] sm:w-[400px] z-[10000] overflow-visible aspect-square rotate-[70deg] absolute -left-24 -bottom-24 sm:-bottom-36"
+          alt="planet saturn"
+          className="hidden sm:block w-[250px] sm:w-[400px] z-[10000]  aspect-square rotate-[70deg] absolute -left-24 -bottom-24 sm:-bottom-24"
         />
       </div>
       <img
         src="/images/saturn.png"
-        className="w-[250px] sm:w-[400px] z-[10000] overflow-visible aspect-square rotate-[70deg] absolute -left-24 -bottom-24 sm:-bottom-36"
+        alt="planet saturn"
+        className="w-[250px] sm:w-[400px] z-[10000]  aspect-square rotate-[70deg] absolute -left-24 -bottom-24 sm:-bottom-24"
       />
     </>
   );
