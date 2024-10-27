@@ -46,28 +46,21 @@ const Home = () => {
       path: "/events/technical",
     },
     {
-      title: "Fun Events",
+      title: "Non-Technical Events",
       description:
         "We at SynChronize are bringing you some lighthearted fun events to dispel the stereotype of a technical festival....",
       src: "https://images.unsplash.com/photo-1643508522322-5bbc32b80dd0",
       color: "#977F6D",
     },
+    // {
+    //   title: "Cultural Events",
+    //   description:
+    //     "This is an opportunity of a lifetime to meet and enjoy the performances and Open Mics of some of the best artists among the participants to get you moving to their music and dance...",
+    //   src: "https://images.unsplash.com/photo-1643508522322-5bbc32b80dd0",
+    //   color: "#C2491D",
+    // },
     {
-      title: "Cultural Events",
-      description:
-        "This is an opportunity of a lifetime to meet and enjoy the performances and Open Mics of some of the best artists among the participants to get you moving to their music and dance...",
-      src: "https://images.unsplash.com/photo-1643508522322-5bbc32b80dd0",
-      color: "#C2491D",
-    },
-    {
-      title: "Tech Tank",
-      description:
-        "These effectively link the audience and unite those who share similar interests. It is a setting where individuals may express their views and grow as individuals. It offers fantastic networking chances...",
-      src: "https://images.unsplash.com/photo-1643508522322-5bbc32b80dd0",
-      color: "#977F6D",
-    },
-    {
-      title: "Tech Tank",
+      title: "Guest Lectures",
       description:
         "These would include informational and motivational talks from eminent personalities from the field of computer science. Guest lecture is expected to be insightful and a great....",
       src: "https://images.unsplash.com/photo-1643508522322-5bbc32b80dd0",
