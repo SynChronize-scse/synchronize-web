@@ -22,9 +22,11 @@ const StackedCards: React.FC<StackedCardsProps> = ({ items, className }) => {
     offset: ["start start", "end end"],
   });
 
+  const useMotionOnMobile = true;
+
   return (
     <main ref={container} className={cn("relative px-3 sm:px-20", className)}>
-      {!isMobileDevice()
+      {useMotionOnMobile || !isMobileDevice()
         ? items?.map((project, i) => {
             const targetScale = 1 - (items?.length - i) * 0.05;
             return (
