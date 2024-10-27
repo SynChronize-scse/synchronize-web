@@ -11,10 +11,18 @@ import booth from "../assets/images/booth.webp";
 import dj from "../assets/images/dj.jpeg";
 import fifa from "../assets/images/fifa.webp";
 import hacks from "../assets/images/hacks.jpg";
+import { isMobileDevice } from "$lib/utils";
 
 interface PathPoint {
   x: number;
   y: number;
+}
+
+interface BlockConfig {
+  imageOffset: { top: number; left: number };
+  textOffset: { top: number; left: number };
+  textAbove: boolean;
+  zIndex: number;
 }
 
 const imageSources = [
@@ -55,6 +63,119 @@ const imageDescriptions = [
 
 const SCALE_FACTOR = 1.8;
 
+// Block configurations
+const blockConfigs: BlockConfig[] = [
+  // 1
+  {
+    imageOffset: { top: -15, left: -50 },
+    textOffset: { top: 10, left: 0 },
+    textAbove: false,
+    zIndex: 20,
+  },
+  // 2
+  {
+    imageOffset: { top: -20, left: 20 },
+    textOffset: { top: -10, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 3
+  {
+    imageOffset: { top: -50, left: -20 },
+    textOffset: { top: -10, left: -20 },
+    textAbove: false,
+    zIndex: 22,
+  },
+  // 4
+  {
+    imageOffset: { top: 50, left: 0 },
+    textOffset: { top: 70, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 5
+  {
+    imageOffset: { top: 0, left: 0 },
+    textOffset: { top: 0, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 6
+  {
+    imageOffset: { top: 0, left: 0 },
+    textOffset: { top: 0, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 7
+  {
+    imageOffset: { top: 0, left: 0 },
+    textOffset: { top: 0, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 8
+  {
+    imageOffset: { top: -30, left: 0 },
+    textOffset: { top: -30, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 9
+  {
+    imageOffset: { top: 0, left: 0 },
+    textOffset: { top: 0, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 10
+  {
+    imageOffset: { top: -20, left: 0 },
+    textOffset: { top: -20, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 11
+  {
+    imageOffset: { top: 50, left: 0 },
+    textOffset: { top: 50, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 12
+  {
+    imageOffset: { top: -25, left: 0 },
+    textOffset: { top: -25, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 13
+  {
+    imageOffset: { top: 0, left: 0 },
+    textOffset: { top: 0, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 14
+  {
+    imageOffset: { top: 0, left: 0 },
+    textOffset: { top: 0, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+  // 15
+  {
+    imageOffset: { top: 0, left: 0 },
+    textOffset: { top: 0, left: 0 },
+    textAbove: false,
+    zIndex: 21,
+  },
+];
+
+/* For adjusting intesection of blocks */
+// Don't know how this works but it works
+const MID_ADJUST = 400;
+
 export default function FlowingPathScroll() {
   const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -63,6 +184,50 @@ export default function FlowingPathScroll() {
   const [pathLength, setPathLength] = useState<number>(0);
   const [scrollProgress, setScrollProgress] = useState<number>(0);
   const [pathPoints, setPathPoints] = useState<PathPoint[]>([]);
+
+  const [blocksRendered, setBlocksRendered] = useState<boolean>(false);
+  const blockRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const blockIndex = parseInt(entry.target.id.split("-")[1]);
+
+          if (entry.isIntersecting) {
+            blockRefs.current[blockIndex]?.animate(
+              [{ opacity: 0 }, { opacity: 1 }],
+              {
+                duration: 300,
+                easing: "ease-in-out",
+                fill: "forwards",
+              }
+            );
+          } else {
+            blockRefs.current[blockIndex]?.animate(
+              [{ opacity: 1 }, { opacity: 0 }],
+              {
+                duration: 300,
+                easing: "ease-in-out",
+                fill: "forwards",
+              }
+            );
+          }
+        });
+      },
+      { threshold: isMobileDevice() ? 0.5 : 0 }
+    );
+
+    blockRefs.current.forEach((block) => {
+      if (block) {
+        observer.observe(block);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [blocksRendered]);
 
   useEffect(() => {
     if (pathRef.current) {
@@ -74,7 +239,10 @@ export default function FlowingPathScroll() {
       const points: PathPoint[] = [];
       for (let i = 2; i <= 15; i++) {
         const point = pathRef.current.getPointAtLength((i / 15) * length);
-        points.push({ x: point.x * SCALE_FACTOR, y: point.y * SCALE_FACTOR });
+        points.push({
+          x: point.x * SCALE_FACTOR,
+          y: point.y * SCALE_FACTOR,
+        });
       }
       setPathPoints(points);
     }
@@ -122,7 +290,9 @@ export default function FlowingPathScroll() {
         const progress = (scrollY / containerHeight) * 105;
         setScrollProgress(Math.min(progress, 105));
 
-        const horizontalScroll = Math.min(scrollY, svgWidth - viewportWidth);
+        const horizontalScroll =
+          Math.min(scrollY, svgWidth - viewportWidth) -
+          (scrollY < containerHeight / 2 ? MID_ADJUST : 0);
 
         contentRef.current.style.transform = `translateX(-${horizontalScroll}px)`;
       }
@@ -156,33 +326,53 @@ export default function FlowingPathScroll() {
               )
             );
             const imageIndex = index % imageSources.length;
+            const config = blockConfigs[index % blockConfigs.length];
 
             return (
               <div
+                ref={(el) => {
+                  blockRefs.current[index] = el;
+                  if (index === pathPoints.length - 1) {
+                    setBlocksRendered(true);
+                  }
+                }}
+                id={`block-${index}`}
                 key={`image-${index}`}
                 className="absolute transition-all duration-300"
                 style={{
-                  left: `${point.x}px`,
-                  top: `${point.y + 40 * SCALE_FACTOR}px`,
+                  left: `${point.x + config.imageOffset.left}px`,
+                  top: `${point.y + config.imageOffset.top}px`,
                   opacity: visibilityProgress,
                   transform: `translate(-50%, -50%) scale(${
                     1 + visibilityProgress
                   })`,
-                  zIndex: 20,
+                  zIndex: config.zIndex,
                 }}
               >
-                <div className="flex flex-col items-center">
-                  <div className="w-32 h-32 overflow-hidden rounded-lg bg-primary mb-2">
+                <div
+                  className={`flex flex-col items-center ${
+                    config.textAbove ? "flex-col-reverse" : ""
+                  }`}
+                >
+                  <div
+                    className="w-32 h-32 overflow-hidden rounded-lg bg-primary mb-2"
+                    style={{
+                      transform: `translate(${config.imageOffset.left}px, ${config.imageOffset.top}px)`,
+                    }}
+                  >
                     <img
                       src={imageSources[imageIndex]}
                       alt={`Path point ${index + 1}`}
-                      width={128}
-                      height={128}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="bg-black bg-opacity-75 p-1 rounded-md max-w-[128px]">
-                    <p className="text-white text-[8px] leading-tight">
+                  <div
+                    className="text-center bg-opacity-75 p-1 rounded-md max-w-48"
+                    style={{
+                      transform: `translate(${config.textOffset.left}px, ${config.textOffset.top}px)`,
+                    }}
+                  >
+                    <p className="text-white uppercase font-[AdieuRegular] text-xs leading-tight">
                       {imageDescriptions[imageIndex]
                         .split(" ")
                         .slice(0, 15)
