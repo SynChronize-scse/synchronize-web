@@ -7,7 +7,7 @@ import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(useGSAP);
 
 
-export default function App() {
+export default function Navbar() {
   const container = useRef();
   const menuBtn = useRef();
   const closeBtn = useRef();
