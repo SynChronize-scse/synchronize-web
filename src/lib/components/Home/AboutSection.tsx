@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "$lib/utils";
+import SectionHeader from "./SectionHeader";
 
 interface AboutSectionProps {
   className?: React.HTMLAttributes<HTMLDivElement>["className"];
@@ -47,12 +48,7 @@ const AboutSection = ({ className }: AboutSectionProps) => {
       )}
       style={{ cursor: 'url("/images/cursor.png"), auto' }}
     >
-      <div className="flex flex-col w-fit mt-8">
-        <span className="uppercase whitespace-nowrap text-primary-400 text-base sm:text-xl md:text-3xl w-fit mb-1">
-          About Synchronize'25
-        </span>
-        <div className="w-[75%] h-[1px] self-end bg-primary-400"></div>
-      </div>
+      <SectionHeader title="About SynChronize'25" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8 mt-16">
         <div className="relative aspect-square bg-dark-400 border border-gray-800 w-full md:h-[95%] md:w-[85%] ">

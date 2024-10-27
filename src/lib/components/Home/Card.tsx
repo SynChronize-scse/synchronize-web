@@ -1,6 +1,7 @@
 import { motion, MotionValue, useTransform } from "framer-motion";
 import { useNavigation } from "src/navigation/NavigationContext";
 import SlidingButton from "../Button/SlidingButton";
+import React from "react";
 
 interface CardProps {
   title: string;

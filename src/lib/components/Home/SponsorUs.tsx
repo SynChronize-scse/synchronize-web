@@ -1,3 +1,5 @@
+import SectionHeader from "./SectionHeader";
+
 function SponsorUs({ id = "synchrnonize-sponsor-us" }: { id?: string }) {
   return (
     <div
@@ -5,12 +7,7 @@ function SponsorUs({ id = "synchrnonize-sponsor-us" }: { id?: string }) {
       className="flex flex-col font-[AdieuRegular] w-full px-3 sm:px-20 bg-dark-400 gap-3 pt-2"
     >
       {/* Heading */}
-      <div className="flex flex-col w-fit">
-        <span className="uppercase whitespace-nowrap text-primary-400 text-base sm:text-xl md:text-3xl w-fit mb-1">
-          Sponsor Us
-        </span>
-        <div className="w-[75%] h-[1px] self-end bg-primary-400"></div>
-      </div>
+      <SectionHeader title="Sponsor Us" />
 
       {/* Description */}
       <p className="text-white font-[AdieuLight] text-sm sm:text-base">

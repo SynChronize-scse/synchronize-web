@@ -1,5 +1,6 @@
 import AboutSection from "$lib/components/Home/AboutSection";
 import LandingSection from "$lib/components/Home/LandingSection";
+import SectionHeader from "$lib/components/Home/SectionHeader";
 import SponsorUs from "$lib/components/Home/SponsorUs";
 import StackedCards from "$lib/components/Home/StackedCards";
 import { useEffect, useState } from "react";
@@ -98,12 +99,10 @@ const Home = () => {
         <AboutSection className="mt-24" />
 
         {/* Heading */}
-        <div className="flex flex-col w-fit self-start font-[AdieuRegular] px-3 sm:px-20">
-          <span className="uppercase whitespace-nowrap text-primary-400 text-base sm:text-xl md:text-3xl w-fit mb-1">
-            Events
-          </span>
-          <div className="w-[75%] h-[1px] self-end bg-primary-400"></div>
-        </div>
+        <SectionHeader
+          title="Events"
+          className="self-start font-[AdieuRegular] px-3 sm:px-20"
+        />
         <StackedCards items={events} className="font-[AdieuRegular]" />
 
         <SponsorUs id="sponsor-us" />
