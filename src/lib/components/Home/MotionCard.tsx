@@ -35,7 +35,7 @@ const MotionCard: React.FC<CardProps> = ({
   };
 
   return (
-    <div className="h-screen flex items-center justify-center sticky top-0 w-full">
+    <div className="h-screen max-h-[900px] flex items-center justify-center sticky top-0 w-full">
       <motion.div
         className={`flex flex-col-reverse sm:flex-row gap-5 sm:gap-0 relative h-[85vh] sm:h-[600px] overflow-hidden rounded-2xl p-0 sm:p-12 w-full`} // Increased width and height
         style={{

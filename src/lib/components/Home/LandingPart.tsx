@@ -4,7 +4,7 @@ import Globe from "../Globe";
 const LandingPart = () => {
   return (
     <>
-      <div className="w-full h-[90vh] sm:h-screen flex flex-col items-center relative overflow-hidden">
+      <div className="w-full h-[90vh] max-h-[900px] sm:h-screen flex flex-col items-center relative overflow-hidden">
         <div className="relative h-full flex flex-col justify-between pb-16 sm:pb-8 landing-parent items-center sm:text-base w-max ">
           <div className="flex flex-col gap-28 sm:gap-5 items-center">
             <div className="relative">

@@ -43,7 +43,7 @@ const AboutSection = ({ className }: AboutSectionProps) => {
   return (
     <div
       className={cn(
-        "flex flex-col font-[AdieuRegular] w-full px-3 sm:px-20 bg-dark-400 min-h-screen",
+        "flex flex-col font-[AdieuRegular] w-full px-3 sm:px-20 bg-dark-400 max-h-[900px]",
         className
       )}
       style={{ cursor: 'url("/images/cursor.png"), auto' }}

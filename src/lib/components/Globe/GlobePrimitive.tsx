@@ -165,7 +165,7 @@ export function GlobePrimitive({ globeConfig, data }: WorldProps) {
         .hexPolygonColor((_e) => {
           return defaultProps.polygonColor;
         });
-      startAnimation();
+      if (data) startAnimation();
     }
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [globeData]);
@@ -209,7 +209,7 @@ export function GlobePrimitive({ globeConfig, data }: WorldProps) {
   };
 
   useEffect(() => {
-    if (!globeRef.current || !globeData) return;
+    if (!globeRef.current || !globeData || !globeData.length) return;
 
     const interval = setInterval(() => {
       if (!globeRef.current || !globeData) return;
