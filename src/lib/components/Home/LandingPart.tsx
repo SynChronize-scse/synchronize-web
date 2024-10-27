@@ -1,3 +1,4 @@
+import SlidingButton from "../Button/SlidingButton";
 import Globe from "../Globe";
 
 const LandingPart = () => {
@@ -36,9 +37,13 @@ const LandingPart = () => {
           </div>
 
           <div className="flex flex-col items-center  relative z-20">
-            <button className="border border-primary-400 text-sm rounded-full px-3 py-2">
+            {/* <button className="border border-primary-400 text-sm rounded-full px-3 py-2">
               Register Now
-            </button>
+            </button> */}
+            <SlidingButton
+              primaryText="Register Now"
+              secondaryText="Register Now"
+            />
 
             <div className="mt-8 sm:mt-12 relative flex flex-col items-center">
               <div className="relative bg-[#303030] w-[2px] h-10 mb-2">
