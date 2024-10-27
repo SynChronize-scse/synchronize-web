@@ -18,12 +18,12 @@ export default function Navbar() {
       tl.to("#full", {
         top: 0,
         delay: 0.3,
-        duration: 0.59,
+        duration: 0.3,
       });
 
       tl.from("#full h4", {
         x: 150,
-        duration: 0.69,
+        duration: 0.2,
         stagger: 0.22,
         opacity: 0,
       });
