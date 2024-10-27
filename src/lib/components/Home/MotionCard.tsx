@@ -1,3 +1,4 @@
+import { motion, MotionValue, useTransform } from "framer-motion";
 import { useNavigation } from "src/navigation/NavigationContext";
 import SlidingButton from "../Button/SlidingButton";
 import React from "react";
@@ -7,18 +8,26 @@ interface CardProps {
   description: string;
   src: string;
   color: string;
-  i?: number;
+  i: number;
+  progress: MotionValue<number>;
+  range: number[];
+  targetScale: number;
   path?: string;
 }
 
-const Card: React.FC<CardProps> = ({
+const MotionCard: React.FC<CardProps> = ({
   title,
   description,
   src,
   color,
   i,
+  progress,
+  range,
+  targetScale,
   path,
 }) => {
+  const scale = useTransform(progress, range, [1, targetScale]);
+
   const { goto } = useNavigation();
 
   const handleClick = () => {
@@ -27,11 +36,12 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <div className="h-screen flex items-center justify-center sticky top-0 w-full">
-      <div
+      <motion.div
         className={`flex flex-col-reverse sm:flex-row gap-5 sm:gap-0 relative h-[85vh] sm:h-[600px] overflow-hidden rounded-2xl p-0 sm:p-12 w-full`} // Increased width and height
         style={{
           backgroundColor: color,
-          top: i ? `calc(-5vh + ${i * 25}px)` : "0",
+          scale,
+          top: `calc(-5vh + ${i * 25}px)`,
         }}
       >
         {/* Left Side: Title and Description */}
@@ -58,9 +68,9 @@ const Card: React.FC<CardProps> = ({
             className="object-cover w-full h-full"
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
 
-export default Card;
+export default MotionCard;
