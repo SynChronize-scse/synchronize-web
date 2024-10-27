@@ -38,9 +38,7 @@ const StackedCards: React.FC<StackedCardsProps> = ({ items, className }) => {
               />
             );
           })
-        : items?.map((project, i) => (
-            <Card key={`p_${i}`} i={i} {...project} />
-          ))}
+        : items?.map((project, i) => <Card key={`p_${i}`} {...project} />)}
     </main>
   );
 };

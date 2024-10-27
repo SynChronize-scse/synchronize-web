@@ -31,7 +31,7 @@ const Card: React.FC<CardProps> = ({
         className={`flex flex-col-reverse sm:flex-row gap-5 sm:gap-0 relative h-[85vh] sm:h-[600px] overflow-hidden rounded-2xl p-0 sm:p-12 w-full`} // Increased width and height
         style={{
           backgroundColor: color,
-          top: i ? `calc(-5vh + ${i * 25}px)` : "0",
+          top: i !== undefined && i >= 0 ? `calc(-5vh + ${i * 25}px)` : "0",
         }}
       >
         {/* Left Side: Title and Description */}
@@ -51,7 +51,7 @@ const Card: React.FC<CardProps> = ({
         </div>
 
         {/* Right Side: Image */}
-        <div className="relative sm:w-1/2 h-full sm:rounded-2xl overflow-hidden">
+        <div className="relative sm:w-1/2 h-[50vh] sm:h-full sm:rounded-2xl overflow-hidden">
           <img
             src={`${src}`}
             alt={title}
