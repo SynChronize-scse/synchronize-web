@@ -3,13 +3,13 @@ import Globe from "../Globe";
 const LandingPart = () => {
   return (
     <>
-      <div className="w-full h-[90vh] sm:h-screen flex flex-col  items-center relative overflow-hidden">
+      <div className="w-full h-[90vh] sm:h-screen flex flex-col items-center relative overflow-hidden">
         <div className="relative h-full flex flex-col justify-between pb-16 sm:pb-8 landing-parent items-center sm:text-base w-max ">
           <div className="flex flex-col gap-28 sm:gap-5 items-center">
             <div className="relative">
               <img
                 src="/images/moons.png"
-                className="rotate-90 h-[100px] sm:h-[150px] opacity-50"
+                className="rotate-90 h-[100px] sm:h-[120px] opacity-50"
               />
             </div>
 

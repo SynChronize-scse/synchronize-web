@@ -1,5 +1,6 @@
 import AboutSection from "$lib/components/Home/AboutSection";
 import LandingSection from "$lib/components/Home/LandingSection";
+import SponsorUs from "$lib/components/Home/SponsorUs";
 import StackedCards from "$lib/components/Home/StackedCards";
 import { useEffect, useState } from "react";
 
@@ -33,33 +34,49 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center gap-10 justify-center bg-dark-400 text-white">
-      <LandingSection />
-      <AboutSection className="mt-24" />
-      <StackedCards />
+    <>
+      {/* Top Message Bar */}
+      <div className=" relative z-[10000] flex items-center justify-center w-full h-fit py-1 text-white bg-[rgba(10,10,10,0.404)] backdrop-blur-[10px]">
+        <p className="text-center text-xs sm:text-sm">
+          Interested in partnering with us? Check out our{" "}
+          <a
+            href="#sponsor-us"
+            className="font-bold cursor-pointer hover:underline"
+          >
+            Sponsor Us
+          </a>{" "}
+          section below!
+        </p>
+      </div>
+      <div className="flex flex-col items-center gap-10 justify-center bg-dark-400 text-white">
+        <LandingSection />
+        <AboutSection className="mt-24" />
+        <StackedCards />
+        <SponsorUs id="sponsor-us" />
 
-      {!hasHWA && showHwaPrompt && (
-        <>
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex items-center justify-center">
-            <div className="bg-dark-400 p-3 rounded-lg max-w-80 sm:max-w-96 flex flex-col">
-              <h1 className="text-xl font-bold">
-                Hardware Acceleration is Disabled
-              </h1>
-              <p className="text-sm mt-4">
-                This site is optimized for hardware acceleration. Please enable
-                it in your browser settings.
-              </p>
-              <button
-                onClick={() => setShowHwaPrompt(false)}
-                className="mt-4 text-primary-400 rounded-md self-center"
-              >
-                [Close]
-              </button>
+        {!hasHWA && showHwaPrompt && (
+          <>
+            <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex items-center justify-center">
+              <div className="bg-dark-400 p-3 rounded-lg max-w-80 sm:max-w-96 flex flex-col">
+                <h1 className="text-xl font-bold">
+                  Hardware Acceleration is Disabled
+                </h1>
+                <p className="text-sm mt-4">
+                  This site is optimized for hardware acceleration. Please
+                  enable it in your browser settings.
+                </p>
+                <button
+                  onClick={() => setShowHwaPrompt(false)}
+                  className="mt-4 text-primary-400 rounded-md self-center"
+                >
+                  [Close]
+                </button>
+              </div>
             </div>
-          </div>
-        </>
-      )}
-    </div>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 

@@ -16,7 +16,7 @@ nav h5{
     cursor: pointer;
     position: absolute;
     right: 60px;
-    top: 65px;
+    top: 40px;
     z-index: 100;
 }
 
@@ -95,8 +95,8 @@ nav h5{
         font-size: 20px;
         /* border: 1px solid pink; */
         margin-right: 0;
-        top: 5.5%;
-        right: 9%;
+        top: 5%;
+        right: 5%;
     }
 
     #full h5{
