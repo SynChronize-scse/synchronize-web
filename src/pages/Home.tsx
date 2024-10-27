@@ -33,11 +33,56 @@ const Home = () => {
     }
   }, []);
 
+  // #9A4444
+  // #004225
+  const events = [
+    {
+      title: "Technical Events",
+      description:
+        "The SynChronize festival will be renowned for its enormous selection of scientific and technology-related activities and contests. These experiences provide you ...",
+      src: "https://images.unsplash.com/photo-1566954979172-eaba308acdf0",
+      color: "#606C5D",
+      path: "/events/technical",
+    },
+    {
+      title: "Fun Events",
+      description:
+        "We at SynChronize are bringing you some lighthearted fun events to dispel the stereotype of a technical festival....",
+      src: "https://images.unsplash.com/photo-1643508522322-5bbc32b80dd0",
+      color: "#977F6D",
+    },
+    {
+      title: "Cultural Events",
+      description:
+        "This is an opportunity of a lifetime to meet and enjoy the performances and Open Mics of some of the best artists among the participants to get you moving to their music and dance...",
+      src: "https://images.unsplash.com/photo-1643508522322-5bbc32b80dd0",
+      color: "#C2491D",
+    },
+    {
+      title: "Tech Tank",
+      description:
+        "These effectively link the audience and unite those who share similar interests. It is a setting where individuals may express their views and grow as individuals. It offers fantastic networking chances...",
+      src: "https://images.unsplash.com/photo-1643508522322-5bbc32b80dd0",
+      color: "#977F6D",
+    },
+    {
+      title: "Tech Tank",
+      description:
+        "These would include informational and motivational talks from eminent personalities from the field of computer science. Guest lecture is expected to be insightful and a great....",
+      src: "https://images.unsplash.com/photo-1643508522322-5bbc32b80dd0",
+      color: "#31511E",
+    },
+  ];
+
+  // #FFF0D1
+  // #977F6D
+  // #BBACAF
+
   return (
     <>
       {/* Top Message Bar */}
-      <div className=" relative z-[10000] flex items-center justify-center w-full h-fit py-1 text-white bg-[rgba(10,10,10,0.404)] backdrop-blur-[10px]">
-        <p className="text-center text-xs sm:text-sm">
+      <div className="relative z-[10000] flex items-center justify-center w-full h-fit py-1 text-white bg-[rgba(10,10,10,0.404)] backdrop-blur-[10px]">
+        <p className="text-center text-xs sm:text-sm px-1 sm:px-0">
           Interested in partnering with us? Check out our{" "}
           <a
             href="#sponsor-us"
@@ -51,7 +96,16 @@ const Home = () => {
       <div className="flex flex-col items-center gap-10 justify-center bg-dark-400 text-white">
         <LandingSection />
         <AboutSection className="mt-24" />
-        <StackedCards />
+
+        {/* Heading */}
+        <div className="flex flex-col w-fit self-start font-[AdieuRegular] px-3 sm:px-20">
+          <span className="uppercase whitespace-nowrap text-primary-400 text-base sm:text-xl md:text-3xl w-fit mb-1">
+            Events
+          </span>
+          <div className="w-[75%] h-[1px] self-end bg-primary-400"></div>
+        </div>
+        <StackedCards items={events} className="font-[AdieuRegular]" />
+
         <SponsorUs id="sponsor-us" />
 
         {!hasHWA && showHwaPrompt && (

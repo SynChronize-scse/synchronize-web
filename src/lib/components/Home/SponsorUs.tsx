@@ -2,18 +2,18 @@ function SponsorUs({ id = "synchrnonize-sponsor-us" }: { id?: string }) {
   return (
     <div
       id={id}
-      className="flex flex-col font-[AdieuRegular] w-full px-3 sm:px-20 bg-dark-400 gap-3"
+      className="flex flex-col font-[AdieuRegular] w-full px-3 sm:px-20 bg-dark-400 gap-3 pt-2"
     >
       {/* Heading */}
       <div className="flex flex-col w-fit">
-        <span className="uppercase whitespace-nowrap text-primary-400 text-base  sm:text-xl md:text-3xl w-fit mb-1">
+        <span className="uppercase whitespace-nowrap text-primary-400 text-base sm:text-xl md:text-3xl w-fit mb-1">
           Sponsor Us
         </span>
         <div className="w-[75%] h-[1px] self-end bg-primary-400"></div>
       </div>
 
       {/* Description */}
-      <p className="text-white font-[AdieuLight]">
+      <p className="text-white font-[AdieuLight] text-sm sm:text-base">
         Be a part of our college’s premier tech fest and inspire the next
         generation of innovators! As a sponsor, you’ll have the opportunity to
         showcase your brand to a vibrant community of tech enthusiasts, future
