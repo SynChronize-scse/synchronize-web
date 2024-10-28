@@ -65,7 +65,10 @@ export default function Navbar() {
   // #full is appearing on top when resizing window from desktop to mobile after closing nav
   useEffect(() => {
     const handleResize = () => {
-      itemsContainer.current?.style.setProperty("top", "-100vh");
+      itemsContainer.current?.style.setProperty(
+        "top",
+        `-${window.innerHeight}px`
+      );
     };
     window.addEventListener("resize", handleResize);
 
@@ -84,7 +87,11 @@ export default function Navbar() {
             className="border-y-2 border-y-primary-400 h-3 w-7 sm:w-10"
           ></h5>{" "}
         </nav>
-        <div ref={itemsContainer} id="full" className="overflow-hidden">
+        <div
+          ref={itemsContainer}
+          id="full"
+          className="overflow-hidden font-[AdieuRegular]"
+        >
           <h4 className="nav-text">// HOME</h4>
           <h4 className="nav-text">// ABOUT</h4>
           <h4 className="nav-text">// EVENTS</h4>
