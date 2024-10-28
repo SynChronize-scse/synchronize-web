@@ -61,6 +61,7 @@ const LandingPart = () => {
       <img
         src="/images/saturn.webp"
         alt="planet saturn"
+        loading="lazy"
         className="w-[270px] sm:w-[450px] z-[10000]  aspect-square absolute -left-20 sm:-left-36 -bottom-24 sm:-bottom-32"
       />
     </>
