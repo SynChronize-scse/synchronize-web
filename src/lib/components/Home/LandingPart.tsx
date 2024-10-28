@@ -57,17 +57,11 @@ const LandingPart = () => {
         </div>
 
         <Globe className="w-[450px] sm:w-[500px] overflow-hidden aspect-square absolute -right-52 sm:-right-48 top-32 sm:top-32" />
-
-        <img
-          src="/images/saturn.png"
-          alt="planet saturn"
-          className="hidden sm:block w-[250px] sm:w-[400px] z-[10000]  aspect-square rotate-[70deg] absolute -left-24 -bottom-24 sm:-bottom-24"
-        />
       </div>
       <img
-        src="/images/saturn.png"
+        src="/images/saturn.webp"
         alt="planet saturn"
-        className="w-[250px] sm:w-[400px] z-[10000]  aspect-square rotate-[70deg] absolute -left-24 -bottom-24 sm:-bottom-24"
+        className="w-[270px] sm:w-[450px] z-[10000]  aspect-square absolute -left-20 sm:-left-36 -bottom-24 sm:-bottom-32"
       />
     </>
   );

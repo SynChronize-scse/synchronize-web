@@ -60,9 +60,11 @@ body {
 @font-face {
   font-family: 'AdieuRegular';
   src: url('/fonts/adieu/regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'AdieuLight';
   src: url('/fonts/adieu/light.otf') format('opentype');
+  font-display: swap;
 }
