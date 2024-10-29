@@ -408,7 +408,7 @@ export default function FlowingPathScroll() {
               style={{
                 strokeDashoffset:
                   pathLength - (scrollProgress / 100) * pathLength,
-                transition: "stroke-dashoffset 0.1s linear",
+                // transition: "stroke-dashoffset 0.1s linear",
               }}
               transform={`scale(${SCALE_FACTOR})`}
             />

@@ -7,7 +7,7 @@ import { ReactLenis } from "lenis/react";
 import "lenis/dist/lenis.css";
 import Loading from "$lib/components/Loading.tsx";
 
-const ignoreRoutes = ["/memories"];
+const ignoreRoutes = [""];
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
