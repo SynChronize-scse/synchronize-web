@@ -67,15 +67,15 @@ const SCALE_FACTOR = 1.8;
 const blockConfigs: BlockConfig[] = [
   // 1
   {
-    imageOffset: { top: -15, left: -50 },
-    textOffset: { top: 10, left: 0 },
+    imageOffset: { top: 0, left: 0 },
+    textOffset: { top: 0, left: 0 },
     textAbove: false,
-    zIndex: 20,
+    zIndex: 21,
   },
   // 2
   {
-    imageOffset: { top: -20, left: 20 },
-    textOffset: { top: -10, left: 0 },
+    imageOffset: { top: 0, left: 0 },
+    textOffset: { top: 0, left: 0 },
     textAbove: false,
     zIndex: 21,
   },
