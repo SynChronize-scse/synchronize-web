@@ -67,8 +67,8 @@ const SCALE_FACTOR = 1.8;
 const blockConfigs: BlockConfig[] = [
   // 1
   {
-    imageOffset: { top: 0, left: 0 },
-    textOffset: { top: 0, left: 0 },
+    imageOffset: { top: 30, left: 0 },
+    textOffset: { top: 20, left: 0 },
     textAbove: false,
     zIndex: 21,
   },
@@ -81,10 +81,10 @@ const blockConfigs: BlockConfig[] = [
   },
   // 3
   {
-    imageOffset: { top: -50, left: -20 },
-    textOffset: { top: -10, left: -20 },
+    imageOffset: { top: 0, left: 0 },
+    textOffset: { top: 0, left: 0 },
     textAbove: false,
-    zIndex: 22,
+    zIndex: 21,
   },
   // 4
   {
@@ -310,6 +310,16 @@ export default function FlowingPathScroll() {
       <h1 className="fixed top-4 left-1/2 transform -translate-x-1/2 text-4xl font-bold font-[AdieuRegular] text-white z-50">
         Memories
       </h1>
+
+      <div className="flex flex-col items-center  relative z-20">
+        <div className="mt-55 sm:mt-96 relative flex flex-col items-center">
+          <div className="relative bg-[#303030] w-[2px] h-10 mb-2">
+            <div className="absolute bg-[#C3DB62] w-[2px] h-1/2 animate-bounceMore"></div>
+          </div>
+          <span className="text-[#808080] text-xs uppercase">SCROLL</span>
+        </div>
+      </div>
+
       <div
         ref={contentRef}
         className="fixed top-0 left-0 overflow-hidden transition-transform duration-100 ease-linear"
