@@ -65,10 +65,7 @@ export default function Navbar() {
   // #full is appearing on top when resizing window from desktop to mobile after closing nav
   useEffect(() => {
     const handleResize = () => {
-      itemsContainer.current?.style.setProperty(
-        "top",
-        `-${window.innerHeight}px`
-      );
+      itemsContainer.current?.style.setProperty("top", `-100vh`);
     };
     window.addEventListener("resize", handleResize);
 
