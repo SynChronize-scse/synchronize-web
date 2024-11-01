@@ -365,7 +365,7 @@ export default function FlowingPathScroll() {
                   }`}
                 >
                   <div
-                    className="w-32 h-32 overflow-hidden rounded-lg bg-primary mb-2"
+                    className="w-32 h-32 overflow-hidden border-2 border-primary-400 p-1 rounded-full  bg-dark-400 mb-2"
                     style={{
                       transform: `translate(${config.imageOffset.left}px, ${config.imageOffset.top}px)`,
                     }}
@@ -373,7 +373,7 @@ export default function FlowingPathScroll() {
                     <img
                       src={imageSources[imageIndex]}
                       alt={`Path point ${index + 1}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full rounded-full  object-cover "
                     />
                   </div>
                   <div
