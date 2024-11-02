@@ -2,7 +2,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaGithub,
-  FaFacebook,
+  FaYoutube,
   FaEnvelope,
 } from "react-icons/fa";
 import mapImage from "../../assets/xim_map.png";
@@ -70,21 +70,21 @@ const Footer = () => {
               <p className="">Follow Us</p>
               <div className="flex flex-row gap-5 sm:gap-0 sm:justify-between text-base sm:text-lg">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/synchronize_xim/"
                   aria-label="Instagram page link"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaInstagram />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/school-of-computer-science-and-engineering-career-advisory-services-43a0b61ab/"
                   aria-label="LinkedIn page link"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaLinkedin />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/SynChronize-scse"
                   aria-label="GitHub page link"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
@@ -95,7 +95,7 @@ const Footer = () => {
                   aria-label="Facebook page link"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
-                  <FaFacebook />
+                  <FaYoutube />
                 </a>
               </div>
             </div>
@@ -118,7 +118,7 @@ const Footer = () => {
 
       {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-bold">SYNCHRONIZE'25</h1> */}
       <div className="w-full flex justify-center items-center border-t border-gray-700 px-3 sm:px-0">
-        <div className="text-[#E3E0D1] flex flex-row justify-evenly w-full text-[calc(100vw/12)] font-black leading-none pb-3 pt-2 sm:pt-0">
+        <div className="text-[#E3E0D1] flex flex-row justify-evenly w-full text-[calc(100vw/12)] font-black leading-none pb-3 pt-2 pl-4 pr-4 sm:pt-0">
           <span className="m-0 p-0">S</span>
           <span className="m-0 p-0">Y</span>
           <span className="m-0 p-0">N</span>
