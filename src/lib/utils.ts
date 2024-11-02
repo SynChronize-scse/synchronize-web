@@ -30,3 +30,7 @@ export function genRandomNumbers(min: number, max: number, count: number) {
 
   return arr;
 }
+
+export function isMobileDevice() {
+  return /Mobi|Android|iPhone/i.test(navigator.userAgent);
+}

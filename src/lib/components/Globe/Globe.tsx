@@ -1,6 +1,6 @@
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, useEffect, useRef, useState } from "react";
 import { World } from "./GlobePrimitive";
-import { cn } from "$lib/utils";
+import { cn, isMobileDevice } from "$lib/utils";
 
 interface GlobeProps {
   className?: HTMLAttributes<HTMLDivElement>["className"];
@@ -30,21 +30,38 @@ export function Globe({ className }: GlobeProps) {
     autoRotateSpeed: 0.5,
   };
 
+  const container = useRef<HTMLDivElement>(null);
+
+  const [renderControls, setRenderControls] = useState<boolean>(false);
+
+  useEffect(() => {
+    let observer: IntersectionObserver;
+    if (isMobileDevice()) {
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setRenderControls(() => true);
+          } else {
+            setRenderControls(() => false);
+          }
+        });
+      });
+
+      if (container.current) {
+        observer.observe(container.current);
+      }
+    } else {
+      setRenderControls(() => true);
+    }
+
+    return () => {
+      observer?.disconnect();
+    };
+  }, []);
+
   return (
-    // <div className="flex flex-row items-center justify-center py-20 min-h-screen md:h-auto bg-transparent relative w-full">
-    //   <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
-    //     <div className="absolute w-full bottom-0 inset-x-0 h-40  pointer-events-none select-none from-transparent to-white z-40" />
-    //     <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-    //       <World data={[]} globeConfig={globeConfig} />
-    //     </div>
-    //   </div>
-    // </div>
-    <div className={cn("relative overflow-hidden", className)}>
-      {/* <div className="absolute w-full bottom-0 inset-x-0 h-40  pointer-events-none select-none from-transparent to-white z-40" />
-      <div className="absolute w-full">
-        <World data={[]} globeConfig={globeConfig} />
-      </div> */}
-      <World data={[]} globeConfig={globeConfig} />
+    <div ref={container} className={cn("relative overflow-hidden", className)}>
+      {renderControls && <World data={[]} globeConfig={globeConfig} />}
     </div>
   );
 }

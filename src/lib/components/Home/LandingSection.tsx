@@ -3,12 +3,12 @@ import Particles, {
   initParticlesEngine,
   IParticlesProps,
 } from "@tsparticles/react";
-import type { Container, Engine } from "@tsparticles/engine";
+import type { Engine } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
 import LandingPart from "./LandingPart";
 import { ShootingStars } from "../ShootingStars/ShootingStars";
-import Navbar from "../Navbar";
 import { cn } from "$lib/utils";
+import Navbar from "../Navbar/Navbar";
 
 interface LandingSectionProps {
   className?: HTMLAttributes<HTMLDivElement>["className"];
@@ -25,9 +25,7 @@ const LandingSection = ({ className }: LandingSectionProps) => {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container) => {
-    console.log(container);
-  };
+  const particlesLoaded = async () => {};
 
   const options: IParticlesProps["options"] = {
     fullScreen: {

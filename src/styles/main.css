@@ -38,7 +38,7 @@ body {
     left: -50%;
     pointer-events: none;
     user-select: none;
-    background-image: url('http://momentsingraphics.de/Media/BlueNoise/WhiteNoiseDithering.png');
+    background-image: url('https://momentsingraphics.de/Media/BlueNoise/WhiteNoiseDithering.png');
     opacity: 0.029;
     animation: noise 8s steps(10) infinite;
   }
@@ -60,9 +60,11 @@ body {
 @font-face {
   font-family: 'AdieuRegular';
   src: url('/fonts/adieu/regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'AdieuLight';
   src: url('/fonts/adieu/light.otf') format('opentype');
+  font-display: swap;
 }

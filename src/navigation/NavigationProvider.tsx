@@ -1,8 +1,9 @@
-import { useNavigate } from 'react-router-dom'
-import { NavigationContext } from './NavigationContext'
+import { useNavigate } from "react-router-dom";
+import { NavigationContext } from "./NavigationContext";
 
-
-export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const navigate = useNavigate();
 
   const goBack = () => {
