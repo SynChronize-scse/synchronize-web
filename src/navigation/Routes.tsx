@@ -1,10 +1,12 @@
 import { Routes, Route } from 'react-router-dom'
-import Home from '../pages/Home'
-import NotFound from '../pages/NotFound'
-import Memories from '../pages/Memories'
-import EventHeading from '../pages/EventsPage/Components/EventsHeading'
-import Centerstage from '../pages/EventsPage/Components/CenterStage'
-import FunNcultural from '../pages/EventsPage/Components/FunNcultural'
+
+const Home = React.lazy(() => import("../pages/Home"));
+const NotFound = React.lazy(() => import("../pages/NotFound"));
+const Memories = React.lazy(() => import("../pages/Memories"));
+
+const EventHeading = React.lazy(() => import("../pages/EventsPage/Components/EventsHeading"));
+const Centerstage = React.lazy(() => import("../pages/EventsPage/Components/CenterStage"));
+const FunNcultural = React.lazy(() => import("../pages/EventsPage/Components/FunNcultural"));
 
 
 export const AppRoutes = () => {
