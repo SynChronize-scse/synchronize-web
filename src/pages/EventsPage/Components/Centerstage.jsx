@@ -2,7 +2,7 @@ import React from 'react'
 import CardSection from './CardSection'
 import { Link } from 'react-router-dom'
 import CardDemo1 from './ui/CardDemo1'
-import EventsMenu from './EventsMenu'
+import EventsMenu from './EventsMenuBar'
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 
@@ -23,7 +23,7 @@ const EventsSection = () => {
                 </div>
             </div>
 
-            <CardDemo1 />
+            {/* <CardDemo1 /> */}
 
 
         </div>
