@@ -1,5 +1,4 @@
 export default [
-    
         //Workshops & Guest Lectures
         {
             title: "GUest Talk (IEEE)",

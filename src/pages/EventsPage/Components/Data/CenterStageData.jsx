@@ -1,4 +1,4 @@
-export default
+export const flagship =
     [
         // -FLAGSHIP EVENTS
         {
@@ -9,7 +9,9 @@ export default
             date: "10-01-2024",
             time: "11:00 AM",
         },
+    ]
 
+export const robotics =[
         // -ROBOTICS
         {
             title: "Zenos Terminus",
@@ -35,7 +37,9 @@ export default
             date: "10-01-2024",
             time: "10:45 AM",
         },
+]
 
+export const coding =[
         // -CODING
         {
             title: "Debugging Challenge",
@@ -70,7 +74,9 @@ export default
             date: "10-01-2024",
             time: "01:00 AM",
         },
+]
 
+export const business =[
         // -BUSSINESS
         {
             title: "Stock Simulation",
@@ -89,4 +95,4 @@ export default
             time: "11:00 AM",
         },
 
-    ]
+]

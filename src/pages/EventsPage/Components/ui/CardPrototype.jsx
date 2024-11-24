@@ -1,10 +1,13 @@
-import React from 'react'
-import ImageCard from './ui/ImageCard'
-import bgImage from './ui/image.png'
+import React, { useState } from 'react'
+import ImageCard from './ImageCard'
+import bgImage from './image.png'
+import { createPortal } from 'react-dom';
+import ModalContent from './ModalContent';
 
-export default function CardProto(props) {
+export default function CardPrototype(props) {
 
-    const {title, bkgImage} = props;
+    const {title, bkgImage, description} = props;
+    const [showModal, setShowModal] = useState(false);
 
   return (
     <>
@@ -19,7 +22,7 @@ export default function CardProto(props) {
 
             <div className='absolute text-white flex items-center justify-center -bottom-9  group-hover:bottom-[.9rem] transition-all duration-300'>
             <div className='mt-3 -mb-1 ml-9 flex justify-center '>
-              <div className='border-2 w-fit border-slate-50 py-1.5 px-7 cursor-pointer rounded-xl hover:scale-[1.05] shadow-sm shadow-slate-50'>
+              <div className='border-2 w-fit border-slate-50 py-1.5 px-7 cursor-pointer rounded-xl hover:scale-[1.05] shadow-sm shadow-slate-50' onClick={() => setShowModal(true)}>
                 View Details
               </div>
             </div>
@@ -27,6 +30,11 @@ export default function CardProto(props) {
           </div>
 
         </ImageCard>
+
+        {showModal && createPortal(
+                <ModalContent onClose={() => setShowModal(false)} description={description} />,
+                document.body
+            )}
 
       </div>
     </>

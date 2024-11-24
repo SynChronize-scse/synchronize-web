@@ -1,6 +1,4 @@
-export default [
-
-
+export const fun = [
     // FUN & CULTURAL
     {
         title: "Treasure Hunt",
@@ -26,18 +24,35 @@ export default [
         date: "11-01-2024",
         time: "2:00 PM",
     },
-
-    //GAMING
+]
+export const gaming = [
     {
         title: "Valorant",
+        description: "Play the game and win the prize.",
+        img: "https://source.unsplash.com/featured/?valorant",
+        // link: "/events/valorant"     TO BE REPLACED W/ MODAL
+        date: "10-01-2024",
+        time: "Pls check the event page",
     },
     {
         title: "FIFA",
+        description: "Play the game and win the prize.",
+        img: "https://source.unsplash.com/featured/?fifa",
+        // link: "/events/fifa"     TO BE REPLACED W/ MODAL
+        date: "11-01-2024",
+        time: "Pls check the event page",
     },
     {
         title: "BGMI",
+        description: "Play the game and win the prize.",
+        img: "https://source.unsplash.com/featured/?bgmi",
+        // link: "/events/bgmi"     TO BE REPLACED W/ MODAL
+        date: "11-01-2024",
+        time: "Pls check the event page",
     },
+]
 
+export const everyday = [
 
     // Everyday events
     {
