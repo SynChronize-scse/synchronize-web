@@ -1,8 +1,7 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 function ModalContent({ onClose, props }) {
     // Disable body scroll when modal is open
-
     const { title, description, date, time } = props;
 
     useEffect(() => {
@@ -33,7 +32,12 @@ function ModalContent({ onClose, props }) {
                         className="w-5/6 h-[90%] p-[1px] bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 rounded-lg shadow-lg"
                         onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking inside content
                     >
-                        <div className="bg-gradient-to-b from-black to-slate-900 text-slate-100 h-full w-full p-6 rounded-lg flex flex-col justify-start items-center">
+                        <div
+                            className="bg-gradient-to-b from-black to-slate-900 text-slate-100 h-full w-full p-6 rounded-lg flex flex-col justify-start items-center"
+                            style={{
+                                boxShadow: "0 0 8px rgba(255, 223, 0, 0.3), 0 0 15px rgba(255, 140, 0, 0.3), 0 0 20px rgba(255, 105, 0, 0.3)"
+                            }}
+                        >
                             <div className="mb-4 w-full">
                                 <h1 className="text-3xl font-semibold text-center text-gray-100 mb-4">
                                     {title ? title : "Event Title"}
@@ -47,7 +51,7 @@ function ModalContent({ onClose, props }) {
 
                                 <div className="flex flex-row py-5 justify-around items-center text-gray-100">
                                     <div className="text-center ">
-                                        <p>DATE: {date ? data : "ALL 3 DAYS"}</p>
+                                        <p>DATE: {date ? date : "ALL 3 DAYS"}</p>
                                     </div>
                                     <div className="text-center">
                                         <p>TIME: {time ? time : "ALL DAY"}</p>
