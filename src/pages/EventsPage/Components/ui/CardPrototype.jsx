@@ -6,7 +6,7 @@ import ModalContent from './ModalContent';
 
 export default function CardPrototype(props) {
 
-    const {title, bkgImage, description} = props;
+    const {title, bkgImage} = props;
     const [showModal, setShowModal] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ export default function CardPrototype(props) {
         <ImageCard imgSrc={bkgImage ? bkgImage : bgImage}>
           <div className='ml-0'>
             <div className='absolute text-[1.7rem]/8 ml-9 uppercase text-bold bottom-5 group-hover:text-3xl group-hover:bottom-[3.7rem] transition-all duration-300'>
-              {title ? title : 'Silly stuff'}
+              {title ? title : 'EVENT NAME'}
             </div>
 
             <div className='absolute text-white flex items-center justify-center -bottom-9  group-hover:bottom-[.9rem] transition-all duration-300'>
@@ -32,7 +32,7 @@ export default function CardPrototype(props) {
         </ImageCard>
 
         {showModal && createPortal(
-                <ModalContent onClose={() => setShowModal(false)} description={description} />,
+                <ModalContent onClose={() => setShowModal(false)} props={props} />,
                 document.body
             )}
 

@@ -9,7 +9,7 @@ const CardSection = (prop) => {
           <h1 className="text-4xl m-3 mt-2 mb-7 ml-5">{prop.title}</h1>
           <div className="w-full flex justify-start items-center gap-5 overflow-x-scroll scrollbar-hide ">
             <CardProto title='Boat Race' description="hello" />
-            <CardProto />
+            <CardProto title='chainsaw'/>
             <CardProto />
             <CardProto />
           </div>
