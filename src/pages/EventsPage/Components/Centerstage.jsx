@@ -1,7 +1,7 @@
 import React from 'react'
 import CardSection from './CardSection'
 import { Link } from 'react-router-dom'
-import CardDemo1 from './ui/CardDemo1'
+import CardProto from './CardPrototype'
 import EventsMenu from './EventsMenuBar'
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 

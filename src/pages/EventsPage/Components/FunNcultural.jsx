@@ -1,7 +1,7 @@
 import React from "react";
 import CardSection from "./CardSection";
 import { Link } from "react-router-dom";
-import EventsMenu from "./EventsMenu";
+import EventsMenu from "./EventsMenuBar";
 
 const FunNcultural = () => {
   return (
