@@ -13,7 +13,7 @@ const EventsSection = () => {
 
             <EventsMenu />
 
-            <div className=' w-[90vw] -ml-8 flex flex-col items-start justify-evenly gap-10 text-orange-200'>
+            <div className=' w-[92vw] -ml-8 flex flex-col items-start justify-evenly gap-10 text-orange-200'>
                 <div>
                     <CardSection title="🏁 FLAGSHIP" />
                     <CardSection title="🤖 ROBOTICS" />

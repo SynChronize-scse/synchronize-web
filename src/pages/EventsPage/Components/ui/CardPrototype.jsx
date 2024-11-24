@@ -11,7 +11,7 @@ export default function CardPrototype(props) {
 
   return (
     <>
-      <div className='h-[330px] w-[250px]  text-slate-50 group'>
+      <div className='h-[330px] w-[250px] text-slate-50 group'>
       {/* h-[330px] w-[250px] */}
 
         <ImageCard imgSrc={bkgImage ? bkgImage : bgImage}>
