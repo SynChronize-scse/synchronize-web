@@ -38,10 +38,20 @@ function ModalContent({ onClose, props }) {
                                 boxShadow: "0 0 8px rgba(255, 223, 0, 0.3), 0 0 15px rgba(255, 140, 0, 0.3), 0 0 20px rgba(255, 105, 0, 0.3)"
                             }}
                         >
-                            <div className="mb-4 w-full">
-                                <h1 className="text-3xl font-semibold text-center text-gray-100 mb-4">
-                                    {title ? title : "Event Title"}
-                                </h1>
+                            <div className="mb-4 w-full font-[AdieuLight]">
+                                <div className="flex justify-between px-8">
+                                    <h1 className="text-4xl font-semibold text-center text-gray-100 mb-4 ">
+                                        {title ? title : "Event Title"}
+                                    </h1>
+                                    <h1>
+                                        <button
+                                            onClick={onClose}
+                                            className="text-2xl text-gray-50 hover:text-slate-100 hover:scale-110 transition duration-100 ease-in-out"
+                                        >
+                                            &#10005;
+                                        </button>
+                                    </h1>
+                                </div>
 
                                 <div className="h-1/4">
                                     <img src="https://wallpaperaccess.com/full/6923230.jpg" alt="img"
