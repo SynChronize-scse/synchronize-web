@@ -118,7 +118,7 @@ const Footer = () => {
 
       {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-8xl font-bold">SYNCHRONIZE'25</h1> */}
       <div className="w-full flex justify-center items-center border-t border-gray-700 px-3 sm:px-0">
-        <div className="text-[#E3E0D1] flex flex-row justify-evenly w-full text-[calc(100vw/12)] font-black leading-none pb-3 pt-2 pl-4 pr-4 sm:pt-0">
+        <div className="text-[#E3E0D1] flex flex-row justify-evenly w-full text-[calc(100vw/12)] font-black leading-none pb-3 pt-2 sm:pt-0">
           <span className="m-0 p-0">S</span>
           <span className="m-0 p-0">Y</span>
           <span className="m-0 p-0">N</span>
