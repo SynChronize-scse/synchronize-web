@@ -40,7 +40,7 @@ const Footer = () => {
             <a href="#" className="hover:text-gray-400">
               Events
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="/team" className="hover:text-gray-400">
               Team
             </a>
             <a href="/memories" className="hover:text-gray-400">
@@ -52,13 +52,13 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col space-y-5 sm:w-auto">
-            <a href="#" className="hover:text-gray-400">
+            <a href="/memories" className="hover:text-gray-400">
               Gallery
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="https://synchronizexim.com/Home%20Page/index.html" className="hover:text-gray-400">
               Synchronize 2.0
             </a>
-            <a href="#" className="hover:text-gray-400">
+            <a href="https://synchronizexim.com/Synchronize%201.0/index.html" className="hover:text-gray-400">
               Synchronize 1.0
             </a>
           </div>
