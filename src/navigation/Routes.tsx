@@ -7,7 +7,7 @@ const Memories = React.lazy(() => import("../pages/Memories"));
 
 const EventHeading = React.lazy(() => import("../pages/EventsPage/Components/EventsHeading"));
 const Centerstage = React.lazy(() => import("../pages/EventsPage/Components/CenterStage"));
-const FunNcultural = React.lazy(() => import("../pages/EventsPage/Components/FunNcultural"));
+const FunNcultural = React.lazy(() => import("../pages/EventsPage/Components/FunNgames"));
 
 export const AppRoutes = () => {
   return (

@@ -15,11 +15,9 @@ const EventsSection = () => {
           <CardSection title="⚔️ CODE COMBAT" />
           <CardSection title="🧑‍💼 BUSINESS" />
           {/* <CardSection title="🙋‍♂️ TECH-Qs" />
-                    <CardSection title="💻 MINI HACKATHONS" /> */}
+              <CardSection title="💻 MINI HACKATHONS" /> */}
         </div>
       </div>
-
-      {/* <CardDemo1 /> */}
     </div>
   );
 };

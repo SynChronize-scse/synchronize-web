@@ -14,12 +14,12 @@ export default function CardPrototype(props) {
         {/* h-[330px] w-[250px] */}
 
         <ImageCard imgSrc={bkgImage ? bkgImage : bgImage}>
-          <div className="ml-0">
+          <div className="">
             <div className="absolute text-[1.7rem]/8 uppercase text-bold bottom-5 group-hover:text-3xl group-hover:bottom-[3.7rem] transition-all duration-300">
               {title ? title : "EVENT NAME"}
             </div>
 
-            <div className="absolute text-white flex items-center justify-center -bottom-9  group-hover:bottom-[.9rem] transition-all duration-300">
+            <div className="absolute w-5/6 text-white flex items-center justify-center -bottom-9  group-hover:bottom-[.9rem] transition-all duration-300">
               <div className="mt-3 -mb-1 flex justify-center">
                 <div
                   className="border-2 w-fit border-slate-50 py-1.5 px-7 cursor-pointer rounded-xl hover:scale-[1.05] shadow-sm shadow-slate-50"
