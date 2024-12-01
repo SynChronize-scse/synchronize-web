@@ -15,7 +15,7 @@ export default function CardPrototype(props) {
 
         <ImageCard imgSrc={bkgImage ? bkgImage : bgImage}>
           <div className="">
-            <div className="absolute text-[1.7rem]/8 uppercase text-bold bottom-5 group-hover:text-3xl group-hover:bottom-[3.7rem] transition-all duration-300">
+            <div className="absolute text-[1.7rem]/8 uppercase text-bold bottom-5 group-hover:text-2xl group-hover:leading-7 group-hover:px-3  group-hover:bottom-[3.7rem] transition-all duration-300">
               {title ? title : "EVENT NAME"}
             </div>
 
