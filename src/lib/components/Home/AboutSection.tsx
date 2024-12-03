@@ -52,7 +52,9 @@ const AboutSection = ({ className }: AboutSectionProps) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8 mt-16">
         <div className="relative aspect-square bg-dark-400 border border-gray-800 w-full md:h-[95%] md:w-[85%] ">
-          <div className=""></div>
+          <div className="">
+            <img className="w-full h-full" src="/src/assets/images/xim_main.jpg" alt="" />
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-1">
