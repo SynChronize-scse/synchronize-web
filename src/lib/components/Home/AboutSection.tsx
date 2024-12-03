@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "$lib/utils";
 import SectionHeader from "./SectionHeader";
+import XIM from "../../../assets/images/xim_main.png";
 
 interface AboutSectionProps {
   className?: React.HTMLAttributes<HTMLDivElement>["className"];
@@ -87,14 +88,10 @@ const AboutSection = ({ className }: AboutSectionProps) => {
         <div className="md:ml-10 relative aspect-square bg-dark-400 w-full md:w-[85%] ">
           {/* ref={targetRef} */}
           <div className="overflow-hidden rounded-lg">
-            <img
-              className="opacity-80 overflow-hidden"
-              src="/src/assets/images/xim_main.png"
-              alt=""
-            />
+            <img className="opacity-80 overflow-hidden" src={XIM} alt="" />
             {/* <img
               className="opacity-80 overflow-hidden"
-              src="/src/assets/images/xim_main.png"
+              src={XIM}
               alt=""
               style={{ transform: transformStyle }}
             /> */}
