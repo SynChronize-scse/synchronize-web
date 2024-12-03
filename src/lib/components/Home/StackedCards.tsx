@@ -9,6 +9,7 @@ interface StackedCardsProps {
     title: string;
     description: string;
     src: string;
+    mobileSrc?: string;
     color: string;
     path?: string;
   }[];

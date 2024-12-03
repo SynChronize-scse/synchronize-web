@@ -2,7 +2,6 @@ import "./Navbar.css";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 gsap.registerPlugin(useGSAP);
@@ -12,10 +11,12 @@ export default function Navbar() {
   const menuBtn = useRef<HTMLHeadingElement>(null);
   const closeBtn = useRef<HTMLHeadingElement>(null);
   const itemsContainer = useRef<HTMLDivElement>(null);
+  const timeline = useRef<gsap.core.Timeline | null>(null);
 
   useGSAP(
     () => {
       const tl: gsap.core.Timeline = gsap.timeline();
+      timeline.current = tl;
 
       tl.to("#full", {
         top: 0,
@@ -32,22 +33,31 @@ export default function Navbar() {
 
       tl.pause();
 
-      menuBtn.current?.addEventListener("click", () => {
+      const menuBtnClickHandler = () => {
         tl.play();
-        itemsContainer.current?.addEventListener("click", preventDefault);
+        // itemsContainer.current?.addEventListener("click", preventDefault);
         itemsContainer.current?.addEventListener("wheel", preventDefault);
         itemsContainer.current?.addEventListener("touchmove", preventDefault);
-      });
+      };
 
-      closeBtn.current?.addEventListener("click", () => {
+      const closeBtnClickHandler = () => {
         tl.reverse();
-        itemsContainer.current?.removeEventListener("click", preventDefault);
+        // itemsContainer.current?.removeEventListener("click", preventDefault);
         itemsContainer.current?.removeEventListener("wheel", preventDefault);
         itemsContainer.current?.removeEventListener(
           "touchmove",
           preventDefault
         );
-      });
+      };
+
+      menuBtn.current?.addEventListener("click", menuBtnClickHandler);
+
+      closeBtn.current?.addEventListener("click", closeBtnClickHandler);
+
+      return () => {
+        menuBtn.current?.removeEventListener("click", menuBtnClickHandler);
+        closeBtn.current?.removeEventListener("click", closeBtnClickHandler);
+      };
     },
     { scope: container }
   );
@@ -83,12 +93,38 @@ export default function Navbar() {
           id="full"
           className="overflow-hidden font-[AdieuRegular]"
         >
-          <NavLink to="/" className="nav-text">// HOME</NavLink>
-          <NavLink to="/about" className="nav-text">// ABOUT</NavLink>
-          <Link to="/events" className="nav-text">// EVENTS</Link>
-          <NavLink to="/sponsor" className="nav-text">// SPONSOR</NavLink>
-          <NavLink to="/team" className="nav-text">// TEAM</NavLink>
-          <NavLink to="/memories" className="nav-text">// MEMORIES</NavLink>
+          <Link to="/" className="nav-text">
+            // HOME
+          </Link>
+          <a
+            onClick={() => {
+              timeline.current?.reverse();
+              itemsContainer.current?.removeEventListener(
+                "wheel",
+                preventDefault
+              );
+              itemsContainer.current?.removeEventListener(
+                "touchmove",
+                preventDefault
+              );
+            }}
+            href="#about"
+            className="nav-text"
+          >
+            // ABOUT
+          </a>
+          <Link to="/events" className="nav-text">
+            // EVENTS
+          </Link>
+          <Link to="/sponsor" className="nav-text">
+            // SPONSOR
+          </Link>
+          <Link to="/team" className="nav-text">
+            // TEAM
+          </Link>
+          <Link to="/memories" className="nav-text">
+            // MEMORIES
+          </Link>
 
           <h5 ref={closeBtn}>
             <svg

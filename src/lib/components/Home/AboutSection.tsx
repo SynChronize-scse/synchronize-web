@@ -40,10 +40,43 @@ const AboutSection = ({ className }: AboutSectionProps) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // const [transformStyle, setTransformStyle] = useState(
+  //   "translate3d(0px, 0px, 0px) rotate(0deg) scale(1.3, 1.3)"
+  // );
+  // const targetRef = useRef<HTMLDivElement>(null);
+
+  // useEffect(() => {
+  //   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+  //     entries.forEach((entry) => {
+  //       const ratio = entry.intersectionRatio;
+  //       const rotate = -1 * ratio;
+  //       const scale = 1.2 - 0.2 * ratio;
+  //       setTransformStyle(
+  //         `translate3d(0px, 0px, 0px) rotate(${rotate}deg) scale(${scale}, ${scale})`
+  //       );
+  //     });
+  //   };
+
+  //   const observer = new IntersectionObserver(handleIntersection, {
+  //     threshold: Array.from({ length: 101 }, (_, i) => i / 100),
+  //   });
+
+  //   if (targetRef.current) {
+  //     observer.observe(targetRef.current);
+  //   }
+
+  //   return () => {
+  //     if (targetRef.current) {
+  //       observer.unobserve(targetRef.current);
+  //     }
+  //   };
+  // }, []);
+
   return (
     <div
+      id="about"
       className={cn(
-        "flex flex-col font-[AdieuRegular] w-full px-3 sm:px-20 bg-dark-400 max-h-[900px]",
+        "flex flex-col font-[AdieuRegular] w-full px-3 sm:px-20 bg-dark-400 ",
         className
       )}
       style={{ cursor: 'url("/images/cursor.png"), auto' }}
@@ -51,9 +84,20 @@ const AboutSection = ({ className }: AboutSectionProps) => {
       <SectionHeader title="About SynChronize'25" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8 mt-16">
-        <div className="relative aspect-square bg-dark-400 border border-gray-800 w-full md:h-[95%] md:w-[85%] ">
-          <div className="">
-            <img className="" src="/src/assets/images/xim_main.png" alt="" />
+        <div className="md:ml-10 relative aspect-square bg-dark-400 w-full md:w-[85%] ">
+          {/* ref={targetRef} */}
+          <div className="overflow-hidden rounded-lg">
+            <img
+              className="opacity-80 overflow-hidden"
+              src="/src/assets/images/xim_main.png"
+              alt=""
+            />
+            {/* <img
+              className="opacity-80 overflow-hidden"
+              src="/src/assets/images/xim_main.png"
+              alt=""
+              style={{ transform: transformStyle }}
+            /> */}
           </div>
         </div>
 
