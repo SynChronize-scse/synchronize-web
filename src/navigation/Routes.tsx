@@ -10,7 +10,7 @@ const EventHeading = React.lazy(
   () => import("../pages/EventsPage/Components/EventsHeading")
 );
 const Centerstage = React.lazy(
-  () => import("../pages/EventsPage/Components/CenterStage")
+  () => import("../pages/EventsPage/Components/Centerstage")
 );
 const FunNgames = React.lazy(
   () => import("../pages/EventsPage/Components/FunNgames")
