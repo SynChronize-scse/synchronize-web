@@ -2,6 +2,8 @@ import "./Navbar.css";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(useGSAP);
 
@@ -21,16 +23,12 @@ export default function Navbar() {
         duration: 0.3,
       });
 
-      tl.from("#full h4", {
+      tl.from("#full .nav-text", {
         x: 150,
         duration: 0.2,
         stagger: 0.22,
         opacity: 0,
       });
-
-      // tl.from("#full h4", {
-      //   opacity: 0,
-      // });
 
       tl.pause();
 
@@ -43,8 +41,6 @@ export default function Navbar() {
 
       closeBtn.current?.addEventListener("click", () => {
         tl.reverse();
-        // tl.reverse().timeScale(2);
-
         itemsContainer.current?.removeEventListener("click", preventDefault);
         itemsContainer.current?.removeEventListener("wheel", preventDefault);
         itemsContainer.current?.removeEventListener(
@@ -61,8 +57,6 @@ export default function Navbar() {
     e?.stopPropagation();
   };
 
-  // TODO: Improve this temporary fix changing screen widths
-  // #full is appearing on top when resizing window from desktop to mobile after closing nav
   useEffect(() => {
     const handleResize = () => {
       itemsContainer.current?.style.setProperty("top", `-100vh`);
@@ -89,12 +83,12 @@ export default function Navbar() {
           id="full"
           className="overflow-hidden font-[AdieuRegular]"
         >
-          <h4 className="nav-text">// HOME</h4>
-          <h4 className="nav-text">// ABOUT</h4>
-          <h4 className="nav-text">// EVENTS</h4>
-          <h4 className="nav-text">// SPONSOR</h4>
-          <h4 className="nav-text">// TEAM</h4>
-          <h4 className="nav-text">// MEMORIES</h4>
+          <NavLink to="/" className="nav-text">// HOME</NavLink>
+          <NavLink to="/about" className="nav-text">// ABOUT</NavLink>
+          <Link to="/events" className="nav-text">// EVENTS</Link>
+          <NavLink to="/sponsor" className="nav-text">// SPONSOR</NavLink>
+          <NavLink to="/team" className="nav-text">// TEAM</NavLink>
+          <NavLink to="/memories" className="nav-text">// MEMORIES</NavLink>
 
           <h5 ref={closeBtn}>
             <svg

@@ -9,7 +9,7 @@ const Team = React.lazy(() => import("../pages/Team"));
 
 const EventHeading = React.lazy(() => import("../pages/EventsPage/Components/EventsHeading"));
 const Centerstage = React.lazy(() => import("../pages/EventsPage/Components/CenterStage"));
-const FunNcultural = React.lazy(() => import("../pages/EventsPage/Components/FunNgames"));
+const FunNgames = React.lazy(() => import("../pages/EventsPage/Components/FunNgames"));
 
 export const AppRoutes = () => {
   return (
@@ -18,7 +18,7 @@ export const AppRoutes = () => {
       <Route path='/memories' element={<Memories/>} />
       <Route path='*' element={<NotFound />} />
       <Route path='/events' element={<><EventHeading /> <Centerstage /></>} />
-      <Route path='/events/funncultural' element={<><EventHeading /> <FunNcultural /></>} />
+      <Route path='/events/funncultural' element={<><EventHeading /> <FunNgames /></>} />
       <Route path='/team' element={<Team/>} />
     </Routes>
   );

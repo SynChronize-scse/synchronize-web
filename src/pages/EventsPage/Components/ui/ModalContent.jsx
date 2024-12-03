@@ -21,6 +21,9 @@ function ModalContent({ onClose, props }) {
         }
     };
 
+    // Split description by new lines if exists
+    const descriptionLines = description ? description.split("\n") : ["lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."];
+
     return (
         <>
             <div>
@@ -33,7 +36,8 @@ function ModalContent({ onClose, props }) {
                         onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking inside content
                     >
                         <div
-                            className="bg-gradient-to-b from-black to-slate-900 text-slate-100 h-full w-full p-6 rounded-lg flex flex-col justify-start items-center"
+                            className="bg-gradient-to-r from-slate-950  via-slate-900  to-gray-950
+                             text-slate-100 h-full w-full p-6 rounded-lg flex flex-col justify-start items-center"
                             style={{
                                 boxShadow: "0 0 8px rgba(255, 223, 0, 0.3), 0 0 15px rgba(255, 140, 0, 0.3), 0 0 20px rgba(255, 105, 0, 0.3)"
                             }}
@@ -68,13 +72,16 @@ function ModalContent({ onClose, props }) {
                                     </div>
                                 </div>
 
-                                <div className="lg:h-1/6 md:h-2/6 h-3/6 mb-1 p-6 flex-grow text-center text-gray-100">
-                                    {description ? description : 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
+                                {/* Description with line breaks */}
+                                <div className="lg:h-1/6  md:h-2/6 sm:h-2/6 leading-5 text-sm lg:text-lg mb-1 py-4 sm:px-12 flex-grow text-left font-mono text-gray-200">
+                                    {descriptionLines.map((line, index) => (
+                                        <p key={index} className="mb-2">{line}</p>
+                                    ))}
                                 </div>
 
                                 <div className="flex flex-row justify-center items-center ">
                                     <button
-                                        className="px-4 py-2 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold rounded-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95"
+                                        className="px-4 py-2 shadow-lg shadow-blue-500/40 hover:shadow-indigo-500/40  bg-gradient-to-r from-teal-500 to-blue-600  active:from-orange-600 active:to-pink-600 text-white font-semibold rounded-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95"
                                     >
                                         REGISTER
                                     </button>
