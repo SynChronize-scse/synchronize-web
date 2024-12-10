@@ -1,6 +1,6 @@
 export const FLAGSHIP = [
   {
-    title: "24 hours hackathon",
+    title: "Time Hacks",
     description:
       "A thrilling 24-hour hackathon designed for developers of all levels. \nTest your coding skills and creativity as you collaborate with like-minded individuals. \nCompete for exciting prizes while building innovative projects under a tight deadline.",
     img: "https://source.unsplash.com/featured/?hackathon",
@@ -23,26 +23,36 @@ export const ROBOTICS = [
   {
     title: "Megatron",
     description:
-      "'Megatron' is a fierce robot combat competition where participants build robots to battle in a controlled arena. \nStrategize and optimize your robot for combat, outsmarting your opponents for the title. \nGet ready for an action-packed, high-stakes showdown!",
+      "Megatron is a fierce robot combat competition where participants build robots to battle in a controlled arena. \nStrategize and optimize your robot for combat, outsmarting your opponents for the title. \nGet ready for an action-packed, high-stakes showdown!",
     img: "https://source.unsplash.com/featured/?robotics",
     // link: "/events/robotics"  TO BE REPLACED W/ MODAL
     date: "09-01-2024",
     time: "03:00 PM",
   },
   {
-    title: "Path Xplorer",
+    title: "Mazeium",
     description:
-      "'Path Xplorer' challenges you to build a robot that can find the shortest path through a maze. \nNavigate obstacles and optimize your robot’s path to reach the finish line first. \nPut your problem-solving and programming skills to the test in this exciting event.",
+      "Mazeium challenges you to build a robot that can find the shortest path through a maze. \nNavigate obstacles and optimize your robot’s path to reach the finish line first. \nPut your problem-solving and programming skills to the test in this exciting event.",
     img: "https://source.unsplash.com/featured/?robotics",
     // link: "/events/robotics"  TO BE REPLACED W/ MODAL
     date: "10-01-2024",
     time: "10:45 AM",
   },
+  {
+    title: "TechTanks",
+    description:
+      "TechTanks is an engaging drone workshop where you'll learn the fundamentals of drone design and operation. \nMaster the basics of aerodynamics, control systems, and programming. \nGet hands-on experience in building and flying your own drone in this interactive session.",
+    img: "https://source.unsplash.com/featured/?drones",
+    // link: "/events/robotics"  TO BE REPLACED W/ MODAL
+    date: "10-01-2024",
+    time: "02:30 PM",
+  },
 ];
+
 
 export const CODING = [
   {
-    title: "Debugging Challenge",
+    title: "Bugathon",
     description:
       "In the 'Debugging Challenge,' participants fix broken code under time pressure. \nIdentify bugs quickly and solve them for the chance to win exciting prizes. \nYour debugging skills will be tested as you race against the clock.",
     img: "https://source.unsplash.com/featured/?coding",
@@ -60,9 +70,9 @@ export const CODING = [
     time: "02:00 PM",
   },
   {
-    title: "Algorhym Master",
+    title: "Algorhythm Master",
     description:
-      "'Algorhym Master' is an algorithm competition that tests your problem-solving and coding abilities. \nSolve complex algorithmic challenges within a fixed time. \nThink critically and use your coding skills to claim victory.",
+      "'Algorhythm Master' is an algorithm competition that tests your problem-solving and coding abilities. \nSolve complex algorithmic challenges within a fixed time. \nThink critically and use your coding skills to claim victory.",
     img: "https://source.unsplash.com/featured/?coding",
     // link: "/events/coding"  TO BE REPLACED W/ MODAL
     date: "10-01-2024",
@@ -81,18 +91,18 @@ export const CODING = [
 
 export const BUSINESS = [
   {
-    title: "Stock Simulation",
+    title: "Stock Storm",
     description:
-      "'Stock Simulation' is a virtual stock trading competition. \nBuy and sell stocks based on real-time data to grow your portfolio. \nManage risks, predict market trends, and maximize your profits to win.",
+      "'Stock Storm' is a virtual stock trading competition. \nBuy and sell stocks based on real-time data to grow your portfolio. \nManage risks, predict market trends, and maximize your profits to win.",
     img: "https://source.unsplash.com/featured/?business",
     // link: "/events/business"  TO BE REPLACED W/ MODAL
     date: "10-01-2024",
     time: "10:00 AM",
   },
   {
-    title: "Tech Tank",
+    title: "Start-Up Park",
     description:
-      "In 'Tech Tank,' entrepreneurs pitch their business ideas to investors. \nPresent your product, receive feedback, and compete for investment or mentorship. \nShowcase your innovation and take your startup to the next level!",
+      "In Start-Up Park, entrepreneurs pitch their business ideas to investors. \nPresent your product, receive feedback, and compete for investment or mentorship. \nShowcase your innovation and take your startup to the next level!",
     img: "https://source.unsplash.com/featured/?business",
     // link: "/events/business"  TO BE REPLACED W/ MODAL
     date: "11-01-2024",
@@ -103,7 +113,7 @@ export const BUSINESS = [
 export const FUN = [
   // FUN & CULTURAL
   {
-    title: "Treasure Hunt",
+    title: "Galactic Hunt",
     description:
       "Gear up for an adventurous quest to solve clues and find the hidden treasure. Navigate through challenges with your team and emerge victorious. Exciting prizes await the winners. Let the hunt begin!",
     img: "https://source.unsplash.com/featured/?fun",
@@ -111,21 +121,14 @@ export const FUN = [
     time: "04:30 PM",
   },
   {
-    title: "Tech Skibble",
+    title: "Voyage to Victory",
     description:
-      "Bring out the artist in you by sketching creative, tech-inspired masterpieces. Impress the judges with your artistic flair. Top entries win amazing rewards. Let your imagination flow!",
+      "Tech Bingo, Tech Skribble, Pitch you name it! Bring out the artist in you by sketching creative, tech-inspired masterpieces. Impress the judges with your artistic flair. Let your imagination flow!",
     img: "https://source.unsplash.com/featured/?fun",
     date: "11-01-2024",
     time: "02:00 PM",
   },
-  {
-    title: "Tech Bingo",
-    description:
-      "Experience the excitement of Bingo with a tech twist. Match the numbers and shout 'Bingo!' to win cool prizes. Gather your friends and make it a memorable game day.",
-    img: "https://source.unsplash.com/featured/?fun",
-    date: "11-01-2024",
-    time: "2:00 PM",
-  },
+
 ];
 
 export const GAMING = [
