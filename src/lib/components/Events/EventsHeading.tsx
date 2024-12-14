@@ -5,6 +5,8 @@ import Particles, {
 } from "@tsparticles/react";
 import type { Engine } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
+import { ChevronLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const EventsHeading = () => {
   const [init, setInit] = useState<boolean>(false);
@@ -30,7 +32,7 @@ const EventsHeading = () => {
     },
     particles: {
       number: {
-        value: window?.innerWidth > 768 ? 90 : 20,
+        value: window?.innerWidth > 768 ? 50 : 10,
         limit: {
           mode: "wait",
           value: window?.innerWidth > 768 ? 200 : 50,
@@ -114,7 +116,7 @@ const EventsHeading = () => {
     preset: "stars",
   };
   return (
-    <div>
+    <div className="overflow-hidden relative">
       {init && (
         <Particles
           id="tsparticles"
@@ -124,9 +126,13 @@ const EventsHeading = () => {
         />
       )}
 
-      <div className="font-[AdieuRegular] h-screen flex justify-center items-center bg-dark-400">
+      <div className="font-[AdieuRegular] flex justify-center items-center bg-dark-400 py-20">
+        <Link to="/">
+          <ChevronLeft className="w-7 h-7 sm:w-10 sm:h-10 text-primary-400 absolute z-50 top-4 left-4 sm:top-9 sm:left-9" />
+        </Link>
+
         <div className="w-full my-5 flex justify-center items-center">
-          <h1 className="relative z-50 text-5xl md:text-9xl lg:text-[10rem] font-semibold text-primary-400">
+          <h1 className="relative z-50 text-5xl md:text-9xl lg:text-9xl font-semibold text-primary-400">
             EVENTS
           </h1>
         </div>

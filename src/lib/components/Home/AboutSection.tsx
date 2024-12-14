@@ -127,7 +127,8 @@ const AboutSection = ({ className }: AboutSectionProps) => {
                     {word.split("").map((letter, lIndex) => {
                       const overallIndex = pIndex * 5 + wIndex * 5 + lIndex;
                       const isHighlighted =
-                        scrollPosition > overallIndex / (text.length * 1);
+                        scrollPosition + 0.15 >
+                        overallIndex / (text.length * 1);
                       return (
                         <span
                           key={lIndex}

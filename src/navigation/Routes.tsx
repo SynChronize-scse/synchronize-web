@@ -6,15 +6,9 @@ const NotFound = React.lazy(() => import("../pages/NotFound"));
 const Memories = React.lazy(() => import("../pages/Memories"));
 const Team = React.lazy(() => import("../pages/Team"));
 
-const EventHeading = React.lazy(
-  () => import("../pages/EventsPage/Components/EventsHeading")
-);
-const Centerstage = React.lazy(
-  () => import("../pages/EventsPage/Components/Centerstage")
-);
-const FunNgames = React.lazy(
-  () => import("../pages/EventsPage/Components/FunNgames")
-);
+const Centerstage = React.lazy(() => import("../pages/Centerstage"));
+const FunNgames = React.lazy(() => import("../pages/FunNgames"));
+const GuestTalks = React.lazy(() => import("../pages/GuestTalks"));
 
 export const AppRoutes = () => {
   const location = useLocation();
@@ -29,22 +23,9 @@ export const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/memories" element={<Memories />} />
       <Route path="*" element={<NotFound />} />
-      <Route
-        path="/events"
-        element={
-          <>
-            <EventHeading /> <Centerstage />
-          </>
-        }
-      />
-      <Route
-        path="/events/funncultural"
-        element={
-          <>
-            <EventHeading /> <FunNgames />
-          </>
-        }
-      />
+      <Route path="/events" element={<Centerstage />} />
+      <Route path="/events/funncultural" element={<FunNgames />} />
+      <Route path="/events/guesttalks" element={<GuestTalks />} />
       <Route path="/team" element={<Team />} />
     </Routes>
   );

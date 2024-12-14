@@ -52,7 +52,7 @@ const Home = () => {
       src: TechDesktop,
       mobileSrc: TechMobile,
       color: "#606C5D",
-      path: "/events/technical",
+      path: "/events",
     },
     {
       title: "Non-Technical Events",
@@ -63,6 +63,7 @@ const Home = () => {
       // mobileSrc: "src/assets/images/non_tech.png",
       src: NonTechDesktop,
       mobileSrc: NonTechMobile,
+      path: "/events/funncultural",
       color: "#977F6D",
     },
     // {
@@ -81,6 +82,7 @@ const Home = () => {
       src: GuestDesktop,
       mobileSrc: GuestMobile,
       color: "#31511E",
+      path: "/events/guesttalks",
     },
   ];
 
@@ -105,7 +107,7 @@ const Home = () => {
       </div>
       <div className="flex flex-col items-center gap-10 justify-center bg-dark-400 text-white">
         <LandingSection />
-        <AboutSection className="mt-24" />
+        <AboutSection className="mt-24 sm:mb-20" />
 
         {/* Heading */}
         <SectionHeader

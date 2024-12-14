@@ -38,6 +38,9 @@ const Footer = () => {
       <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl w-full h-auto flex flex-col gap-10 md:flex-row justify-between px-3 sm:px-5 xl:px-5 pt-8 pb-8 lg:pt-16 lg:pb-8 xl:pt-24 xl:pb-12">
         <div className="flex flex-row max-[320px]:flex-col max-[320px]:items-start gap-3 sm:gap-12 md:gap-14 lg:gap-28 xl:gap-52 justify-between items-end">
           <div className="flex flex-col space-y-5 sm:w-auto">
+            <Link to="/" className="hover:text-gray-400">
+              Home
+            </Link>
             <Link to="/events" className="hover:text-gray-400">
               Events
             </Link>
@@ -46,9 +49,6 @@ const Footer = () => {
             </Link>
             <Link to="/memories" className="hover:text-gray-400">
               Memories
-            </Link>
-            <Link to="#" className="hover:text-gray-400">
-              Contact
             </Link>
           </div>
 
