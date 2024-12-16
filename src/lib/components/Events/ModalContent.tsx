@@ -87,7 +87,7 @@ function ModalContent({ onClose, props }) {
                     </div>
 
                     {/* Description with line breaks */}
-                    <div className="leading-5 font-mono text-sm md:text-base lg:text-lg mb-1 py-4 text-left text-gray-200  md:pb-16 lg:pb-12 xl:pb-36 2xl:pb-52 ">
+                    <div className="leading-5 font-mono text-sm md:text-base lg:text-lg mb-1 py-4 text-left text-gray-200  md:pb-16 lg:pb-12 xl:pb-28 2xl:pb-52 ">
                       {descriptionLines.map((line, index) => (
                         <p key={index} className="mb-2">
                           {line}
@@ -96,18 +96,18 @@ function ModalContent({ onClose, props }) {
                     </div>
 
                     <div className="flex flex-row justify-center items-center ">
-                      {/* <button className="px-4 py-2 shadow-lg shadow-blue-500/40 hover:shadow-indigo-500/40  bg-gradient-to-r from-teal-500 to-blue-600  active:from-orange-600 active:to-pink-600 text-white font-semibold rounded-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+                      <button className="px-4 py-[10px] shadow-lg shadow-blue-500/40 hover:shadow-indigo-500/40  bg-gradient-to-r from-teal-500 to-blue-600  active:from-orange-600 active:to-pink-600 text-white font-semibold rounded-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95">
                         REGISTER
-                      </button> */}
+                      </button>
                       {/* <a
                         href="#"
                         className="mt-5 group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-primary-400 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur origin-left hover:decoration-2 hover:text-primary-400 relative bg-neutral-800 h-fit w-fit border border-white text-left p-3 text-gray-50 text-xs sm:text-sm rounded-lg overflow-hidden before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-violet-500 before:rounded-full before:blur-lg  after:absolute after:z-10 after:w-20 after:h-20 after:content['']  after:bg-rose-300 after:right-8 after:top-3 after:rounded-full after:blur-lg"
                       >
                         <span className="relative z-50">Register</span>
                       </a> */}
-                      <button className="border-primary-400 group uppercase flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-7 py-2 lg:px-9 lg:py-3 border text-left p-3 text-gray-50 text-sm lg:text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-primary-400 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse">
+                      {/* <button className="border-primary-400 group uppercase flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-7 py-2 lg:px-9 lg:py-3 border text-left p-3 text-gray-50 text-sm lg:text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-primary-400 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse">
                         Register
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
