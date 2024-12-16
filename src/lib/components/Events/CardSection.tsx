@@ -33,12 +33,6 @@ const CardSection = ({
         </div>
         <div className="flex flex-row gap-5 overflow-x-auto pb-3">
           {cards.map((card, index) => (
-            // <CardProto
-            //   key={index}
-            //   title={card.title || "Untitled"}
-            //   description={card.description || "No description available."}
-            //   img={card.img}
-            //   />
 
             <Card
               key={index}

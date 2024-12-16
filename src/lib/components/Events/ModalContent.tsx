@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 function ModalContent({ onClose, props }) {
   // Disable body scroll when modal is open
@@ -32,51 +32,52 @@ function ModalContent({ onClose, props }) {
     <>
       <div>
         <div
-          className="modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex items-center justify-center"
+          className="modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-2 flex items-center justify-center"
           onClick={handleBackgroundClick} // Close modal when background is clicked
         >
           <div
-            className="w-[90%] max-h-[90vh] overflow-y-auto border border-[#2e2c21] rounded-3xl shadow-lg"
+            className="w-5/6 h-fit p-[1px] bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 rounded-lg shadow-lg"
             onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking inside content
           >
             <div
-              className="bg-gradient-to-r from-black via-dark-400 to-black text-slate-100 h-full w-full p-6 rounded-lg flex flex-col justify-start items-center"
-              // style={{
-              //   boxShadow:
-              //     "0 0 8px rgba(255, 223, 0, 0.3), 0 0 15px rgba(255, 140, 0, 0.3), 0 0 20px rgba(255, 105, 0, 0.3)",
-              // }}
+              className="bg-gradient-to-r from-slate-950  via-slate-900  to-gray-950
+                             text-slate-100 h-full w-full py-3 px-4 md:p-6 rounded-lg flex flex-col justify-start items-center"
+              style={{
+                boxShadow:
+                  "0 0 8px rgba(255, 223, 0, 0.3), 0 0 15px rgba(255, 140, 0, 0.3), 0 0 20px rgba(255, 105, 0, 0.3)",
+              }}
             >
-              <div className="mb-4 w-full font-[AdieuLight]">
-                <div className="flex justify-end">
-                  {/* <h1 className="text-4xl font-semibold text-center text-gray-100 mb-4">
+              <div className="py-2 w-full font-[AdieuLight]">
+                <div className="flex justify-between  md:px-4">
+                  <h1 className="text-3xl md:text-4xl font-semibold text-center text-gray-100 mb-4 ">
                     {title ? title : "Event Title"}
-                  </h1> */}
+                  </h1>
                   <h1>
                     <button
                       onClick={onClose}
-                      className="text-2xl text-gray-50 hover:text-slate-100 hover:scale-110 transition duration-100 ease-in-out"
+                      className="text-xl md:text-2xl pt-[1px] text-gray-50 hover:text-slate-100 hover:scale-110 transition duration-100 ease-in-out"
                     >
                       &#10005;
                     </button>
                   </h1>
                 </div>
 
-                <div className="flex flex-col md:flex-row">
-                  <div className="">
+                <div className="flex flex-col lg:flex-row">
+                  <div className="flex justify-center">
                     {img && (
                       <img
                         src={img}
                         alt="img"
-                        className="w-full h-full object-contain rounded-3xl"
+                        className="h-72 lg:h-[95%]  object-contain  rounded-3xl"
                       />
                     )}
                   </div>
 
-                  <div className="flex flex-col px-0 md:px-10 w-full mt-5 md:mt-0">
+                  <div className="flex flex-col space-between px-4 md:px-10 w-full pt-10 lg:mt-5 md:mt-0">
                     <h1 className="whitespace-nowrap text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-left text-gray-100 mb-4">
                       {title ? title : "Event Title"}
                     </h1>
-                    <div className="flex text-sm md:text-base flex-col lg:flex-row pb-5 justify-between items-start lg:items-center text-primary-400">
+                    <div className="flex text-sm md:text-base flex-row pb-5 justify-between items-start lg:items-center text-primary-400">
                       <div className="text-center whitespace-nowrap">
                         <p>DATE: {date ? date : "ALL 3 DAYS"}</p>
                       </div>
@@ -86,7 +87,7 @@ function ModalContent({ onClose, props }) {
                     </div>
 
                     {/* Description with line breaks */}
-                    <div className="leading-5 font-[AdieuLight] text-sm lg:text-lg mb-1 py-4 flex-grow text-left text-gray-200">
+                    <div className="leading-5 font-mono text-sm md:text-base lg:text-lg mb-1 py-4 text-left text-gray-200  md:pb-16 lg:pb-12 xl:pb-36 2xl:pb-52 ">
                       {descriptionLines.map((line, index) => (
                         <p key={index} className="mb-2">
                           {line}
