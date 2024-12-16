@@ -7,6 +7,7 @@ interface CardProps {
   title: string;
   description: string;
   src: string;
+  mobileSrc?: string;
   color: string;
   i: number;
   progress: MotionValue<number>;
@@ -19,6 +20,7 @@ const MotionCard: React.FC<CardProps> = ({
   title,
   description,
   src,
+  mobileSrc,
   color,
   i,
   progress,
@@ -63,9 +65,15 @@ const MotionCard: React.FC<CardProps> = ({
         {/* Right Side: Image */}
         <div className="relative sm:w-1/2 h-full sm:rounded-2xl overflow-hidden">
           <img
-            src={`${src}`}
+            src={`${src ? src : mobileSrc}`}
             alt={title}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full hidden sm:block"
+          />
+
+          <img
+            src={`${mobileSrc ? mobileSrc : src}`}
+            alt={title}
+            className="object-cover w-full h-full block sm:hidden"
           />
         </div>
       </motion.div>

@@ -6,6 +6,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import mapImage from "../../assets/xim_map.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const handleMapClick = () => {
@@ -37,28 +38,38 @@ const Footer = () => {
       <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl w-full h-auto flex flex-col gap-10 md:flex-row justify-between px-3 sm:px-5 xl:px-5 pt-8 pb-8 lg:pt-16 lg:pb-8 xl:pt-24 xl:pb-12">
         <div className="flex flex-row max-[320px]:flex-col max-[320px]:items-start gap-3 sm:gap-12 md:gap-14 lg:gap-28 xl:gap-52 justify-between items-end">
           <div className="flex flex-col space-y-5 sm:w-auto">
-            <a href="#" className="hover:text-gray-400">
+            <Link to="/" className="hover:text-gray-400">
+              Home
+            </Link>
+            <Link to="/events" className="hover:text-gray-400">
               Events
-            </a>
-            <a href="/team" className="hover:text-gray-400">
+            </Link>
+            <Link to="/team" className="hover:text-gray-400">
               Team
-            </a>
-            <a href="/memories" className="hover:text-gray-400">
+            </Link>
+            <Link to="/memories" className="hover:text-gray-400">
               Memories
-            </a>
-            <a href="#" className="hover:text-gray-400">
-              Contact
-            </a>
+            </Link>
           </div>
 
           <div className="flex flex-col space-y-5 sm:w-auto">
-            <a href="/memories" className="hover:text-gray-400">
+            <Link to="/memories" className="hover:text-gray-400">
               Gallery
-            </a>
-            <a href="https://synchronizexim.com/Home%20Page/index.html" className="hover:text-gray-400">
+            </Link>
+            <a
+              href="https://synchronizexim.com/Home%20Page/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-400"
+            >
               Synchronize 2.0
             </a>
-            <a href="https://synchronizexim.com/Synchronize%201.0/index.html" className="hover:text-gray-400">
+            <a
+              href="https://synchronizexim.com/Synchronize%201.0/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-400"
+            >
               Synchronize 1.0
             </a>
           </div>
@@ -72,13 +83,17 @@ const Footer = () => {
                 <a
                   href="https://www.instagram.com/synchronize_xim/"
                   aria-label="Instagram page link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaInstagram />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/school-of-computer-science-and-engineering-career-advisory-services-43a0b61ab/"
+                  href="https://www.linkedin.com/in/synchronize-xim/"
                   aria-label="LinkedIn page link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaLinkedin />
@@ -86,13 +101,17 @@ const Footer = () => {
                 <a
                   href="https://github.com/SynChronize-scse"
                   aria-label="GitHub page link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaGithub />
                 </a>
                 <a
-                  href="#"
-                  aria-label="Facebook page link"
+                  href="https://www.youtube.com/@SynChronizeXIM"
+                  aria-label="Youtube page link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-gray-400 text-2xl border border-input rounded-full p-1"
                 >
                   <FaYoutube />

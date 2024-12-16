@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ImageCard from "./ImageCard";
-import bgImage from "./image.png";
+import bgImage from "./p.jpg";
 import { createPortal } from "react-dom";
 import ModalContent from "./ModalContent";
 

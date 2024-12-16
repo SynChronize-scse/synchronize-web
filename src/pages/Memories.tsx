@@ -198,8 +198,8 @@ export default function FlowingPathScroll() {
             blockRefs.current[blockIndex]?.animate(
               [{ opacity: 0 }, { opacity: 1 }],
               {
-                duration: 300,
-                easing: "ease-in-out",
+                duration: 600,
+                easing: "cubic-bezier(0.4, 0, 0.2, 1)",
                 fill: "forwards",
               }
             );
@@ -207,15 +207,18 @@ export default function FlowingPathScroll() {
             blockRefs.current[blockIndex]?.animate(
               [{ opacity: 1 }, { opacity: 0 }],
               {
-                duration: 300,
-                easing: "ease-in-out",
+                duration: 600,
+                easing: "cubic-bezier(0.4, 0, 0.2, 1)",
                 fill: "forwards",
               }
             );
           }
         });
       },
-      { threshold: isMobileDevice() ? 0.5 : 0 }
+      {
+        threshold: isMobileDevice() ? 0.5 : 0.1,
+        rootMargin: "-300px 0px",
+      }
     );
 
     blockRefs.current.forEach((block) => {

@@ -5,6 +5,13 @@ import SponsorUs from "$lib/components/Home/SponsorUs";
 import StackedCards from "$lib/components/Home/StackedCards";
 import { useEffect, useState } from "react";
 
+import TechMobile from "../assets/images/tech_events.png";
+import TechDesktop from "../assets/images/tech_desktop.jpg";
+import NonTechMobile from "../assets/images/non_tech.png";
+import NonTechDesktop from "../assets/images/nontech_desktop.jpg";
+import GuestMobile from "../assets/images/guest_lecture.png";
+import GuestDesktop from "../assets/images/guest_desktop.jpg";
+
 const Home = () => {
   const [hasHWA, setHasHWA] = useState<boolean>(true);
   const [showHwaPrompt, setShowHwaPrompt] = useState<boolean>(true);
@@ -42,16 +49,21 @@ const Home = () => {
       description:
         "The SynChronize festival will be renowned for its enormous selection of scientific and technology-related activities and contests. These experiences provide you ...",
       // src: "https://images.unsplash.com/photo-1566954979172-eaba308acdf0",
-      src: "https://placehold.co/600x400",
+      src: TechDesktop,
+      mobileSrc: TechMobile,
       color: "#606C5D",
-      path: "/events/technical",
+      path: "/events",
     },
     {
       title: "Non-Technical Events",
       description:
         "We at SynChronize are bringing you some lighthearted fun events to dispel the stereotype of a technical festival....",
       // src: "https://images.unsplash.com/photo-1643508522322-5bbc32b80dd0",
-      src: "https://placehold.co/600x400",
+      // src: "/images/p1.jpg",
+      // mobileSrc: "src/assets/images/non_tech.png",
+      src: NonTechDesktop,
+      mobileSrc: NonTechMobile,
+      path: "/events/funncultural",
       color: "#977F6D",
     },
     // {
@@ -66,8 +78,11 @@ const Home = () => {
       description:
         "These would include informational and motivational talks from eminent personalities from the field of computer science. Guest lecture is expected to be insightful and a great....",
       // src: "https://images.unsplash.com/flagged/photo-1557896279-080cb03b9ca6",
-      src: "https://placehold.co/600x400",
+      // src: "src/assets/images/guest_lecture.png",
+      src: GuestDesktop,
+      mobileSrc: GuestMobile,
       color: "#31511E",
+      path: "/events/guesttalks",
     },
   ];
 
@@ -92,7 +107,7 @@ const Home = () => {
       </div>
       <div className="flex flex-col items-center gap-10 justify-center bg-dark-400 text-white">
         <LandingSection />
-        <AboutSection className="mt-24" />
+        <AboutSection className="mt-24 sm:mb-20" />
 
         {/* Heading */}
         <SectionHeader

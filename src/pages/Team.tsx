@@ -1,42 +1,49 @@
 const Team = () => {
-    return (
-      <div className="bg-dark-400 text-primary-400 h-full w-full text-center">
-        <h2 className="text-6xl pt-5">Team</h2>
-  
+  return (
+    <div className="bg-dark-400 text-primary-400 h-full w-full text-center font-[AdieuRegular]">
+      <h2 className="text-8xl pt-5">Team</h2>
+
+      <div className="flex flex-col gap-10 mt-20">
         {/* Supervisor Section */}
-        <div className="mt-4">
-          <ul className="mt-3 text-2xl">Supervisor
+        <div className="">
+          <span className="text-3xl">Supervisor</span>
+          <ul className="text-2xl text-white">
             <li className="text-base">Mohit Singh</li>
           </ul>
         </div>
-  
+
         {/* Coordinators Section */}
-        <div className="mt-4">
-          <ul className="mt-3 text-2xl">Coordinators
+        <div className="">
+          <span className="text-3xl">Coordinators</span>
+
+          <ul className="text-white text-2xl">
             <li className="text-base">Abhilasha Panda</li>
             <li className="text-base">Sumit Kumar Yadav</li>
           </ul>
         </div>
-  
+
         {/* Deputy Coordinators Section */}
-        <div className="mt-4">
-          <ul className="mt-3 text-2xl">Deputy Coordinators
+        <div className="">
+          <span className="text-3xl">Deputy Coordinators</span>
+          <ul className="text-white text-2xl">
             <li className="text-base">Swandan Dash</li>
             <li className="text-base">Sonali Nayak</li>
           </ul>
         </div>
-  
+
         {/* Treasurers Section */}
-        <div className="mt-4">
-          <ul className="mt-3 text-2xl">Treasurers
+        <div className="">
+          <span className="text-3xl">Treasurers</span>
+          <ul className="text-white text-2xl">
             <li className="text-base">Ansika Mohanty</li>
             <li className="text-base">Divyanshu Ajit D'Silva</li>
           </ul>
         </div>
-  
+
         {/* Tech Section */}
-        <div className="mt-4">
-          <ul className="mt-3 text-2xl">Tech Team
+        <div className="">
+          <span className="text-3xl">Tech Team</span>
+          <ul className="text-white text-2xl">
             <li className="text-base">Ayush Tripathy</li>
             <li className="text-base">Anupam Choudhary</li>
             <li className="text-base">Bismay Sarangi</li>
@@ -53,10 +60,11 @@ const Team = () => {
             <li className="text-base">Jivitesh Barik</li>
           </ul>
         </div>
-  
+
         {/* Sponsorship Section */}
-        <div className="mt-4">
-          <ul className="mt-3 text-2xl">Sponsorship Team
+        <div className="">
+          <span className="text-3xl">Sponsorship Team</span>
+          <ul className="text-white text-2xl">
             <li className="text-base">Sashwat Swarup Panda</li>
             <li className="text-base">Siddharth Sushil </li>
             <li className="text-base">Varun Satapathy</li>
@@ -71,10 +79,11 @@ const Team = () => {
             <li className="text-base">Durga Dhar</li>
           </ul>
         </div>
-  
+
         {/* Marketing Section */}
-        <div className="mt-4">
-          <ul className="mt-3 text-2xl">Marketing
+        <div className="">
+          <span className="text-3xl">Marketing</span>
+          <ul className="text-white text-2xl">
             <li className="text-base">Soham Kundu</li>
             <li className="text-base">Siddhant Pradhan</li>
             <li className="text-base">Priyanshu Pati</li>
@@ -88,10 +97,11 @@ const Team = () => {
             <li className="text-base">Shreeya</li>
           </ul>
         </div>
-  
+
         {/* Events Section */}
-        <div className="mt-4">
-          <ul className="mt-3 text-2xl">Events
+        <div className="">
+          <span className="text-3xl">Events</span>
+          <ul className="text-white text-2xl">
             <li className="text-base">Saishrita Mohapatra</li>
             <li className="text-base">Simran Osta</li>
             <li className="text-base">Sidhant Sharma</li>
@@ -112,10 +122,11 @@ const Team = () => {
             <li className="text-base">Manish</li>
           </ul>
         </div>
-  
+
         {/* Logistics Section */}
-        <div className="mt-4">
-          <ul className="mt-3 text-2xl">Logistics
+        <div className="">
+          <span className="text-3xl">Logistics</span>
+          <ul className="text-white text-2xl">
             <li className="text-base">Deepak Kumar</li>
             <li className="text-base">Manish Nanda</li>
             <li className="text-base">Aditya Pandey</li>
@@ -129,10 +140,11 @@ const Team = () => {
             <li className="text-base">Swayam Prakash</li>
           </ul>
         </div>
-  
+
         {/* Hospitality Section */}
-        <div className="mt-4">
-          <ul className="mt-3 text-2xl">Hospitality
+        <div className="">
+          <span className="text-3xl">Hospitality</span>
+          <ul className="text-white text-2xl">
             <li className="text-base">Adyasha Jha</li>
             <li className="text-base">Suraj Maharana</li>
             <li className="text-base">Abhisekh Dash</li>
@@ -144,8 +156,8 @@ const Team = () => {
           </ul>
         </div>
       </div>
-    );
-  };
-  
-  export default Team;
-  
+    </div>
+  );
+};
+
+export default Team;
