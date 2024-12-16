@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 function ModalContent({ onClose, props }) {
   // Disable body scroll when modal is open
@@ -49,7 +49,10 @@ function ModalContent({ onClose, props }) {
             >
               <div className="py-2 w-full font-[AdieuLight]">
                 <div className="flex justify-between  md:px-4">
-                  <h1 className="text-3xl md:text-4xl font-semibold text-center text-gray-100 mb-4 ">
+                  <h1 className="text-3xl md:text-4xl text-cente mb-4 font-semibold
+                    from-slate-50 via-slate-100 to-slate-300 bg-gradient-to-r bg-clip-text text-transparent
+
+                  ">
                     {title ? title : "Event Title"}
                   </h1>
                   <h1>
@@ -77,7 +80,7 @@ function ModalContent({ onClose, props }) {
                     <h1 className="whitespace-nowrap text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-left text-gray-100 mb-4">
                       {title ? title : "Event Title"}
                     </h1>
-                    <div className="flex text-sm md:text-base flex-row pb-5 justify-between items-start lg:items-center text-primary-400">
+                    <div className="flex text-xs sm:text-sm md:text-base flex-row pb-5 justify-between items-start lg:items-center text-primary-400">
                       <div className="text-center whitespace-nowrap">
                         <p>DATE: {date ? date : "ALL 3 DAYS"}</p>
                       </div>
@@ -96,7 +99,9 @@ function ModalContent({ onClose, props }) {
                     </div>
 
                     <div className="flex flex-row justify-center items-center ">
-                      <button className="px-4 py-[10px] shadow-lg shadow-blue-500/40 hover:shadow-indigo-500/40  bg-gradient-to-r from-teal-500 to-blue-600  active:from-orange-600 active:to-pink-600 text-white font-semibold rounded-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95">
+                      <button className="px-4 py-[10px] shadow-lg shadow-blue-500/40 hover:shadow-indigo-500/40  
+                      opacity-90
+                      bg-gradient-to-r from-slate-500 to-slate-600  active:from-slate-400 active:to-slate-500 text-white active:text-slate-300 font-semibold rounded-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95">
                         REGISTER
                       </button>
                       {/* <a

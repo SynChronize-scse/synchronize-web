@@ -18,9 +18,9 @@ const CardSection = ({
   titleImg?: string;
 }) => {
   return (
-    <div className="flex justify-center items-center w-full">
-      <div className="mt-5 rounded-xl w-full">
-        <div className="flex justify-between relative w-full">
+    <div className="flex justify-center items-center w-full ">
+      <div className="mt-5 rounded-xl w-full md:px-4">
+        <div className="flex justify-between relative w-full ">
           <h1 className="text-2xl lg:text-4xl my-5">{title}</h1>
 
           {titleImg && (

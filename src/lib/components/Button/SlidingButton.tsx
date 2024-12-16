@@ -18,7 +18,7 @@ const SlidingButton: React.FC<SlidingButtonProps> = ({
     <button
       {...buttonProps}
       className={cn(
-        `group text-sm relative flex flex-col h-fit w-fit rounded-full border border-primary-400 px-5 py-2 overflow-hidden duration-[600ms] ease-[cubic-bezier(.16,1,.3,1)]`,
+        `group text-sm relative flex flex-col h-fit w-fit rounded-xl border border-primary-400 px-5 py-2 overflow-hidden duration-[600ms] ease-[cubic-bezier(.16,1,.3,1)]`,
         className
       )}
     >
