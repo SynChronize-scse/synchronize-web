@@ -31,7 +31,10 @@ const Card: FC<CardProps> = ({
   useEffect(() => {
     const query = window.location.search;
     const event = parseQueries(query).get("event");
-    const processedTitle = title?.toLocaleLowerCase().replace(/\s/g, "-");
+    const processedTitle = title
+      ?.trim()
+      ?.toLocaleLowerCase()
+      .replace(/\s/g, "-");
 
     if (event === processedTitle) {
       setShowModal(() => true);

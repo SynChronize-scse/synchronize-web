@@ -243,7 +243,7 @@ export const GUESTLECTURES = [
     time: "10:00 AM",
   },
   {
-    title: "Youth Icon Talk ",
+    title: "Youth Icon Talk",
     Guest: "Mr. Steve Rogers",
     description: "Talk by Youth Icon.",
     img: YOUTH_ICON_TALK,
