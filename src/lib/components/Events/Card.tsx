@@ -1,5 +1,5 @@
 import { cn } from "$lib/utils";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import SlidingButton from "../Button/SlidingButton";
 import ModalContent from "./ModalContent";
 import { createPortal } from "react-dom";
@@ -22,6 +22,21 @@ const Card: FC<CardProps> = ({
   time,
 }) => {
   const [showModal, setShowModal] = useState(false);
+
+  const parseQueries = (search: string) => {
+    const params = new URLSearchParams(search);
+    return params;
+  };
+
+  useEffect(() => {
+    const query = window.location.search;
+    const event = parseQueries(query).get("event");
+    const processedTitle = title?.toLocaleLowerCase().replace(/\s/g, "-");
+
+    if (event === processedTitle) {
+      setShowModal(() => true);
+    }
+  }, [title]);
 
   return (
     <div
