@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import drone from "../assets/images/ig-drones.jpg";
 import TQ from "../assets/images/TQ.png";
-import start from "../assets/images/start.jpg";
+// import start from "../assets/images/start.jpg";
 import algo from "../assets/images/Algo-Rythm.png";
 import anu from "../assets/images/anu.jpg";
 import arsh from "../assets/images/arsh.jpg";
@@ -45,7 +45,7 @@ const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={`p-6 pt-0 ${className || ""}`} {...props} />
+  <div ref={ref} className={`p-6  pt-0 ${className || ""}`} {...props} />
 ));
 CardContent.displayName = "CardContent";
 
@@ -64,7 +64,7 @@ const imageSources = [
   TQ,
   TQ,
   TQ,
-  start,
+  // start,
 ];
 
 const imageDescriptions = [
@@ -334,18 +334,18 @@ export default function FlowingPathScroll() {
 
   return (
     <div>
-      <div className="container mx-auto px-4 py-8 block md:hidden">
-        <h1 className="text-3xl font-bold text-center mb-8">Image Gallery</h1>
+      <div className="container font-[AdieuRegular]  text-orange-200 mx-auto px-4 py-8 block md:hidden">
+        <h1 className="text-3xl font-bold text-center mb-8">Memories</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {imageSources.map((src, index) => (
-            <Card key={index} className="overflow-hidden">
+            <Card key={index} className="overflow-hidden ">
               <img
                 src={src}
                 alt={`Image ${index + 1}`}
-                className="object-cover"
+                className="object-cover  "
               />
-              <CardContent className="p-4">
-                <p className="text-sm text-gray-600 line-clamp-3">
+              <CardContent className="p-6 pt-7">
+                <p className="text-sm  line-clamp-3 ">
                   {imageDescriptions[index]}
                 </p>
               </CardContent>
