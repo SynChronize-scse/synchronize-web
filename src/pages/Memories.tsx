@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import drone from "../assets/images/ig-drones.jpg";
-import TQ from "../assets/images/TQ.png";
 // import start from "../assets/images/start.jpg";
 import algo from "../assets/images/Algo-Rythm.png";
 import anu from "../assets/images/anu.jpg";
@@ -11,6 +10,10 @@ import booth from "../assets/images/booth.webp";
 import dj from "../assets/images/dj.jpeg";
 import fifa from "../assets/images/fifa.webp";
 import hacks from "../assets/images/hacks.jpg";
+import bug from "../assets/images/bug-buster.jpg";
+import rohit from "../assets/images/guest_lecture.png";
+import robowar from "../assets/images/robowar.jpg";
+import cultural from "../assets/images/non_tech.png";
 import { isMobileDevice } from "$lib/utils";
 import React from "react";
 
@@ -60,10 +63,10 @@ const imageSources = [
   dj,
   fifa,
   hacks,
-  TQ,
-  TQ,
-  TQ,
-  TQ,
+  bug,
+  rohit,
+  robowar,
+  cultural,
   // start,
 ];
 
@@ -78,10 +81,10 @@ const imageDescriptions = [
   "Energetic DJ spinning tracks, creating an electrifying atmosphere for the crowd. State-of-the-art equipment and lighting effects enhance the immersive experience. Showcases the power of music and technology in bringing people together.",
   "Intense FIFA gaming moment captured during esports tournament. Players fully engaged, showcasing skills and strategic thinking in virtual football match. Highlights the growing popularity and competitiveness of electronic sports in modern entertainment.",
   "Hackathon in full swing, with diverse group of participants collaborating intensely. Whiteboards filled with ideas and laptops displaying lines of code. Embodies the spirit of innovation, teamwork, and rapid problem-solving in tech community.",
-  "TQ logo prominently displayed, representing our brand identity and values. Clean lines and modern design convey professionalism and innovation. Serves as a visual anchor for our company's mission and vision in tech industry.",
-  "TQ emblem showcased in various applications and contexts. Versatile design adapts seamlessly to different mediums and scales. Reinforces brand recognition and consistency across multiple platforms and products.",
-  "TQ symbol integrated into product packaging and marketing materials. Sleek and minimalist approach enhances visual appeal and memorability. Demonstrates the importance of cohesive branding in building strong market presence.",
-  "TQ icon featured in digital interfaces and mobile applications. Recognizable even at small sizes, ensuring consistent user experience. Highlights our commitment to user-centric design and seamless integration of branding.",
+  "Debugging Challenge heats up as participants race against the clock to fix broken code, adrenaline high and focus sharp.",
+  "Insightful guest talk by Rohit Negi, captivating the audience with fresh perspectives and inspiring ideas.",
+  "Thrilling Robo War underway as bots clash in an electrifying battle of strategy and engineering.",
+  "Vibrant Cultural Night comes alive with dazzling dance and soulful music performances lighting up the stage.",
   "Starting line of an exciting journey or competition. Anticipation and energy palpable as participants prepare to begin. Symbolizes new beginnings, opportunities, and the thrill of embarking on challenging endeavors.",
 ];
 
@@ -334,7 +337,7 @@ export default function FlowingPathScroll() {
 
   return (
     <div>
-      <div className="container font-[AdieuRegular]  text-orange-200 mx-auto px-4 py-8 block md:hidden">
+      <div className="container font-[AdieuRegular] text-orange-200 mx-auto px-4 py-8 block md:hidden">
         <h1 className="text-3xl font-bold text-center mb-8">Memories</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {imageSources.map((src, index) => (
@@ -342,7 +345,7 @@ export default function FlowingPathScroll() {
               <img
                 src={src}
                 alt={`Image ${index + 1}`}
-                className="object-cover  "
+                className="object-cover  w-full"
               />
               <CardContent className="p-6 pt-7">
                 <p className="text-sm  line-clamp-3 ">
@@ -430,7 +433,7 @@ export default function FlowingPathScroll() {
                         transform: `translate(${config.textOffset.left}px, ${config.textOffset.top}px)`,
                       }}
                     >
-                      <p className="text-white uppercase font-[AdieuRegular] text-xs leading-tight">
+                      <p className="text-white font-[AdieuRegular] text-xs leading-tight">
                         {imageDescriptions[imageIndex]
                           .split(" ")
                           .slice(0, 15)
