@@ -101,15 +101,15 @@ const blockConfigs: BlockConfig[] = [
   },
   // 2
   {
-    imageOffset: { top: 0, left: 0 },
-    textOffset: { top: 0, left: 0 },
+    imageOffset: { top: -40, left: 0 },
+    textOffset: { top: -40, left: 0 },
     textAbove: false,
     zIndex: 21,
   },
   // 3
   {
-    imageOffset: { top: 0, left: 0 },
-    textOffset: { top: 0, left: 0 },
+    imageOffset: { top: -20, left: 0 },
+    textOffset: { top: -20, left: 0 },
     textAbove: false,
     zIndex: 21,
   },
@@ -244,7 +244,7 @@ export default function FlowingPathScroll() {
       },
       {
         threshold: isMobileDevice() ? 0.5 : 0.1,
-        rootMargin: "-300px 0px",
+        rootMargin: "0px -300px",
       }
     );
 
@@ -416,7 +416,7 @@ export default function FlowingPathScroll() {
                     }`}
                   >
                     <div
-                      className="w-32 h-32 overflow-hidden border-2 border-primary-400 p-1 rounded-full  bg-dark-400 mb-2"
+                      className="w-32 h-32 [@media(max-height:670px)]:h-24 [@media(max-height:670px)]:w-24 overflow-hidden border-2 border-primary-400 p-1 rounded-full  bg-dark-400 mb-2"
                       style={{
                         transform: `translate(${config.imageOffset.left}px, ${config.imageOffset.top}px)`,
                       }}
@@ -433,7 +433,7 @@ export default function FlowingPathScroll() {
                         transform: `translate(${config.textOffset.left}px, ${config.textOffset.top}px)`,
                       }}
                     >
-                      <p className="text-white font-[AdieuRegular] text-xs leading-tight">
+                      <p className="text-white font-[AdieuRegular] text-xs [@media(max-height:670px)]:text-[8px] leading-tight">
                         {imageDescriptions[imageIndex]
                           .split(" ")
                           .slice(0, 15)
