@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 function ModalContent({ onClose, props }) {
   // Disable body scroll when modal is open
-  const { title, description, date, time, img } = props;
+  const { title, description, date, time, img, link } = props;
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -104,9 +104,15 @@ function ModalContent({ onClose, props }) {
                       >
                         <span className="relative z-50">Register</span>
                       </a> */}
-                      <button className="border-primary-400 group uppercase flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-7 py-2 lg:px-9 lg:py-3 border text-left p-3 text-gray-50 text-sm lg:text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-primary-400 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse">
-                        Register
-                      </button>
+
+                      {link && (
+                        <button
+                          onClick={() => window.open(link, "_blank")}
+                          className="border-primary-400 group uppercase flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-7 py-2 lg:px-9 lg:py-3 border text-left p-3 text-gray-50 text-sm lg:text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-primary-400 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse"
+                        >
+                          Register
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -116,9 +116,26 @@ export default function Navbar() {
           <Link to="/events" className="nav-text">
             // EVENTS
           </Link>
-          <Link to="/sponsor" className="nav-text">
+          {/* <Link to="/sponsor" className="nav-text">
             // SPONSOR
-          </Link>
+          </Link> */}
+          <a
+            onClick={() => {
+              timeline.current?.reverse();
+              itemsContainer.current?.removeEventListener(
+                "wheel",
+                preventDefault
+              );
+              itemsContainer.current?.removeEventListener(
+                "touchmove",
+                preventDefault
+              );
+            }}
+            href="#sponsor-us"
+            className="nav-text"
+          >
+            // SPONSOR
+          </a>
           <Link to="/team" className="nav-text">
             // TEAM
           </Link>

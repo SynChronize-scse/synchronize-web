@@ -1,6 +1,6 @@
-import devendraSirImage from '../assets/images/devendra-sir.jpg';
-import chandansirImage from '../assets/images/chandan-sir.jpg';
-import swarupsirImage from '../assets/images/swarup-sir.jpg';
+import devendraSirImage from "../assets/images/devendra-sir.jpg";
+import chandansirImage from "../assets/images/chandan-sir.jpg";
+import swarupsirImage from "../assets/images/swarup-sir.jpg";
 
 const Team = () => {
   return (
@@ -8,25 +8,41 @@ const Team = () => {
       <h2 className="text-8xl pt-5">Team</h2>
 
       {/* Faculty Section */}
-      <div className="h-40 w-full pt-5">
-        <h2 className="text-3xl mb-4">Faculty Coordinators</h2>
-        <div className="text-white text-2xl flex flex-wrap">
-          <div className="flex-1 flex flex-col items-center">
-            <img className='h-28 w-28 rounded-full' src={devendraSirImage} alt="" />
-            <span className="mt-2 text-base sm:text-sm">Dr. Devendra K Yadav</span>
+      <div className="mx-auto my-20">
+        <h2 className="text-3xl my-8">Faculty Coordinators</h2>
+        <div className="text-white text-2xl grid grid-cols-1 min-[400px]:grid-cols-3 gap-5 md:gap-10 w-fit mx-auto">
+          <div className="flex flex-col items-center">
+            <img
+              className="h-28 w-28 rounded-full"
+              src={devendraSirImage}
+              alt=""
+            />
+            <span className="mt-2 text-base sm:text-sm">
+              Dr. Devendra K Yadav
+            </span>
           </div>
-          <div className="flex-1 flex flex-col items-center">
-            <img className='h-28 w-28 rounded-full' src={chandansirImage} alt="" />
+          <div className="flex flex-col items-center">
+            <img
+              className="h-28 w-28 rounded-full"
+              src={chandansirImage}
+              alt=""
+            />
             <span className="mt-2 text-base sm:text-sm">Dr. Chandan Misra</span>
           </div>
-          <div className="flex-1 flex flex-col items-center">
-            <img className='h-28 w-28 rounded-full' src={swarupsirImage} alt="" />
-            <span className="mt-2 text-base sm:text-sm">Dr. Swarup Chattopadhyay</span>
+          <div className="flex flex-col items-center">
+            <img
+              className="h-28 w-28 rounded-full"
+              src={swarupsirImage}
+              alt=""
+            />
+            <span className="mt-2 text-base sm:text-sm">
+              Dr. Swarup Chattopadhyay
+            </span>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col gap-10 mt-24">
+      <div className="flex flex-col gap-10 mt-10">
         {/* Supervisor Section */}
         <div className="">
           <span className="text-3xl">Supervisor</span>

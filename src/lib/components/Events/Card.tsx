@@ -11,6 +11,7 @@ interface CardProps {
   description?: string;
   date?: string;
   time?: string;
+  link?: string;
 }
 
 const Card: FC<CardProps> = ({
@@ -20,6 +21,7 @@ const Card: FC<CardProps> = ({
   description,
   date,
   time,
+  link,
 }) => {
   const [showModal, setShowModal] = useState(false);
 
@@ -91,6 +93,7 @@ const Card: FC<CardProps> = ({
               date: date,
               time: time,
               img: img,
+              link: link,
             }}
           />,
           document.body

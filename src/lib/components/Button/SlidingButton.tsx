@@ -6,6 +6,7 @@ interface SlidingButtonProps {
   secondaryText: string;
   className?: HTMLAttributes<HTMLButtonElement>["className"];
   buttonProps?: HTMLAttributes<HTMLButtonElement>;
+  href?: string;
 }
 
 const SlidingButton: React.FC<SlidingButtonProps> = ({
@@ -13,9 +14,13 @@ const SlidingButton: React.FC<SlidingButtonProps> = ({
   secondaryText,
   className,
   buttonProps,
+  href,
 }) => {
   return (
     <button
+      onClick={() => {
+        if (href) window.open(href, "_blank");
+      }}
       {...buttonProps}
       className={cn(
         `group text-sm relative flex flex-col h-fit w-fit rounded-full border border-primary-400 px-5 py-2 overflow-hidden duration-[600ms] ease-[cubic-bezier(.16,1,.3,1)]`,

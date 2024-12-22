@@ -6,6 +6,7 @@ interface Card {
   description?: string;
   date?: string;
   time?: string;
+  link?: string;
 }
 
 const CardSection = ({
@@ -47,6 +48,7 @@ const CardSection = ({
               description={card.description}
               date={card.date}
               time={card.time}
+              link={card.link}
             />
           ))}
         </div>
