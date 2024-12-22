@@ -20,14 +20,14 @@ const CardSection = ({
   return (
     <div className="flex justify-center items-center w-full">
       <div className="mt-5 rounded-xl w-full">
-        <div className="flex justify-between relative w-full">
+        <div className="flex justify-between relative w-full items-center">
           <h1 className="text-2xl lg:text-4xl my-5">{title}</h1>
 
           {titleImg && (
             <img
               src={titleImg}
               alt="title"
-              className="max-[350px]:hidden h-16 object-cover rounded-lg"
+              className="max-[350px]:hidden sm:hidden h-16 object-cover rounded-lg"
             />
           )}
         </div>

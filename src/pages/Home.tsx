@@ -127,7 +127,7 @@ const Home = () => {
                 </h1>
                 <p className="text-sm mt-4">
                   This site is optimized for hardware acceleration. Please
-                  enable it in your browser settings.
+                  enable it in your browser settings for the best experience.
                 </p>
                 <button
                   onClick={() => setShowHwaPrompt(false)}

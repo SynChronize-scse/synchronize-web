@@ -128,15 +128,15 @@ export const BUSINESS = [
     date: "10-01-2024",
     time: "10:00 AM",
   },
-  {
-    title: "Start-Up Park",
-    description:
-      "In Start-Up Park, entrepreneurs pitch their business ideas to investors. \nPresent your product, receive feedback, and compete for investment or mentorship. \nShowcase your innovation and take your startup to the next level!",
-    img: "",
-    // link: "/events/business"  TO BE REPLACED W/ MODAL
-    date: "11-01-2024",
-    time: "11:00 AM",
-  },
+  // {
+  //   title: "Start-Up Park",
+  //   description:
+  //     "In Start-Up Park, entrepreneurs pitch their business ideas to investors. \nPresent your product, receive feedback, and compete for investment or mentorship. \nShowcase your innovation and take your startup to the next level!",
+  //   img: "",
+  //   // link: "/events/business"  TO BE REPLACED W/ MODAL
+  //   date: "11-01-2024",
+  //   time: "11:00 AM",
+  // },
 ];
 
 export const FUN = [
@@ -212,14 +212,14 @@ export const EVERYDAY = [
     date: "EVERYDAY EVENT",
     time: "ALL DAY",
   },
-  {
-    title: "Startup Parks",
-    description:
-      "Explore cutting-edge innovations at our startup parks. Interact with budding entrepreneurs, discover their ideas, and get inspired by their journeys.",
-    img: "",
-    date: "EVERYDAY EVENT",
-    time: "ALL DAY",
-  },
+  // {
+  //   title: "Startup Parks",
+  //   description:
+  //     "Explore cutting-edge innovations at our startup parks. Interact with budding entrepreneurs, discover their ideas, and get inspired by their journeys.",
+  //   img: "",
+  //   date: "EVERYDAY EVENT",
+  //   time: "ALL DAY",
+  // },
 ];
 
 export const GUESTLECTURES = [

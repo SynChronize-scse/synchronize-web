@@ -19,9 +19,9 @@ const LandingPart = () => {
           SYNCHRONIZE'25
         </h3> */}
             <div className="flex flex-col">
-              <h3 className="sm:mt-10 z-10 font-bold leading-none tracking-wider max-[370px]:h-[clamp(1.8rem,9vi+-0.6rem,7rem)] max-[370px]:text-[clamp(1.8rem,9vi+-0.6rem,7rem)] h-[clamp(1.9rem,9vi+-0.6rem,7rem)] text-[clamp(1.9rem,9vi+-0.6rem,7rem)]">
-                SYNCHRONIZE'25
-              </h3>
+              <h1 className="sm:mt-10 z-10 font-bold leading-none tracking-wider max-[370px]:h-[clamp(1.7rem,9vi+-0.6rem,7rem)] max-[370px]:text-[clamp(1.7rem,9vi+-0.6rem,7rem)] h-[clamp(1.9rem,9vi+-0.6rem,7rem)] text-[clamp(1.9rem,9vi+-0.6rem,7rem)] max-[1500px]:h-[clamp(1.9rem,9vi+-0.6rem,6rem)] max-[1500px]:text-[clamp(1.9rem,9vi+-0.6rem,6rem)]">
+                SYNCHRONIZE 3.0
+              </h1>
 
               <div className="relative z-10 flex flex-row items-center justify-center mt-4 w-full max-w-[90%] self-end">
                 <img
