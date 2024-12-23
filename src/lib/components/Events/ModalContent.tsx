@@ -32,7 +32,7 @@ function ModalContent({ onClose, props }) {
     <>
       <div>
         <div
-          className="modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-2 flex items-center justify-center"
+          className="modal  fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-2 flex items-center justify-center"
           onClick={handleBackgroundClick} // Close modal when background is clicked
         >
           <div
@@ -40,14 +40,14 @@ function ModalContent({ onClose, props }) {
             onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking inside content
           >
             <div
-              className="bg-gradient-to-r from-slate-950  via-slate-900  to-gray-950
+              className="bg-gradient-to-r from-slate-950  via-black to-gray-800
                              text-slate-100 h-full w-full py-3 px-4 md:p-6 rounded-lg flex flex-col justify-start items-center"
               style={{
                 boxShadow:
                   "0 0 8px rgba(255, 223, 0, 0.3), 0 0 15px rgba(255, 140, 0, 0.3), 0 0 20px rgba(255, 105, 0, 0.3)",
               }}
             >
-              <div className="py-2 w-full font-[AdieuLight]">
+              <div className="py-5 lg:py-0 w-full font-[AdieuLight]">
                 <div className="flex justify-between  md:px-4">
                   <h1 className="text-3xl md:text-4xl text-cente mb-4 font-semibold
                     from-slate-50 via-slate-100 to-slate-300 bg-gradient-to-r bg-clip-text text-transparent
@@ -76,7 +76,7 @@ function ModalContent({ onClose, props }) {
                     )}
                   </div>
 
-                  <div className="flex flex-col space-between px-4 md:px-10 w-full pt-10 lg:mt-5 md:mt-0">
+                  <div className="flex flex-col space-between px-4 md:px-10 w-full  md:mt-0">
                     <h1 className="whitespace-nowrap text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-left text-gray-100 mb-4">
                       {title ? title : "Event Title"}
                     </h1>
@@ -90,7 +90,7 @@ function ModalContent({ onClose, props }) {
                     </div>
 
                     {/* Description with line breaks */}
-                    <div className="leading-5 font-mono text-sm md:text-base lg:text-lg mb-1 py-4 text-left text-gray-200  md:pb-16 lg:pb-12 xl:pb-28 2xl:pb-52 ">
+                    <div className="leading-5  text-sm md:text-base lg:text-lg mb-1 py-4 text-left text-gray-200  md:pb-16 lg:pb-12 xl:pb-28 2xl:pb-52 ">
                       {descriptionLines.map((line, index) => (
                         <p key={index} className="mb-2">
                           {line}
@@ -99,20 +99,20 @@ function ModalContent({ onClose, props }) {
                     </div>
 
                     <div className="flex flex-row justify-center items-center ">
-                      <button className="px-4 py-[10px] shadow-lg shadow-blue-500/40 hover:shadow-indigo-500/40  
+                      {/* <button className="px-4 py-[10px] shadow-lg shadow-blue-500/40 hover:shadow-indigo-500/40  
                       opacity-90
                       bg-gradient-to-r from-slate-500 to-slate-600  active:from-slate-400 active:to-slate-500 text-white active:text-slate-300 font-semibold rounded-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95">
                         REGISTER
-                      </button>
+                      </button> */}
                       {/* <a
                         href="#"
                         className="mt-5 group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-primary-400 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur origin-left hover:decoration-2 hover:text-primary-400 relative bg-neutral-800 h-fit w-fit border border-white text-left p-3 text-gray-50 text-xs sm:text-sm rounded-lg overflow-hidden before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-violet-500 before:rounded-full before:blur-lg  after:absolute after:z-10 after:w-20 after:h-20 after:content['']  after:bg-rose-300 after:right-8 after:top-3 after:rounded-full after:blur-lg"
                       >
                         <span className="relative z-50">Register</span>
                       </a> */}
-                      {/* <button className="border-primary-400 group uppercase flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-7 py-2 lg:px-9 lg:py-3 border text-left p-3 text-gray-50 text-sm lg:text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-primary-400 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse">
+                      <button className="border-primary-400 group uppercase flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-7 py-2 lg:px-9 lg:py-3 border text-left p-3 text-gray-50 text-sm lg:text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-primary-400 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse">
                         Register
-                      </button> */}
+                      </button>
                     </div>
                   </div>
                 </div>
