@@ -21,7 +21,8 @@ const CardSection = ({
   return (
     <div className="flex justify-center items-center w-full">
       <div className="mt-5 rounded-xl w-full">
-        <div className="flex justify-between relative w-full items-center">
+        <div className="flex justify-between relative w-full">
+
           <h1 className="text-2xl lg:text-4xl my-5">{title}</h1>
 
           {titleImg && (
@@ -34,12 +35,6 @@ const CardSection = ({
         </div>
         <div className="flex flex-row gap-5 overflow-x-auto pb-3">
           {cards.map((card, index) => (
-            // <CardProto
-            //   key={index}
-            //   title={card.title || "Untitled"}
-            //   description={card.description || "No description available."}
-            //   img={card.img}
-            //   />
 
             <Card
               key={index}

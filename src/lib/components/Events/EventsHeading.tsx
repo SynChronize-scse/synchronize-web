@@ -131,8 +131,8 @@ const EventsHeading = () => {
           <ChevronLeft className="w-7 h-7 sm:w-10 sm:h-10 text-primary-400 absolute z-50 top-4 left-4 sm:top-9 sm:left-9" />
         </Link>
 
-        <div className="w-full my-5 flex justify-center items-center">
-          <h1 className="relative z-50 text-5xl md:text-9xl lg:text-9xl font-semibold text-primary-400">
+        <div className="w-full  my-5 flex justify-center items-center">
+          <h1 className="relative z-1 text-5xl md:text-9xl lg:text-9xl font-semibold text-primary-400">
             EVENTS
           </h1>
         </div>

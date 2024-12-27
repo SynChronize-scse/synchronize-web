@@ -46,7 +46,7 @@ const Card: FC<CardProps> = ({
   return (
     <div
       className={cn(
-        "border rounded-3xl border-[#2e2c21] flex flex-col min-w-[calc(100%-50px)] max-w-[calc(100%-50px)] sm:min-w-[320px] sm:max-w-xs",
+        "border rounded-3xl hover:shadow-sm hover:shadow-red-500 shadow-yellow-700 border-stone-700 flex flex-col min-w-[calc(100%-50px)] max-w-[calc(100%-50px)] sm:min-w-[320px] sm:max-w-xs transition-all ease-in-out duration-200",
         className
       )}
     >
@@ -55,32 +55,25 @@ const Card: FC<CardProps> = ({
           <img className="opacity-80 overflow-hidden" src={img} alt="" />
         </div>
       </div>
-      <div className="p-4 flex flex-col justify-between flex-1">
-        <h1 className="text-xl uppercase">{title}</h1>
-        {/* <p className="mt-2 text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          vehicula, nunc eget dignissim lacinia, felis turpis lacinia lacus, nec
-          suscipit nunc eros nec justo.
-        </p> */}
+      <div className="p-4 flex flex-col justify-around flex-1">
+        <h1
+          className="text-2xl py-4 px-3 tracking-wider uppercase font-semibold  
+from-[#fcd6aa] via-[#d8b791] to-amber-400 opacity-90 bg-gradient-to-r bg-clip-text text-transparent
+        "
+        >
+          {title}
+        </h1>
 
-        {/* Location badge */}
-        {/* <div className="flex items-center mt-2 w-fit px-1 py-1 rounded-full text-xs font-mono bg-primary-400 text-black">
-          <MapPin className="w-4 h-4 mr-1" />
-          <p className="text-sm">Online</p>
-        </div> */}
-        {/* <Badge className="font-light bg-primary-400 text-black">
-          <MapPin className="w-4 h-4 mr-1" />
-          <p className="text-sm">Online</p>
-        </Badge> */}
-
+        <div className="flex justify-center">
         <SlidingButton
-          className="mt-4"
+          className=" "
           primaryText="View Details"
           secondaryText="View Details"
           buttonProps={{
             onClick: () => setShowModal(() => true),
           }}
         />
+        </div>
       </div>
 
       {showModal &&
