@@ -26,7 +26,7 @@ import BITE_BAZAR from "../../assets/images/events/foodstalls.png";
 
 import GUEST_LECTURE_IEEE from "../../assets/images/events/guest(ieee).png";
 import GUEST_LECTURE_ACM from "../../assets/images/events/guest(acm).png";
-import YOUTH_ICON_TALK from "../../assets/images/events/podcast.png";
+// import YOUTH_ICON_TALK from "../../assets/images/events/podcast.png";
 
 export const FLAGSHIP = [
   {
@@ -101,7 +101,7 @@ export const CODING = [
   {
     title: "Algorhythm Master",
     description:
-      "'Algorhythm Master' is an algorithm competition that tests your problem-solving and coding abilities. \nSolve complex algorithmic challenges within a fixed time. \nThink critically and use your coding skills to claim victory.",
+      "Algorhythm Master is a lively cultural event celebrating music, dance, and creativity! From electrifying dance performances and soul-stirring music acts to engaging open mic sessions, it’s a stage for talent and passion to shine. Join us for a vibrant evening filled with rhythm, energy, and unforgettable moments!",
     img: ALGORHYTHM_MASTER,
     link: "https://docs.google.com/forms/d/e/1FAIpQLSeVZAzlkeYosbdMZRkC0dyTGJk1i2j5i9IhN4gywD06aOc3tA/viewform?usp=sharing&utm_source=website",
     date: "10-01-2024",
@@ -244,13 +244,13 @@ export const GUESTLECTURES = [
     date: "10-01-2024",
     time: "10:00 AM",
   },
-  {
-    title: "Youth Icon Talk",
-    Guest: "Mr. Steve Rogers",
-    description: "Talk by Youth Icon.",
-    img: YOUTH_ICON_TALK,
-    // link: "/events/youthtalk"
-    date: "11-01-2024",
-    time: "10:00 AM",
-  },
+  // {
+  //   title: "Youth Icon Talk",
+  //   Guest: "Mr. Steve Rogers",
+  //   description: "Talk by Youth Icon.",
+  //   img: YOUTH_ICON_TALK,
+  //   // link: "/events/youthtalk"
+  //   date: "11-01-2024",
+  //   time: "10:00 AM",
+  // },
 ];

@@ -27,23 +27,29 @@ const LandingPart = () => {
             {/* <h3 className="font-bold leading-none h-[clamp(1.53rem,7.99vi+-0.47rem,5.92rem)]  text-[clamp(1.53rem,7.99vi+-0.47rem,5.92rem)]">
           SYNCHRONIZE'25
         </h3> */}
-            <div className="flex flex-col">
-              <h1 className="sm:mt-10 z-10 font-bold leading-none tracking-wider max-[370px]:h-[clamp(1.7rem,9vi+-0.6rem,7rem)] max-[370px]:text-[clamp(1.7rem,9vi+-0.6rem,7rem)] h-[clamp(1.9rem,9vi+-0.6rem,7rem)] text-[clamp(1.9rem,9vi+-0.6rem,7rem)] max-[1500px]:h-[clamp(1.9rem,9vi+-0.6rem,6rem)] max-[1500px]:text-[clamp(1.9rem,9vi+-0.6rem,6rem)]">
-                SYNCHRONIZE 3.0
-              </h1>
+            <div className="flex flex-col items-center gap-5">
+              <div className="flex flex-col">
+                <h1 className="sm:mt-10 z-10 font-bold leading-none tracking-wider max-[370px]:h-[clamp(1.7rem,9vi+-0.6rem,7rem)] max-[370px]:text-[clamp(1.7rem,9vi+-0.6rem,7rem)] h-[clamp(1.9rem,9vi+-0.6rem,7rem)] text-[clamp(1.9rem,9vi+-0.6rem,7rem)] max-[1500px]:h-[clamp(1.9rem,9vi+-0.6rem,6rem)] max-[1500px]:text-[clamp(1.9rem,9vi+-0.6rem,6rem)]">
+                  SYNCHRONIZE 3.0
+                </h1>
 
-              <div className="relative z-10 flex flex-row items-center justify-center mt-4 w-full max-w-[90%] self-end">
-                <img
-                  src="/images/star.png"
-                  alt="decoration star image"
-                  className="w-10  sm:w-20 "
-                />
+                <div className="relative z-10 flex flex-row items-center justify-center mt-4 w-full max-w-[90%] self-end">
+                  <img
+                    src="/images/star.png"
+                    alt="decoration star image"
+                    className="w-10  sm:w-20 "
+                  />
 
-                <div className="border-t border-primary-400 flex-1"></div>
-                <span className="ml-3 uppercase text-primary-400 text-base sm:text-xl whitespace-nowrap">
-                  ENTER THE COSMOS
-                </span>
+                  <div className="border-t border-primary-400 flex-1"></div>
+                  <span className="ml-3 uppercase text-primary-400 text-sm sm:text-xl whitespace-nowrap">
+                    ENTER THE COSMOS
+                  </span>
+                </div>
               </div>
+
+              <span className="text-[#C3DB62] text-sm tracking-wider relative z-50">
+                09th - 11th January 2025
+              </span>
             </div>
 
             {/* Countdown Timer */}

@@ -46,7 +46,7 @@ const Card: FC<CardProps> = ({
   return (
     <div
       className={cn(
-        "border rounded-3xl hover:shadow-sm hover:shadow-red-500 shadow-yellow-700 border-stone-700 flex flex-col min-w-[calc(100%-50px)] max-w-[calc(100%-50px)] sm:min-w-[320px] sm:max-w-xs transition-all ease-in-out duration-200",
+        "border rounded-3xl hover:shadow-sm hover:shadow-primary-400 shadow-yellow-700 border-stone-700 flex flex-col min-w-[calc(100%-50px)] max-w-[calc(100%-50px)] sm:min-w-[320px] sm:max-w-xs transition-all ease-in-out duration-200",
         className
       )}
     >
@@ -57,22 +57,22 @@ const Card: FC<CardProps> = ({
       </div>
       <div className="p-4 flex flex-col justify-around flex-1">
         <h1
-          className="text-2xl py-4 px-3 tracking-wider uppercase font-semibold  
+          className="mb-2 text-2xl tracking-wider uppercase font-semibold font-[AdieuRegular]
 from-[#fcd6aa] via-[#d8b791] to-amber-400 opacity-90 bg-gradient-to-r bg-clip-text text-transparent
         "
         >
           {title}
         </h1>
 
-        <div className="flex justify-center">
-        <SlidingButton
-          className=" "
-          primaryText="View Details"
-          secondaryText="View Details"
-          buttonProps={{
-            onClick: () => setShowModal(() => true),
-          }}
-        />
+        <div className="flex mt-2">
+          <SlidingButton
+            className=" "
+            primaryText="View Details"
+            secondaryText="View Details"
+            buttonProps={{
+              onClick: () => setShowModal(() => true),
+            }}
+          />
         </div>
       </div>
 
