@@ -90,7 +90,7 @@ const Footer = () => {
                   <FaInstagram />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/synchronize-xim/"
+                  href="https://www.linkedin.com/in/school-of-computer-science-and-engineering-career-advisory-services-43a0b61ab/"
                   aria-label="LinkedIn page link"
                   target="_blank"
                   rel="noopener noreferrer"

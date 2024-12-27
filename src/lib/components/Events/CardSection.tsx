@@ -6,6 +6,7 @@ interface Card {
   description?: string;
   date?: string;
   time?: string;
+  link?: string;
 }
 
 const CardSection = ({
@@ -18,16 +19,17 @@ const CardSection = ({
   titleImg?: string;
 }) => {
   return (
-    <div className="flex justify-center items-center w-full ">
-      <div className="mt-5 rounded-xl w-full md:px-4">
-        <div className="flex justify-between relative w-full ">
+    <div className="flex justify-center items-center w-full">
+      <div className="mt-5 rounded-xl w-full">
+        <div className="flex justify-between relative w-full">
+
           <h1 className="text-2xl lg:text-4xl my-5">{title}</h1>
 
           {titleImg && (
             <img
               src={titleImg}
               alt="title"
-              className="max-[350px]:hidden h-16 object-cover rounded-lg"
+              className="max-[350px]:hidden sm:hidden h-16 object-cover rounded-lg"
             />
           )}
         </div>
@@ -41,6 +43,7 @@ const CardSection = ({
               description={card.description}
               date={card.date}
               time={card.time}
+              link={card.link}
             />
           ))}
         </div>

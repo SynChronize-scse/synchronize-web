@@ -3,4 +3,4 @@ Disallow:
 
 Disallow: /memories
 
-Sitemap: https://synchronize-web.onrender.com/sitemap.xml
+Sitemap: https://synchronizexim.in/sitemap.xml

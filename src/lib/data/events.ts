@@ -7,7 +7,7 @@ import TECHTANKS from "../../assets/images/events/techtank.png";
 
 import BUGATHON from "../../assets/images/events/bugathon.png";
 import CLASH_OF_CODES from "../../assets/images/events/clashcodes.png";
-// import ALGORHYTHM_MASTER from "../../assets/images/events/";
+import ALGORHYTHM_MASTER from "../../assets/images/events/cultural.png";
 import PROMPTOPIA from "../../assets/images/events/promptopia.png";
 
 import STOCK_STORM from "../../assets/images/events/stock.png";
@@ -34,9 +34,18 @@ export const FLAGSHIP = [
     description:
       "A thrilling 24-hour hackathon designed for developers of all levels. \nTest your coding skills and creativity as you collaborate with like-minded individuals. \nCompete for exciting prizes while building innovative projects under a tight deadline.",
     img: TIME_HACKS,
-    // link: "/events/hackathon"  TO BE REPLACED W/ MODAL
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSfhEibzXXt14MDmFAro3TYMLs5Y4Sxyq5yoOSqO-3EoQnK_IQ/viewform?usp=pp_url&utm_source=website",
     date: "10-01-2024",
     time: "11:00 AM",
+  },
+  {
+    title: "TechTanks",
+    description:
+      "TechTanks is an engaging drone workshop where you'll learn the fundamentals of drone design and operation. \nMaster the basics of aerodynamics, control systems, and programming. \nGet hands-on experience in building and flying your own drone in this interactive session.",
+    img: TECHTANKS,
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSckNanFsZyl3lmIATcu0MY9KlBj9UVAx7VKPMUDV6AKsRiLUg/viewform?usp=pp_url&utm_source=website",
+    date: "10-01-2024",
+    time: "02:30 PM",
   },
 ];
 
@@ -46,7 +55,7 @@ export const ROBOTICS = [
     description:
       "Join the ultimate robotics race in 'Zenos Terminus,' where speed, precision, and control are key. \nDesign and program your robot to race through a challenging course full of obstacles. \nThe fastest robot wins, but navigating the course perfectly is just as important.",
     img: ZENOS_TERMINUS,
-    // link: "/events/robotics"  TO BE REPLACED W/ MODAL
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSf2SrAG6zE_21u-B1IRUTB293ThBEHO5QDaOjA8gr5ar6tK3g/viewform?utm_source=website",
     date: "09-01-2024",
     time: "12:00 NOON",
   },
@@ -55,7 +64,7 @@ export const ROBOTICS = [
     description:
       "Megatron is a fierce robot combat competition where participants build robots to battle in a controlled arena. \nStrategize and optimize your robot for combat, outsmarting your opponents for the title. \nGet ready for an action-packed, high-stakes showdown!",
     img: MEGATRON,
-    // link: "/events/robotics"  TO BE REPLACED W/ MODAL
+    link: "https://docs.google.com/forms/d/e/1FAIpQLScHFEC7lwp1J8_guavJMk1yStDUU1UJLF4KZo2Sw8kU5MRu8A/viewform?usp=pp_url&utm_source=website",
     date: "09-01-2024",
     time: "03:00 PM",
   },
@@ -64,28 +73,19 @@ export const ROBOTICS = [
     description:
       "Mazeium challenges you to build a robot that can find the shortest path through a maze. \nNavigate obstacles and optimize your robot’s path to reach the finish line first. \nPut your problem-solving and programming skills to the test in this exciting event.",
     img: MAZEIUM,
-    // link: "/events/robotics"  TO BE REPLACED W/ MODAL
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSdD3ZZ1AWyJ7jWY0-nw53zRWPMZc1A4vFhgNVYtezBZyj64eQ/viewform?usp=pp_url&utm_source=website",
     date: "10-01-2024",
     time: "10:45 AM",
-  },
-  {
-    title: "TechTanks",
-    description:
-      "TechTanks is an engaging drone workshop where you'll learn the fundamentals of drone design and operation. \nMaster the basics of aerodynamics, control systems, and programming. \nGet hands-on experience in building and flying your own drone in this interactive session.",
-    img: TECHTANKS,
-    // link: "/events/robotics"  TO BE REPLACED W/ MODAL
-    date: "10-01-2024",
-    time: "02:30 PM",
   },
 ];
 
 export const CODING = [
   {
-    title: "Bugathon",
+    title: "Code of Orbit",
     description:
       "In the 'Debugging Challenge,' participants fix broken code under time pressure. \nIdentify bugs quickly and solve them for the chance to win exciting prizes. \nYour debugging skills will be tested as you race against the clock.",
     img: BUGATHON,
-    // link: "/events/coding"  TO BE REPLACED W/ MODAL
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSdjLx7kjH38r9Ld6hFHLIkvr-lTLIeHSFx9ld7lnKdIhG9ccg/viewform?usp=pp_url&utm_source=website",
     date: "09-01-2024",
     time: "11:45 AM",
   },
@@ -94,7 +94,7 @@ export const CODING = [
     description:
       "'Clash of Codes' is a coding competition where you solve timed challenges against others. \nShow off your coding skills as you compete to solve algorithmic problems. \nThe fastest and most efficient solution wins the competition.",
     img: CLASH_OF_CODES,
-    // link: "/events/coding"  TO BE REPLACED W/ MODAL
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSf3gOLJGQQm9gOPBPdzgSqzU99OCAn73JFNz_qks0HuFkM28A/viewform?usp=pp_url&utm_source=website",
     date: "10-01-2024",
     time: "02:00 PM",
   },
@@ -102,8 +102,8 @@ export const CODING = [
     title: "Algorhythm Master",
     description:
       "'Algorhythm Master' is an algorithm competition that tests your problem-solving and coding abilities. \nSolve complex algorithmic challenges within a fixed time. \nThink critically and use your coding skills to claim victory.",
-    img: "",
-    // link: "/events/coding"  TO BE REPLACED W/ MODAL
+    img: ALGORHYTHM_MASTER,
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSeVZAzlkeYosbdMZRkC0dyTGJk1i2j5i9IhN4gywD06aOc3tA/viewform?usp=sharing&utm_source=website",
     date: "10-01-2024",
     time: "03:00 PM",
   },
@@ -112,7 +112,7 @@ export const CODING = [
     description:
       "'Promptopia' challenges you to write the best code under strict time constraints. \nSolve unique coding problems while ensuring your code is efficient and effective. \nRace against the clock to prove your coding prowess!",
     img: PROMPTOPIA,
-    // link: "/events/coding"  TO BE REPLACED W/ MODAL
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSdtcfdz1DxpOy3rEssssqIynXC6uDLStsWhmPnZotJumDi_tQ/viewform?usp=pp_url&utm_source=website",
     date: "10-01-2024",
     time: "01:00 AM",
   },
@@ -124,19 +124,19 @@ export const BUSINESS = [
     description:
       "'Stock Storm' is a virtual stock trading competition. \nBuy and sell stocks based on real-time data to grow your portfolio. \nManage risks, predict market trends, and maximize your profits to win.",
     img: STOCK_STORM,
-    // link: "/events/business"  TO BE REPLACED W/ MODAL
+    link: "https://community.stockgro.club/form/083590bc-ac16-4a6b-9720-9864b9e706a1",
     date: "10-01-2024",
     time: "10:00 AM",
   },
-  {
-    title: "Start-Up Park",
-    description:
-      "In Start-Up Park, entrepreneurs pitch their business ideas to investors. \nPresent your product, receive feedback, and compete for investment or mentorship. \nShowcase your innovation and take your startup to the next level!",
-    img: "",
-    // link: "/events/business"  TO BE REPLACED W/ MODAL
-    date: "11-01-2024",
-    time: "11:00 AM",
-  },
+  // {
+  //   title: "Start-Up Park",
+  //   description:
+  //     "In Start-Up Park, entrepreneurs pitch their business ideas to investors. \nPresent your product, receive feedback, and compete for investment or mentorship. \nShowcase your innovation and take your startup to the next level!",
+  //   img: "",
+  //   // link: "/events/business"  TO BE REPLACED W/ MODAL
+  //   date: "11-01-2024",
+  //   time: "11:00 AM",
+  // },
 ];
 
 export const FUN = [
@@ -145,6 +145,7 @@ export const FUN = [
     title: "Galactic Hunt",
     description:
       "Gear up for an adventurous quest to solve clues and find the hidden treasure. Navigate through challenges with your team and emerge victorious. Exciting prizes await the winners. Let the hunt begin!",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSd0PdTqD8UE0zGLRL60ZIuAhDDX71iJG0sv0vGupDVY38UN_Q/viewform?usp=pp_url&utm_source=website",
     img: GALACTIC_HUNT,
     date: "09-01-2024",
     time: "04:30 PM",
@@ -153,6 +154,7 @@ export const FUN = [
     title: "Voyage to Victory",
     description:
       "Tech Bingo, Tech Skribble, Pitch you name it! Bring out the artist in you by sketching creative, tech-inspired masterpieces. Impress the judges with your artistic flair. Let your imagination flow!",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSdhp1jf0CtniRFxh0fTp6K-2719MEzXKByze6HpHcbzKHQjYw/viewform?usp=pp_url&utm_source=website",
     img: "",
     date: "11-01-2024",
     time: "02:00 PM",
@@ -212,24 +214,24 @@ export const EVERYDAY = [
     date: "EVERYDAY EVENT",
     time: "ALL DAY",
   },
-  {
-    title: "Startup Parks",
-    description:
-      "Explore cutting-edge innovations at our startup parks. Interact with budding entrepreneurs, discover their ideas, and get inspired by their journeys.",
-    img: "",
-    date: "EVERYDAY EVENT",
-    time: "ALL DAY",
-  },
+  // {
+  //   title: "Startup Parks",
+  //   description:
+  //     "Explore cutting-edge innovations at our startup parks. Interact with budding entrepreneurs, discover their ideas, and get inspired by their journeys.",
+  //   img: "",
+  //   date: "EVERYDAY EVENT",
+  //   time: "ALL DAY",
+  // },
 ];
 
 export const GUESTLECTURES = [
   //Workshops & Guest Lectures
   {
-    title: "GUest Talk (IEEE)",
+    title: "Guest Talk (IEEE)",
     Guest: "Dr. Bruce Banner",
     description: "Guest talk by IEEE.",
     img: GUEST_LECTURE_IEEE,
-    // link: "/events/guesttalk"     TO BE REPLACED W/ MODAL
+    // link: "/events/guesttalk"
     date: "09-01-2024",
     time: "10:50 AM",
   },
@@ -238,16 +240,16 @@ export const GUESTLECTURES = [
     Guest: "Dr. Tony Stark",
     description: "Workshop by ACM.",
     img: GUEST_LECTURE_ACM,
-    // link: "/events/workshop"     TO BE REPLACED W/ MODAL
+    // link: "/events/workshop"
     date: "10-01-2024",
     time: "10:00 AM",
   },
   {
-    title: "Youth Icon Talk ",
+    title: "Youth Icon Talk",
     Guest: "Mr. Steve Rogers",
     description: "Talk by Youth Icon.",
     img: YOUTH_ICON_TALK,
-    // link: "/events/youthtalk"     TO BE REPLACED W/ MODAL
+    // link: "/events/youthtalk"
     date: "11-01-2024",
     time: "10:00 AM",
   },

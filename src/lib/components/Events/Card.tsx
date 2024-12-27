@@ -1,5 +1,5 @@
 import { cn } from "$lib/utils";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import SlidingButton from "../Button/SlidingButton";
 import ModalContent from "./ModalContent";
 import { createPortal } from "react-dom";
@@ -11,6 +11,7 @@ interface CardProps {
   description?: string;
   date?: string;
   time?: string;
+  link?: string;
 }
 
 const Card: FC<CardProps> = ({
@@ -20,8 +21,27 @@ const Card: FC<CardProps> = ({
   description,
   date,
   time,
+  link,
 }) => {
   const [showModal, setShowModal] = useState(false);
+
+  const parseQueries = (search: string) => {
+    const params = new URLSearchParams(search);
+    return params;
+  };
+
+  useEffect(() => {
+    const query = window.location.search;
+    const event = parseQueries(query).get("event");
+    const processedTitle = title
+      ?.trim()
+      ?.toLocaleLowerCase()
+      .replace(/\s/g, "-");
+
+    if (event === processedTitle) {
+      setShowModal(() => true);
+    }
+  }, [title]);
 
   return (
     <div
@@ -66,6 +86,7 @@ from-[#fcd6aa] via-[#d8b791] to-amber-400 opacity-90 bg-gradient-to-r bg-clip-te
               date: date,
               time: time,
               img: img,
+              link: link,
             }}
           />,
           document.body
