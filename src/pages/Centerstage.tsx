@@ -1,7 +1,13 @@
 import CardSection from "$lib/components/Events/CardSection";
 import EventsHeading from "$lib/components/Events/EventsHeading";
 import EventsMenu from "$lib/components/Events/EventsMenuBar";
-import { BUSINESS, CODING, FLAGSHIP, ROBOTICS } from "$lib/data/events";
+import {
+  BUSINESS,
+  CODING,
+  FLAGSHIP,
+  NON_TECH,
+  ROBOTICS,
+} from "$lib/data/events";
 import AmongUsCharacter from "../assets/images/p3.avif";
 
 const EventsSection = () => {
@@ -19,6 +25,7 @@ const EventsSection = () => {
           <CardSection title="🤖 ROBOTICS" cards={ROBOTICS} />
           <CardSection title="⚔️ CODE COMBAT" cards={CODING} />
           <CardSection title="🧑‍💼 BUSINESS" cards={BUSINESS} />
+          <CardSection title="🎸 NON-TECH" cards={NON_TECH} />
           {/* Add more sections here as needed */}
         </div>
       </div>

@@ -98,24 +98,7 @@ export const CODING = [
     date: "10-01-2024",
     time: "02:00 PM",
   },
-  {
-    title: "Algorhythm Master",
-    description:
-      "Algorhythm Master is a lively cultural event celebrating music, dance, and creativity! From electrifying dance performances and soul-stirring music acts to engaging open mic sessions, it’s a stage for talent and passion to shine. Join us for a vibrant evening filled with rhythm, energy, and unforgettable moments!",
-    img: ALGORHYTHM_MASTER,
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSeVZAzlkeYosbdMZRkC0dyTGJk1i2j5i9IhN4gywD06aOc3tA/viewform?usp=sharing&utm_source=website",
-    date: "10-01-2024",
-    time: "03:00 PM",
-  },
-  {
-    title: "Promptopia",
-    description:
-      "'Promptopia' challenges you to write the best code under strict time constraints. \nSolve unique coding problems while ensuring your code is efficient and effective. \nRace against the clock to prove your coding prowess!",
-    img: PROMPTOPIA,
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSdtcfdz1DxpOy3rEssssqIynXC6uDLStsWhmPnZotJumDi_tQ/viewform?usp=pp_url&utm_source=website",
-    date: "10-01-2024",
-    time: "01:00 AM",
-  },
+
 ];
 
 export const BUSINESS = [
@@ -254,3 +237,24 @@ export const GUESTLECTURES = [
   //   time: "10:00 AM",
   // },
 ];
+
+export const NON_TECH = [
+  {
+    title: "Algorhythm Master",
+    description:
+      "Algorhythm Master is a lively cultural event celebrating music, dance, and creativity! From electrifying dance performances and soul-stirring music acts to engaging open mic sessions, it’s a stage for talent and passion to shine. Join us for a vibrant evening filled with rhythm, energy, and unforgettable moments!",
+    img: ALGORHYTHM_MASTER,
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSeVZAzlkeYosbdMZRkC0dyTGJk1i2j5i9IhN4gywD06aOc3tA/viewform?usp=sharing&utm_source=website",
+    date: "10-01-2024",
+    time: "03:00 PM",
+  },
+  {
+    title: "Promptopia",
+    description:
+      "'Promptopia' challenges you to write the best code under strict time constraints. \nSolve unique coding problems while ensuring your code is efficient and effective. \nRace against the clock to prove your coding prowess!",
+    img: PROMPTOPIA,
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSdtcfdz1DxpOy3rEssssqIynXC6uDLStsWhmPnZotJumDi_tQ/viewform?usp=pp_url&utm_source=website",
+    date: "10-01-2024",
+    time: "01:00 AM",
+  },
+]
