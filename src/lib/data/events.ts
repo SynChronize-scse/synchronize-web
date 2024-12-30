@@ -149,6 +149,8 @@ export const GAMING = [
     title: "Valorant",
     description:
       "Showcase your gaming skills in this intense first-person shooter. Teamwork and strategy are key to securing victory. Compete against the best and take home amazing prizes.",
+    link: "https://forms.gle/RreyM7ZXSXeZGaqU9"
+    ,
     img: VALORANT,
     date: "10-01-2024",
     time: "Pls check the event page",
@@ -157,6 +159,7 @@ export const GAMING = [
     title: "FIFA",
     description:
       "Step onto the virtual football field and prove your prowess. Compete head-to-head to score goals and win. Amazing prizes await the top players.",
+    link: "https://forms.gle/G4ysE85PwQADJ2bB8",
     img: FIFA,
     date: "11-01-2024",
     time: "Pls check the event page",
@@ -165,6 +168,7 @@ export const GAMING = [
     title: "BGMI",
     description:
       "Enter the battleground for the ultimate survival game. Show your strategic brilliance and shooting skills. Winners will grab thrilling prizes and bragging rights.",
+    link: "https://forms.gle/B8FxeYhAFfTiixoW9",
     img: BGMI,
     date: "11-01-2024",
     time: "Pls check the event page",
