@@ -11,6 +11,7 @@ import ALGORHYTHM_MASTER from "../../assets/images/events/cultural.png";
 import PROMPTOPIA from "../../assets/images/events/promptopia.png";
 
 import STOCK_STORM from "../../assets/images/events/stock.png";
+import ORBIT_OF_IDEAS from "../../assets/images/events/orbitofideas.png"
 // import STARTUP_PARK from "../../assets/images/events/";
 
 import GALACTIC_HUNT from "../../assets/images/events/galactichunt.png";
@@ -105,21 +106,21 @@ export const BUSINESS = [
   {
     title: "Stock Storm",
     description:
-      "'Stock Storm' is a virtual stock trading competition. \nBuy and sell stocks based on real-time data to grow your portfolio. \nManage risks, predict market trends, and maximize your profits to win.",
+      "'Stock Storm is a virtual stock trading competition. \nBuy and sell stocks based on real-time data to grow your portfolio. \nManage risks, predict market trends, and maximize your profits to win.",
     img: STOCK_STORM,
     link: "https://community.stockgro.club/form/083590bc-ac16-4a6b-9720-9864b9e706a1",
     date: "10-01-2024",
     time: "10:00 AM",
   },
-  // {
-  //   title: "Start-Up Park",
-  //   description:
-  //     "In Start-Up Park, entrepreneurs pitch their business ideas to investors. \nPresent your product, receive feedback, and compete for investment or mentorship. \nShowcase your innovation and take your startup to the next level!",
-  //   img: "",
-  //   // link: "/events/business"  TO BE REPLACED W/ MODAL
-  //   date: "11-01-2024",
-  //   time: "11:00 AM",
-  // },
+  {
+    title: "Orbit of Ideas",
+    description:
+      "In Orbit of Ideas, entrepreneurs pitch their business ideas to investors. \nPresent your product, receive feedback, and compete for investment or mentorship. \nShowcase your innovation and take your startup to the next level!",
+    img: ORBIT_OF_IDEAS,
+    link: "https://docs.google.com/forms/d/1i-XQU4UHY8RhhnoKEKJsq7i3NJJr0ejql1lVWkroOgY/edit?usp=drivesdk",
+    date: "11-01-2024",
+    time: "11:00 AM",
+  },
 ];
 
 export const FUN = [
