@@ -33,7 +33,7 @@ const CardSection = ({
             />
           )}
         </div>
-        <div className="flex flex-row gap-5 overflow-x-auto pb-3">
+        <div className="flex flex-row gap-6 overflow-x-auto pb-3">
           {cards.map((card, index) => (
 
             <Card
