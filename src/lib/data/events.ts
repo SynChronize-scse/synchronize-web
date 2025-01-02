@@ -11,7 +11,7 @@ import ALGORHYTHM_MASTER from "../../assets/images/events/cultural.png";
 import PROMPTOPIA from "../../assets/images/events/promptopia.png";
 
 import STOCK_STORM from "../../assets/images/events/stock.png";
-import ORBIT_OF_IDEAS from "../../assets/images/events/orbitofideas.png"
+import ORBIT_OF_IDEAS from "../../assets/images/events/orbitofideas.png";
 // import STARTUP_PARK from "../../assets/images/events/";
 
 import GALACTIC_HUNT from "../../assets/images/events/galactichunt.png";
@@ -42,7 +42,7 @@ export const FLAGSHIP = [
   {
     title: "TechTanks",
     description:
-      "TechTanks is an engaging drone workshop where you'll learn the fundamentals of drone design and operation. \nMaster the basics of aerodynamics, control systems, and programming. \nGet hands-on experience in building and flying your own drone in this interactive session.",
+      "Dive into a world of innovation and discovery at our Tech Fest Poster Presentation! This is your chance to showcase groundbreaking ideas, spark meaningful conversations, and connect with like-minded tech enthusiasts. Unleash your creativity, share your passion, and be part of an exciting journey where ideas truly come to life!",
     img: TECHTANKS,
     link: "https://docs.google.com/forms/d/e/1FAIpQLSckNanFsZyl3lmIATcu0MY9KlBj9UVAx7VKPMUDV6AKsRiLUg/viewform?usp=pp_url&utm_source=website",
     date: "10-01-2024",
@@ -99,7 +99,6 @@ export const CODING = [
     date: "10-01-2024",
     time: "02:00 PM",
   },
-
 ];
 
 export const BUSINESS = [
@@ -150,8 +149,7 @@ export const GAMING = [
     title: "Valorant",
     description:
       "Showcase your gaming skills in this intense first-person shooter. Teamwork and strategy are key to securing victory. Compete against the best and take home amazing prizes.",
-    link: "https://forms.gle/RreyM7ZXSXeZGaqU9"
-    ,
+    link: "https://forms.gle/RreyM7ZXSXeZGaqU9",
     img: VALORANT,
     date: "10-01-2024",
     time: "Pls check the event page",
@@ -256,10 +254,10 @@ export const NON_TECH = [
   {
     title: "Promptopia",
     description:
-      "'Promptopia' challenges you to write the best code under strict time constraints. \nSolve unique coding problems while ensuring your code is efficient and effective. \nRace against the clock to prove your coding prowess!",
+      "Dive into the world of creativity and storytelling with Promptopia! In this unique event, participants will be presented with a variety of intriguing themes, each accompanied by a thought-provoking image. Using these visual inspirations as their guide, participants will craft imaginative and compelling prompts designed from tools like Gemini/ChatGPT.",
     img: PROMPTOPIA,
     link: "https://docs.google.com/forms/d/e/1FAIpQLSdtcfdz1DxpOy3rEssssqIynXC6uDLStsWhmPnZotJumDi_tQ/viewform?usp=pp_url&utm_source=website",
     date: "10-01-2024",
     time: "01:00 AM",
   },
-]
+];
