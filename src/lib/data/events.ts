@@ -116,7 +116,7 @@ export const BUSINESS = [
     description:
       "In Orbit of Ideas, entrepreneurs pitch their business ideas to investors. \nPresent your product, receive feedback, and compete for investment or mentorship. \nShowcase your innovation and take your startup to the next level!",
     img: ORBIT_OF_IDEAS,
-    link: "https://docs.google.com/forms/d/1i-XQU4UHY8RhhnoKEKJsq7i3NJJr0ejql1lVWkroOgY/edit?usp=drivesdk",
+    link: "https://forms.gle/2aPTyTDqj42oVMbj8",
     date: "11-01-2024",
     time: "11:00 AM",
   },
