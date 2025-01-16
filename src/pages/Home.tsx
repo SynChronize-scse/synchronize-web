@@ -1,7 +1,7 @@
 import AboutSection from "$lib/components/Home/AboutSection";
 import LandingSection from "$lib/components/Home/LandingSection";
 import SectionHeader from "$lib/components/Home/SectionHeader";
-import SponsorUs from "$lib/components/Home/SponsorUs";
+// import SponsorUs from "$lib/components/Home/SponsorUs";
 import StackedCards from "$lib/components/Home/StackedCards";
 import { useEffect, useState } from "react";
 
@@ -11,6 +11,32 @@ import NonTechMobile from "../assets/images/non_tech.png";
 import NonTechDesktop from "../assets/images/nontech_desktop.jpg";
 import GuestMobile from "../assets/images/guest_lecture.png";
 import GuestDesktop from "../assets/images/guest_desktop.jpg";
+import SponsorshipSection from "$lib/components/Sponsershipsection";
+
+const premierSponsor = {
+  name: "MCL",
+  logo: "/images/MCL.jpeg",
+  url: "https://www.mahanadicoal.in/Welcome.php",
+};
+
+const otherSponsors = [
+  {
+    name: "Parrot CTF",
+    logo: "/images/parrotctf.png",
+    url: "https://parrot-ctfs.com/",
+  },
+  {
+    name: "Odisha FC",
+    logo: "/images/odishafc.jpg",
+    url: "https://www.odishafc.com/",
+  },
+  {
+    name: "Wayspire",
+    logo: "/images/wayspire.jpeg",
+    url: "https://wayspire.in/?srsltid=AfmBOopI3nIQ1Cb378cW13ot27ggMe_jp_MiDjujb2APMepivllAXoGN",
+  },
+  { name: "NTPC", logo: "/images/ntpc.jpg", url: "https://ntpc.co.in/" },
+];
 
 const Home = () => {
   const [hasHWA, setHasHWA] = useState<boolean>(true);
@@ -116,7 +142,13 @@ const Home = () => {
         />
         <StackedCards items={events} className="font-[AdieuRegular]" />
 
-        <SponsorUs id="sponsor-us" />
+        {/* <SponsorUs id="sponsor-us" /> */}
+        <div>
+          <SponsorshipSection
+            premierSponsor={premierSponsor}
+            otherSponsors={otherSponsors}
+          />
+        </div>
 
         {!hasHWA && showHwaPrompt && (
           <>
