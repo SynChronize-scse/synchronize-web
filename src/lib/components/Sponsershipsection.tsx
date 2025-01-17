@@ -14,9 +14,11 @@ export default function SponsorshipSection({
   otherSponsors,
 }: SponsorshipSectionProps) {
   return (
-    <section className="py-12 px-4 md:px-6 lg:px-8 bg-background">
+    <section className="py-12 px-4 md:px-6 lg:px-8 bg-background" id="sponsors">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Sponsors</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 font-[AdieuRegular] text-primary-400">
+          Our Sponsors
+        </h2>
 
         {/* Premier Sponsor */}
         <div className="mb-12">

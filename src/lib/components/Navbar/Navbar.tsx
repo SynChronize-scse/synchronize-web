@@ -96,7 +96,7 @@ export default function Navbar() {
           <Link to="/" className="nav-text">
             // HOME
           </Link>
-          <a
+          {/* <a
             onClick={() => {
               timeline.current?.reverse();
               itemsContainer.current?.removeEventListener(
@@ -112,7 +112,10 @@ export default function Navbar() {
             className="nav-text"
           >
             // ABOUT
-          </a>
+          </a> */}
+          <Link to="/gallery" className="nav-text">
+            // GALLERY
+          </Link>
           <Link to="/events" className="nav-text">
             // EVENTS
           </Link>
@@ -131,7 +134,7 @@ export default function Navbar() {
                 preventDefault
               );
             }}
-            href="#sponsor-us"
+            href="#sponsors"
             className="nav-text"
           >
             // SPONSOR

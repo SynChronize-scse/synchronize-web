@@ -10,6 +10,8 @@ const Centerstage = React.lazy(() => import("../pages/Centerstage"));
 const FunNgames = React.lazy(() => import("../pages/FunNgames"));
 const GuestTalks = React.lazy(() => import("../pages/GuestTalks"));
 
+const Gallery = React.lazy(() => import("../pages/Gallery"));
+
 export const AppRoutes = () => {
   const location = useLocation();
 
@@ -27,6 +29,7 @@ export const AppRoutes = () => {
       <Route path="/events/funncultural" element={<FunNgames />} />
       <Route path="/events/guesttalks" element={<GuestTalks />} />
       <Route path="/team" element={<Team />} />
+      <Route path="/gallery" element={<Gallery />} />
     </Routes>
   );
 };
