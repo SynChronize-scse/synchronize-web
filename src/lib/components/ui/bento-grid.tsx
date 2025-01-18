@@ -44,11 +44,16 @@ export const BentoGridItem = ({
       )}
     >
       {img && (
-        <img
-          className="object-cover w-full h-full rounded-xl"
-          src={img}
-          alt="gallery"
-        />
+        <picture className="object-cover w-full h-full rounded-xl">
+          <source type="image/webp" srcSet={img} />
+          <img
+            className="object-cover w-full h-full rounded-xl"
+            src={img}
+            alt="gallery"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
       )}
     </div>
   );
