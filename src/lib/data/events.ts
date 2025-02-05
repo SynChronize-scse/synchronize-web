@@ -25,8 +25,8 @@ import POSE_PAVILLON from "../../assets/images/events/photobooth.png";
 import GAME_STALLS from "../../assets/images/events/gamestalls.png";
 import BITE_BAZAR from "../../assets/images/events/foodstalls.png";
 
-import GUEST_LECTURE_IEEE from "../../assets/images/events/guest(ieee).png";
-import GUEST_LECTURE_ACM from "../../assets/images/events/guest(acm).png";
+// import GUEST_LECTURE_IEEE from "../../assets/images/events/guest(ieee).png";
+// import GUEST_LECTURE_ACM from "../../assets/images/events/guest(acm).png";
 // import YOUTH_ICON_TALK from "../../assets/images/events/podcast.png";
 
 export const FLAGSHIP = [
@@ -216,7 +216,8 @@ export const GUESTLECTURES = [
     title: "Guest Talk (IEEE)",
     Guest: "Dr. Bruce Banner",
     description: "Guest talk by IEEE.",
-    img: GUEST_LECTURE_IEEE,
+    // img: GUEST_LECTURE_IEEE,
+    img: "/images/ieee.jpg",
     // link: "/events/guesttalk"
     date: "09-01-2025",
     time: "10:50 AM",
@@ -225,7 +226,8 @@ export const GUESTLECTURES = [
     title: "Workshop (ACM)",
     Guest: "Dr. Tony Stark",
     description: "Workshop by ACM.",
-    img: GUEST_LECTURE_ACM,
+    // img: GUEST_LECTURE_ACM,
+    img: "/images/acm.jpg",
     // link: "/events/workshop"
     date: "10-01-2025",
     time: "10:00 AM",
