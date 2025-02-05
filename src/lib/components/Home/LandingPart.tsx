@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import SlidingButton from "../Button/SlidingButton";
 import Globe from "../Globe";
+import { Link } from "react-router-dom";
 // import CountDownTimer from "../CountDownTimer";
 
 const LandingPart = () => {
@@ -50,6 +51,12 @@ const LandingPart = () => {
               <span className="text-[#C3DB62] text-sm tracking-wider relative z-50">
                 09th - 11th January 2025
               </span>
+              <Link
+                to="/gallery"
+                className="text-sm relative z-10 underline text-white"
+              >
+                View Gallery
+              </Link>
             </div>
 
             {/* Countdown Timer */}

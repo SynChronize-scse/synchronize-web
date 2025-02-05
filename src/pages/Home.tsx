@@ -5,13 +5,14 @@ import SectionHeader from "$lib/components/Home/SectionHeader";
 import StackedCards from "$lib/components/Home/StackedCards";
 import { useEffect, useState } from "react";
 
-import TechMobile from "../assets/images/tech_events.png";
-import TechDesktop from "../assets/images/tech_desktop.jpg";
+// import TechMobile from "../assets/images/tech_events.png";
+// import TechDesktop from "../assets/images/tech_desktop.jpg";
 import NonTechMobile from "../assets/images/non_tech.png";
 import NonTechDesktop from "../assets/images/nontech_desktop.jpg";
-import GuestMobile from "../assets/images/guest_lecture.png";
-import GuestDesktop from "../assets/images/guest_desktop.jpg";
+// import GuestMobile from "../assets/images/guest_lecture.png";
+// import GuestDesktop from "../assets/images/guest_desktop.jpg";
 import SponsorshipSection from "$lib/components/Sponsershipsection";
+import HighlightsCarousel from "$lib/components/HighlightsCarousel";
 
 const premierSponsor = {
   name: "MCL",
@@ -75,8 +76,10 @@ const Home = () => {
       description:
         "The SynChronize festival will be renowned for its enormous selection of scientific and technology-related activities and contests. These experiences provide you ...",
       // src: "https://images.unsplash.com/photo-1566954979172-eaba308acdf0",
-      src: TechDesktop,
-      mobileSrc: TechMobile,
+      // src: TechDesktop,
+      // mobileSrc: TechMobile,
+      src: "https://synchronizexim.in/images/IMG_1304.webp",
+      mobileSrc: "https://synchronizexim.in/images/IMG_1304.webp",
       color: "#606C5D",
       path: "/events",
     },
@@ -105,8 +108,10 @@ const Home = () => {
         "These would include informational and motivational talks from eminent personalities from the field of computer science. Guest lecture is expected to be insightful and a great....",
       // src: "https://images.unsplash.com/flagged/photo-1557896279-080cb03b9ca6",
       // src: "src/assets/images/guest_lecture.png",
-      src: GuestDesktop,
-      mobileSrc: GuestMobile,
+      // src: GuestDesktop,
+      // mobileSrc: GuestMobile,
+      src: "https://synchronizexim.in/images/DSC_0244.webp",
+      mobileSrc: "https://synchronizexim.in/images/DSC_0244.webp",
       color: "#31511E",
       path: "/events/guesttalks",
     },
@@ -134,6 +139,13 @@ const Home = () => {
       <div className="flex flex-col items-center gap-10 justify-center bg-dark-400 text-white">
         <LandingSection />
         <AboutSection className="mt-24 sm:mb-20" />
+
+        {/* Heading */}
+        <SectionHeader
+          title="Highlights"
+          className="self-start font-[AdieuRegular] px-3 sm:px-20"
+        />
+        <HighlightsCarousel />
 
         {/* Heading */}
         <SectionHeader

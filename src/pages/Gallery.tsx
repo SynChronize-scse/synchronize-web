@@ -28,12 +28,17 @@ export default function BentoGridDemo() {
   //   };
   // }, []);
 
+  function isBig(i: number) {
+    const bigs = [3, 4, 7, 8, 9, 10, 11];
+    return bigs.includes(i);
+  }
+
   return (
     <div className="bg-dark-400 pt-10">
       <h1 className="text-3xl md:text-5xl font-bold text-center font-[AdieuRegular] text-primary-400 mb-20">
         Synchronize 3.0 Gallery
       </h1>
-      <BentoGrid className="p-3 sm:p-10 lg:px-20 bg-dark-400">
+      <BentoGrid className="p-3 sm:p-10 bg-dark-400">
         {SYNCHRONIZE3_GALLERY.map((item, i) => (
           <BentoGridItem
             elRef={(el) => {
@@ -41,10 +46,15 @@ export default function BentoGridDemo() {
             }}
             key={i}
             img={item.img}
-            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+            className={
+              isBig(i) ? "md:col-span-3" : i === 6 ? "md:col-span-2" : ""
+            }
           />
         ))}
       </BentoGrid>
+      {/* {SYNCHRONIZE3_GALLERY.map((item, i) => (
+        <img src={item.img} alt="gallery" key={i} />
+      ))} */}
     </div>
   );
 }

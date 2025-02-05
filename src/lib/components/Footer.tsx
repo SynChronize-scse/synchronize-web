@@ -53,7 +53,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col space-y-5 sm:w-auto">
-            <Link to="/memories" className="hover:text-gray-400">
+            <Link to="/gallery" className="hover:text-gray-400">
               Gallery
             </Link>
             <a
